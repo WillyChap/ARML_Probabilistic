@@ -1,13 +1,26 @@
 # Generating Probabilistic Atmospheric River Forecasts from Deterministic NWP Systems With Neural Networks and Convolutional Neural Networks
 ## Forecasts are from 0-5 Days Lead Time
 
+**Contact:** wchapman@ucsd.edu
+
+**Authors:** William E. Chapmana, Luca Delle Monachea, Stefano Alessandrinib, Aneesh C. Subramanianc, F. Martin Ralpha, Shang-Ping Xiea , Sebastian Lerchd, Negin Hayatbini
+
+**Affiliations:** Scripps Institution of Oceanography, La Jolla, California; National Center for Atmospheric Research, Boulder, Colorado; University of Colorado Boulder, Boulder, Colorado; Institute for Stochastics, Karlsruhe Institute of Technology, Karlsruhe, Germany
+
+
+
 This repository provides Python accompanying the paper
 
 Post arxiv link here (when available). 
 
 Code for processing and implementation All Neural Network models is available.
 
-This study demonstrates how neural networks can be used for post-processing of deterministic weather forecasts for a distributional regression framework. 
+This study demonstrates how neural networks can be used for post-processing of deterministic weather forecasts to create a distributional (i.e. probabilistic) regressional framework using a CRPS loss function. 
+
+
+**NOTE**: It took a massive amount of data to run/store results of this work, this is all readily available here, the authors are happy to provide keys to this data if you contact us. We made a few intermediate files inorder to store output model results, currently these are available upon request as they are too large to store on git. Additionally, the West-WRF model will be made publically available very shortly. 
+
+West-WRF simulations are archived at the Center for Western Weather and Water Extremes and on the National Center for Atmospheric Research servers are readily available upon request. GEFS data can be retrieved through the TIGGE archive (https://www.ecmwf.int/en/research/projects/tigge). MERRA2 data can be retrieved at https://gmao.gsfc.nasa.gov/reanalysis/MERRA-2/data_access/.![image](https://user-images.githubusercontent.com/14932329/117337174-e6a3a380-ae51-11eb-8dd1-f0b209318984.png)
 
 
 ### ABSTRACT (currently in flux)
