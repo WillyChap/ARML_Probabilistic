@@ -1,9 +1,0 @@
-/glade/work/wchapman/miniconda3/envs/tfp/lib/python3.6/site-packages/dask/config.py:168: YAMLLoadWarning: calling yaml.load() without Loader=... is deprecated, as the default Loader is unsafe. Please read https://msg.pyyaml.org/load for full details.
-  data = yaml.load(f.read()) or {}
-Traceback (most recent call last):
-  File "Run_CNN_GatherData_ByYear.py", line 43, in <module>
-    import utils_CNN
-  File "/glade/work/wchapman/AnEn/CNN/Coastal_Points_LogNormal/utils_CNN.py", line 1518
-    if yearstart not in yearstoinclude = pd.date_range("1985", periods=32, freq="Y").year.astype('str').tolist():
-                                       ^
-SyntaxError: invalid syntax
