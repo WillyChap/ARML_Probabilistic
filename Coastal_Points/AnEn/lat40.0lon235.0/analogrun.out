@@ -1,0 +1,10 @@
+ Sono qui           0
+ Sono qui dopo
+ Start End train, Start End Test           1        4001        4002        4122
+ Number of members          21
+ Num. of forec. lead time          21
+ Number of predictors           6
+ Weight Used  0.600000024       0.00000000      0.200000003       0.00000000      0.100000001      0.100000001    
+ type of predictors   1.00000000       1.00000000       1.00000000       1.00000000       1.00000000       1.00000000    
+ threshold_bias   300.000000    
+Time =  4.250 seconds.
