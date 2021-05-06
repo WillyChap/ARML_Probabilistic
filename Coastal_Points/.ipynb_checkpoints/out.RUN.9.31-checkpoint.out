@@ -1,0 +1,777 @@
+#############################################
+post processing forecast: F048
+#############################################
+['/device:GPU:0']
+#################################################
+#################################################
+SUCCESS: Found GPU: /device:GPU:0
+#################################################
+#################################################
+We are here: /glade/work/wchapman/AnEn/CNN/Coastal_Points_LogNormal
+/glade/scratch/wchapman/Reforecast/F000
+/glade/scratch/wchapman/Reforecast/F006
+/glade/scratch/wchapman/Reforecast/F012
+/glade/scratch/wchapman/Reforecast/F018
+/glade/scratch/wchapman/Reforecast/F024
+/glade/scratch/wchapman/Reforecast/F030
+/glade/scratch/wchapman/Reforecast/F036
+/glade/scratch/wchapman/Reforecast/F042
+/glade/scratch/wchapman/Reforecast/F048
+Training on
+/glade/scratch/wchapman/Reforecast/F048/train/F048_WY_1985_500mb_Clean.nc
+/glade/scratch/wchapman/Reforecast/F048/train/F048_WY_1986_500mb_Clean.nc
+/glade/scratch/wchapman/Reforecast/F048/train/F048_WY_1987_500mb_Clean.nc
+/glade/scratch/wchapman/Reforecast/F048/train/F048_WY_1988_500mb_Clean.nc
+/glade/scratch/wchapman/Reforecast/F048/train/F048_WY_1989_500mb_Clean.nc
+/glade/scratch/wchapman/Reforecast/F048/train/F048_WY_1990_500mb_Clean.nc
+/glade/scratch/wchapman/Reforecast/F048/train/F048_WY_1991_500mb_Clean.nc
+/glade/scratch/wchapman/Reforecast/F048/train/F048_WY_1992_500mb_Clean.nc
+/glade/scratch/wchapman/Reforecast/F048/train/F048_WY_1993_500mb_Clean.nc
+/glade/scratch/wchapman/Reforecast/F048/train/F048_WY_1994_500mb_Clean.nc
+/glade/scratch/wchapman/Reforecast/F048/train/F048_WY_1995_500mb_Clean.nc
+/glade/scratch/wchapman/Reforecast/F048/train/F048_WY_1996_500mb_Clean.nc
+/glade/scratch/wchapman/Reforecast/F048/train/F048_WY_1997_500mb_Clean.nc
+/glade/scratch/wchapman/Reforecast/F048/train/F048_WY_1998_500mb_Clean.nc
+/glade/scratch/wchapman/Reforecast/F048/train/F048_WY_1999_500mb_Clean.nc
+/glade/scratch/wchapman/Reforecast/F048/train/F048_WY_2000_500mb_Clean.nc
+/glade/scratch/wchapman/Reforecast/F048/train/F048_WY_2001_500mb_Clean.nc
+/glade/scratch/wchapman/Reforecast/F048/train/F048_WY_2002_500mb_Clean.nc
+/glade/scratch/wchapman/Reforecast/F048/train/F048_WY_2003_500mb_Clean.nc
+/glade/scratch/wchapman/Reforecast/F048/train/F048_WY_2004_500mb_Clean.nc
+/glade/scratch/wchapman/Reforecast/F048/train/F048_WY_2005_500mb_Clean.nc
+/glade/scratch/wchapman/Reforecast/F048/train/F048_WY_2006_500mb_Clean.nc
+/glade/scratch/wchapman/Reforecast/F048/train/F048_WY_2007_500mb_Clean.nc
+/glade/scratch/wchapman/Reforecast/F048/train/F048_WY_2008_500mb_Clean.nc
+/glade/scratch/wchapman/Reforecast/F048/train/F048_WY_2009_500mb_Clean.nc
+/glade/scratch/wchapman/Reforecast/F048/train/F048_WY_2010_500mb_Clean.nc
+/glade/scratch/wchapman/Reforecast/F048/train/F048_WY_2011_500mb_Clean.nc
+/glade/scratch/wchapman/Reforecast/F048/train/F048_WY_2012_500mb_Clean.nc
+/glade/scratch/wchapman/Reforecast/F048/train/F048_WY_2013_500mb_Clean.nc
+/glade/scratch/wchapman/Reforecast/F048/train/F048_WY_2014_500mb_Clean.nc
+/glade/scratch/wchapman/Reforecast/F048/train/F048_WY_2015_500mb_Clean.nc
+/glade/scratch/wchapman/Reforecast/F048/train/F048_WY_2016_500mb_Clean.nc
+Validating on
+/glade/scratch/wchapman/Reforecast/F048/validate/F048_WY_2017_500mb_Clean.nc
+Testing on
+/glade/scratch/wchapman/Reforecast/F048/test/F048_WY_2018_500mb_Clean.nc
+['1987', '1988', '1989', '1990', '1991', '1992', '1993', '1994', '1995', '1996', '1997', '1998', '1999', '2000', '2001', '2002', '2003', '2004', '2005', '2006', '2007', '2008', '2009', '2010', '2011', '2012', '2013', '2014', '2015', '2016', '2017', '2018']
+['/glade/scratch/wchapman/Reforecast/F048/train/F048_WY_1987_500mb_Clean.nc', '/glade/scratch/wchapman/Reforecast/F048/train/F048_WY_1988_500mb_Clean.nc', '/glade/scratch/wchapman/Reforecast/F048/train/F048_WY_1989_500mb_Clean.nc', '/glade/scratch/wchapman/Reforecast/F048/train/F048_WY_1990_500mb_Clean.nc', '/glade/scratch/wchapman/Reforecast/F048/train/F048_WY_1991_500mb_Clean.nc', '/glade/scratch/wchapman/Reforecast/F048/train/F048_WY_1992_500mb_Clean.nc', '/glade/scratch/wchapman/Reforecast/F048/train/F048_WY_1993_500mb_Clean.nc', '/glade/scratch/wchapman/Reforecast/F048/train/F048_WY_1994_500mb_Clean.nc', '/glade/scratch/wchapman/Reforecast/F048/train/F048_WY_1995_500mb_Clean.nc', '/glade/scratch/wchapman/Reforecast/F048/train/F048_WY_1996_500mb_Clean.nc', '/glade/scratch/wchapman/Reforecast/F048/train/F048_WY_1997_500mb_Clean.nc', '/glade/scratch/wchapman/Reforecast/F048/train/F048_WY_1998_500mb_Clean.nc', '/glade/scratch/wchapman/Reforecast/F048/train/F048_WY_1999_500mb_Clean.nc', '/glade/scratch/wchapman/Reforecast/F048/train/F048_WY_2000_500mb_Clean.nc', '/glade/scratch/wchapman/Reforecast/F048/train/F048_WY_2001_500mb_Clean.nc', '/glade/scratch/wchapman/Reforecast/F048/train/F048_WY_2002_500mb_Clean.nc', '/glade/scratch/wchapman/Reforecast/F048/train/F048_WY_2003_500mb_Clean.nc', '/glade/scratch/wchapman/Reforecast/F048/train/F048_WY_2004_500mb_Clean.nc', '/glade/scratch/wchapman/Reforecast/F048/train/F048_WY_2005_500mb_Clean.nc', '/glade/scratch/wchapman/Reforecast/F048/train/F048_WY_2006_500mb_Clean.nc', '/glade/scratch/wchapman/Reforecast/F048/train/F048_WY_2007_500mb_Clean.nc', '/glade/scratch/wchapman/Reforecast/F048/train/F048_WY_2008_500mb_Clean.nc', '/glade/scratch/wchapman/Reforecast/F048/train/F048_WY_2009_500mb_Clean.nc', '/glade/scratch/wchapman/Reforecast/F048/train/F048_WY_2010_500mb_Clean.nc', '/glade/scratch/wchapman/Reforecast/F048/train/F048_WY_2011_500mb_Clean.nc', '/glade/scratch/wchapman/Reforecast/F048/train/F048_WY_2012_500mb_Clean.nc', '/glade/scratch/wchapman/Reforecast/F048/train/F048_WY_2013_500mb_Clean.nc', '/glade/scratch/wchapman/Reforecast/F048/train/F048_WY_2014_500mb_Clean.nc', '/glade/scratch/wchapman/Reforecast/F048/train/F048_WY_2015_500mb_Clean.nc', '/glade/scratch/wchapman/Reforecast/F048/train/F048_WY_2016_500mb_Clean.nc', '/glade/scratch/wchapman/Reforecast/F048/validate/F048_WY_2017_500mb_Clean.nc', '/glade/scratch/wchapman/Reforecast/F048/test/F048_WY_2018_500mb_Clean.nc']
+Reading data from: "/glade/scratch/wchapman/Reforecast/F048/train/F048_WY_1987_500mb_Clean.nc"...
+Reading data from: "/glade/scratch/wchapman/Reforecast/F048/train/F048_WY_1988_500mb_Clean.nc"...
+Reading data from: "/glade/scratch/wchapman/Reforecast/F048/train/F048_WY_1989_500mb_Clean.nc"...
+Reading data from: "/glade/scratch/wchapman/Reforecast/F048/train/F048_WY_1990_500mb_Clean.nc"...
+Reading data from: "/glade/scratch/wchapman/Reforecast/F048/train/F048_WY_1991_500mb_Clean.nc"...
+Reading data from: "/glade/scratch/wchapman/Reforecast/F048/train/F048_WY_1992_500mb_Clean.nc"...
+Reading data from: "/glade/scratch/wchapman/Reforecast/F048/train/F048_WY_1993_500mb_Clean.nc"...
+Reading data from: "/glade/scratch/wchapman/Reforecast/F048/train/F048_WY_1994_500mb_Clean.nc"...
+Reading data from: "/glade/scratch/wchapman/Reforecast/F048/train/F048_WY_1995_500mb_Clean.nc"...
+Reading data from: "/glade/scratch/wchapman/Reforecast/F048/train/F048_WY_1996_500mb_Clean.nc"...
+Reading data from: "/glade/scratch/wchapman/Reforecast/F048/train/F048_WY_1997_500mb_Clean.nc"...
+Reading data from: "/glade/scratch/wchapman/Reforecast/F048/train/F048_WY_1998_500mb_Clean.nc"...
+Reading data from: "/glade/scratch/wchapman/Reforecast/F048/train/F048_WY_1999_500mb_Clean.nc"...
+Reading data from: "/glade/scratch/wchapman/Reforecast/F048/train/F048_WY_2000_500mb_Clean.nc"...
+Reading data from: "/glade/scratch/wchapman/Reforecast/F048/train/F048_WY_2001_500mb_Clean.nc"...
+Reading data from: "/glade/scratch/wchapman/Reforecast/F048/train/F048_WY_2002_500mb_Clean.nc"...
+Reading data from: "/glade/scratch/wchapman/Reforecast/F048/train/F048_WY_2003_500mb_Clean.nc"...
+Reading data from: "/glade/scratch/wchapman/Reforecast/F048/train/F048_WY_2004_500mb_Clean.nc"...
+Reading data from: "/glade/scratch/wchapman/Reforecast/F048/train/F048_WY_2005_500mb_Clean.nc"...
+Reading data from: "/glade/scratch/wchapman/Reforecast/F048/train/F048_WY_2006_500mb_Clean.nc"...
+Reading data from: "/glade/scratch/wchapman/Reforecast/F048/train/F048_WY_2007_500mb_Clean.nc"...
+Reading data from: "/glade/scratch/wchapman/Reforecast/F048/train/F048_WY_2008_500mb_Clean.nc"...
+Reading data from: "/glade/scratch/wchapman/Reforecast/F048/train/F048_WY_2009_500mb_Clean.nc"...
+Reading data from: "/glade/scratch/wchapman/Reforecast/F048/train/F048_WY_2010_500mb_Clean.nc"...
+Reading data from: "/glade/scratch/wchapman/Reforecast/F048/train/F048_WY_2011_500mb_Clean.nc"...
+Reading data from: "/glade/scratch/wchapman/Reforecast/F048/train/F048_WY_2012_500mb_Clean.nc"...
+Reading data from: "/glade/scratch/wchapman/Reforecast/F048/train/F048_WY_2013_500mb_Clean.nc"...
+Reading data from: "/glade/scratch/wchapman/Reforecast/F048/train/F048_WY_2014_500mb_Clean.nc"...
+Reading data from: "/glade/scratch/wchapman/Reforecast/F048/train/F048_WY_2015_500mb_Clean.nc"...
+Reading data from: "/glade/scratch/wchapman/Reforecast/F048/train/F048_WY_2016_500mb_Clean.nc"...
+Reading data from: "/glade/scratch/wchapman/Reforecast/F048/validate/F048_WY_2017_500mb_Clean.nc"...
+Reading data from: "/glade/scratch/wchapman/Reforecast/F048/test/F048_WY_2018_500mb_Clean.nc"...
+
+
+Mean and standard deviation for "IVT" = 147.0457, 130.1686
+Mean and standard deviation for "p_sfc" = 1005.6444, 25.1788
+Mean and standard deviation for "u_tr_p" = 13.0357, 11.6779
+Mean and standard deviation for "v_tr_p" = 0.0259, 13.9714
+Mean and standard deviation for "Z_p" = 5596.9361, 159.7367
+Mean and standard deviation for "IWV" = 12.8264, 5.8349
+Mean and standard deviation for "lat" = 41.7743, 6.9694
+Mean and standard deviation for "lon" = -123.6155, 3.6445
+Reading data from: "/glade/scratch/wchapman/Reforecast/F048/train/F048_WY_1987_500mb_Clean.nc"...
+Reading data from: "/glade/scratch/wchapman/Reforecast/F048/train/F048_WY_1988_500mb_Clean.nc"...
+Reading data from: "/glade/scratch/wchapman/Reforecast/F048/train/F048_WY_1989_500mb_Clean.nc"...
+Reading data from: "/glade/scratch/wchapman/Reforecast/F048/train/F048_WY_1990_500mb_Clean.nc"...
+Reading data from: "/glade/scratch/wchapman/Reforecast/F048/train/F048_WY_1991_500mb_Clean.nc"...
+Reading data from: "/glade/scratch/wchapman/Reforecast/F048/train/F048_WY_1992_500mb_Clean.nc"...
+Reading data from: "/glade/scratch/wchapman/Reforecast/F048/train/F048_WY_1993_500mb_Clean.nc"...
+Reading data from: "/glade/scratch/wchapman/Reforecast/F048/train/F048_WY_1994_500mb_Clean.nc"...
+Reading data from: "/glade/scratch/wchapman/Reforecast/F048/train/F048_WY_1995_500mb_Clean.nc"...
+Reading data from: "/glade/scratch/wchapman/Reforecast/F048/train/F048_WY_1996_500mb_Clean.nc"...
+Reading data from: "/glade/scratch/wchapman/Reforecast/F048/train/F048_WY_1997_500mb_Clean.nc"...
+Reading data from: "/glade/scratch/wchapman/Reforecast/F048/train/F048_WY_1998_500mb_Clean.nc"...
+Reading data from: "/glade/scratch/wchapman/Reforecast/F048/train/F048_WY_1999_500mb_Clean.nc"...
+Reading data from: "/glade/scratch/wchapman/Reforecast/F048/train/F048_WY_2000_500mb_Clean.nc"...
+Reading data from: "/glade/scratch/wchapman/Reforecast/F048/train/F048_WY_2001_500mb_Clean.nc"...
+Reading data from: "/glade/scratch/wchapman/Reforecast/F048/train/F048_WY_2002_500mb_Clean.nc"...
+Reading data from: "/glade/scratch/wchapman/Reforecast/F048/train/F048_WY_2003_500mb_Clean.nc"...
+Reading data from: "/glade/scratch/wchapman/Reforecast/F048/train/F048_WY_2004_500mb_Clean.nc"...
+Reading data from: "/glade/scratch/wchapman/Reforecast/F048/train/F048_WY_2005_500mb_Clean.nc"...
+Reading data from: "/glade/scratch/wchapman/Reforecast/F048/train/F048_WY_2006_500mb_Clean.nc"...
+Reading data from: "/glade/scratch/wchapman/Reforecast/F048/train/F048_WY_2007_500mb_Clean.nc"...
+Reading data from: "/glade/scratch/wchapman/Reforecast/F048/train/F048_WY_2008_500mb_Clean.nc"...
+Reading data from: "/glade/scratch/wchapman/Reforecast/F048/train/F048_WY_2009_500mb_Clean.nc"...
+Reading data from: "/glade/scratch/wchapman/Reforecast/F048/train/F048_WY_2010_500mb_Clean.nc"...
+Reading data from: "/glade/scratch/wchapman/Reforecast/F048/train/F048_WY_2011_500mb_Clean.nc"...
+Reading data from: "/glade/scratch/wchapman/Reforecast/F048/train/F048_WY_2012_500mb_Clean.nc"...
+Reading data from: "/glade/scratch/wchapman/Reforecast/F048/train/F048_WY_2013_500mb_Clean.nc"...
+Reading data from: "/glade/scratch/wchapman/Reforecast/F048/train/F048_WY_2014_500mb_Clean.nc"...
+Reading data from: "/glade/scratch/wchapman/Reforecast/F048/train/F048_WY_2015_500mb_Clean.nc"...
+Reading data from: "/glade/scratch/wchapman/Reforecast/F048/train/F048_WY_2016_500mb_Clean.nc"...
+Reading data from: "/glade/scratch/wchapman/Reforecast/F048/validate/F048_WY_2017_500mb_Clean.nc"...
+Reading data from: "/glade/scratch/wchapman/Reforecast/F048/test/F048_WY_2018_500mb_Clean.nc"...
+
+
+Mean and standard deviation for "IVTm" = 143.0777, 131.1317
+Reading data from: "/glade/scratch/wchapman/Reforecast/F048/train/F048_WY_1985_500mb_Clean.nc"...
+Reading data from: "/glade/scratch/wchapman/Reforecast/F048/train/F048_WY_1986_500mb_Clean.nc"...
+Reading data from: "/glade/scratch/wchapman/Reforecast/F048/train/F048_WY_1987_500mb_Clean.nc"...
+Reading data from: "/glade/scratch/wchapman/Reforecast/F048/train/F048_WY_1988_500mb_Clean.nc"...
+Reading data from: "/glade/scratch/wchapman/Reforecast/F048/train/F048_WY_1989_500mb_Clean.nc"...
+Reading data from: "/glade/scratch/wchapman/Reforecast/F048/train/F048_WY_1990_500mb_Clean.nc"...
+Reading data from: "/glade/scratch/wchapman/Reforecast/F048/train/F048_WY_1991_500mb_Clean.nc"...
+Reading data from: "/glade/scratch/wchapman/Reforecast/F048/train/F048_WY_1992_500mb_Clean.nc"...
+Reading data from: "/glade/scratch/wchapman/Reforecast/F048/train/F048_WY_1993_500mb_Clean.nc"...
+Reading data from: "/glade/scratch/wchapman/Reforecast/F048/train/F048_WY_1994_500mb_Clean.nc"...
+Reading data from: "/glade/scratch/wchapman/Reforecast/F048/train/F048_WY_1995_500mb_Clean.nc"...
+Reading data from: "/glade/scratch/wchapman/Reforecast/F048/train/F048_WY_1996_500mb_Clean.nc"...
+Reading data from: "/glade/scratch/wchapman/Reforecast/F048/train/F048_WY_1997_500mb_Clean.nc"...
+Reading data from: "/glade/scratch/wchapman/Reforecast/F048/train/F048_WY_1998_500mb_Clean.nc"...
+Reading data from: "/glade/scratch/wchapman/Reforecast/F048/train/F048_WY_1999_500mb_Clean.nc"...
+Reading data from: "/glade/scratch/wchapman/Reforecast/F048/train/F048_WY_2000_500mb_Clean.nc"...
+Reading data from: "/glade/scratch/wchapman/Reforecast/F048/train/F048_WY_2001_500mb_Clean.nc"...
+Reading data from: "/glade/scratch/wchapman/Reforecast/F048/train/F048_WY_2002_500mb_Clean.nc"...
+Reading data from: "/glade/scratch/wchapman/Reforecast/F048/train/F048_WY_2003_500mb_Clean.nc"...
+Reading data from: "/glade/scratch/wchapman/Reforecast/F048/train/F048_WY_2004_500mb_Clean.nc"...
+Reading data from: "/glade/scratch/wchapman/Reforecast/F048/train/F048_WY_2005_500mb_Clean.nc"...
+Reading data from: "/glade/scratch/wchapman/Reforecast/F048/train/F048_WY_2006_500mb_Clean.nc"...
+Reading data from: "/glade/scratch/wchapman/Reforecast/F048/train/F048_WY_2007_500mb_Clean.nc"...
+Reading data from: "/glade/scratch/wchapman/Reforecast/F048/train/F048_WY_2008_500mb_Clean.nc"...
+Reading data from: "/glade/scratch/wchapman/Reforecast/F048/train/F048_WY_2009_500mb_Clean.nc"...
+Reading data from: "/glade/scratch/wchapman/Reforecast/F048/train/F048_WY_2010_500mb_Clean.nc"...
+Reading data from: "/glade/scratch/wchapman/Reforecast/F048/train/F048_WY_2011_500mb_Clean.nc"...
+Reading data from: "/glade/scratch/wchapman/Reforecast/F048/train/F048_WY_2012_500mb_Clean.nc"...
+Reading data from: "/glade/scratch/wchapman/Reforecast/F048/train/F048_WY_2013_500mb_Clean.nc"...
+Reading data from: "/glade/scratch/wchapman/Reforecast/F048/train/F048_WY_2014_500mb_Clean.nc"...
+Reading data from: "/glade/scratch/wchapman/Reforecast/F048/train/F048_WY_2015_500mb_Clean.nc"...
+Reading data from: "/glade/scratch/wchapman/Reforecast/F048/train/F048_WY_2016_500mb_Clean.nc"...
+Reading data from: "/glade/scratch/wchapman/Reforecast/F048/validate/F048_WY_2017_500mb_Clean.nc"...
+Reading data from: "/glade/scratch/wchapman/Reforecast/F048/test/F048_WY_2018_500mb_Clean.nc"...
+number of training samples: 3880
+number of validation samples: 121
+number of validation samples: 121
+#################################################
+testing: ['/glade/scratch/wchapman/Reforecast/F048/validate/F048_WY_2017_500mb_Clean.nc']
+validatiing: ['/glade/scratch/wchapman/Reforecast/F048/train/F048_WY_2016_500mb_Clean.nc']
+#################################################
+Reading data from: "/glade/scratch/wchapman/Reforecast/F048/train/F048_WY_1987_500mb_Clean.nc"...
+Reading data from: "/glade/scratch/wchapman/Reforecast/F048/train/F048_WY_1988_500mb_Clean.nc"...
+Reading data from: "/glade/scratch/wchapman/Reforecast/F048/train/F048_WY_1989_500mb_Clean.nc"...
+Reading data from: "/glade/scratch/wchapman/Reforecast/F048/train/F048_WY_1990_500mb_Clean.nc"...
+Reading data from: "/glade/scratch/wchapman/Reforecast/F048/train/F048_WY_1991_500mb_Clean.nc"...
+Reading data from: "/glade/scratch/wchapman/Reforecast/F048/train/F048_WY_1992_500mb_Clean.nc"...
+Reading data from: "/glade/scratch/wchapman/Reforecast/F048/train/F048_WY_1993_500mb_Clean.nc"...
+Reading data from: "/glade/scratch/wchapman/Reforecast/F048/train/F048_WY_1994_500mb_Clean.nc"...
+Reading data from: "/glade/scratch/wchapman/Reforecast/F048/train/F048_WY_1995_500mb_Clean.nc"...
+Reading data from: "/glade/scratch/wchapman/Reforecast/F048/train/F048_WY_1996_500mb_Clean.nc"...
+Reading data from: "/glade/scratch/wchapman/Reforecast/F048/train/F048_WY_1997_500mb_Clean.nc"...
+Reading data from: "/glade/scratch/wchapman/Reforecast/F048/train/F048_WY_1998_500mb_Clean.nc"...
+Reading data from: "/glade/scratch/wchapman/Reforecast/F048/train/F048_WY_1999_500mb_Clean.nc"...
+Reading data from: "/glade/scratch/wchapman/Reforecast/F048/train/F048_WY_2000_500mb_Clean.nc"...
+Reading data from: "/glade/scratch/wchapman/Reforecast/F048/train/F048_WY_2001_500mb_Clean.nc"...
+Reading data from: "/glade/scratch/wchapman/Reforecast/F048/train/F048_WY_2002_500mb_Clean.nc"...
+Reading data from: "/glade/scratch/wchapman/Reforecast/F048/train/F048_WY_2003_500mb_Clean.nc"...
+Reading data from: "/glade/scratch/wchapman/Reforecast/F048/train/F048_WY_2004_500mb_Clean.nc"...
+Reading data from: "/glade/scratch/wchapman/Reforecast/F048/train/F048_WY_2005_500mb_Clean.nc"...
+Reading data from: "/glade/scratch/wchapman/Reforecast/F048/train/F048_WY_2006_500mb_Clean.nc"...
+Reading data from: "/glade/scratch/wchapman/Reforecast/F048/train/F048_WY_2007_500mb_Clean.nc"...
+Reading data from: "/glade/scratch/wchapman/Reforecast/F048/train/F048_WY_2008_500mb_Clean.nc"...
+Reading data from: "/glade/scratch/wchapman/Reforecast/F048/train/F048_WY_2009_500mb_Clean.nc"...
+Reading data from: "/glade/scratch/wchapman/Reforecast/F048/train/F048_WY_2010_500mb_Clean.nc"...
+Reading data from: "/glade/scratch/wchapman/Reforecast/F048/train/F048_WY_2011_500mb_Clean.nc"...
+Reading data from: "/glade/scratch/wchapman/Reforecast/F048/train/F048_WY_2012_500mb_Clean.nc"...
+Reading data from: "/glade/scratch/wchapman/Reforecast/F048/train/F048_WY_2013_500mb_Clean.nc"...
+Reading data from: "/glade/scratch/wchapman/Reforecast/F048/train/F048_WY_2014_500mb_Clean.nc"...
+Reading data from: "/glade/scratch/wchapman/Reforecast/F048/train/F048_WY_2015_500mb_Clean.nc"...
+Reading data from: "/glade/scratch/wchapman/Reforecast/F048/test/F048_WY_2018_500mb_Clean.nc"...
+Reading data from: "/glade/scratch/wchapman/Reforecast/F048/train/F048_WY_2016_500mb_Clean.nc"...
+...gathering data...
+Reading data from: "/glade/scratch/wchapman/Reforecast/F048/train/F048_WY_1996_500mb_Clean.nc"...
+Reading data from: "/glade/scratch/wchapman/Reforecast/F048/train/F048_WY_1987_500mb_Clean.nc"...
+Reading data from: "/glade/scratch/wchapman/Reforecast/F048/train/F048_WY_1998_500mb_Clean.nc"...
+Reading data from: "/glade/scratch/wchapman/Reforecast/F048/train/F048_WY_2002_500mb_Clean.nc"...
+Reading data from: "/glade/scratch/wchapman/Reforecast/F048/train/F048_WY_2014_500mb_Clean.nc"...
+Reading data from: "/glade/scratch/wchapman/Reforecast/F048/train/F048_WY_2008_500mb_Clean.nc"...
+Reading data from: "/glade/scratch/wchapman/Reforecast/F048/train/F048_WY_1993_500mb_Clean.nc"...
+Reading data from: "/glade/scratch/wchapman/Reforecast/F048/train/F048_WY_2000_500mb_Clean.nc"...
+Reading data from: "/glade/scratch/wchapman/Reforecast/F048/train/F048_WY_1994_500mb_Clean.nc"...
+Reading data from: "/glade/scratch/wchapman/Reforecast/F048/train/F048_WY_2003_500mb_Clean.nc"...
+Reading data from: "/glade/scratch/wchapman/Reforecast/F048/train/F048_WY_2010_500mb_Clean.nc"...
+Reading data from: "/glade/scratch/wchapman/Reforecast/F048/train/F048_WY_2001_500mb_Clean.nc"...
+Reading data from: "/glade/scratch/wchapman/Reforecast/F048/train/F048_WY_1989_500mb_Clean.nc"...
+Reading data from: "/glade/scratch/wchapman/Reforecast/F048/train/F048_WY_1992_500mb_Clean.nc"...
+Reading data from: "/glade/scratch/wchapman/Reforecast/F048/train/F048_WY_2005_500mb_Clean.nc"...
+Reading data from: "/glade/scratch/wchapman/Reforecast/F048/train/F048_WY_1999_500mb_Clean.nc"...
+Reading data from: "/glade/scratch/wchapman/Reforecast/F048/train/F048_WY_2006_500mb_Clean.nc"...
+Reading data from: "/glade/scratch/wchapman/Reforecast/F048/train/F048_WY_1997_500mb_Clean.nc"...
+Reading data from: "/glade/scratch/wchapman/Reforecast/F048/train/F048_WY_1995_500mb_Clean.nc"...
+Reading data from: "/glade/scratch/wchapman/Reforecast/F048/train/F048_WY_2009_500mb_Clean.nc"...
+Reading data from: "/glade/scratch/wchapman/Reforecast/F048/train/F048_WY_1991_500mb_Clean.nc"...
+Reading data from: "/glade/scratch/wchapman/Reforecast/F048/train/F048_WY_2011_500mb_Clean.nc"...
+Reading data from: "/glade/scratch/wchapman/Reforecast/F048/test/F048_WY_2018_500mb_Clean.nc"...
+Reading data from: "/glade/scratch/wchapman/Reforecast/F048/train/F048_WY_1990_500mb_Clean.nc"...
+Reading data from: "/glade/scratch/wchapman/Reforecast/F048/train/F048_WY_2015_500mb_Clean.nc"...
+Reading data from: "/glade/scratch/wchapman/Reforecast/F048/train/F048_WY_2012_500mb_Clean.nc"...
+Reading data from: "/glade/scratch/wchapman/Reforecast/F048/train/F048_WY_2004_500mb_Clean.nc"...
+Reading data from: "/glade/scratch/wchapman/Reforecast/F048/train/F048_WY_2007_500mb_Clean.nc"...
+Reading data from: "/glade/scratch/wchapman/Reforecast/F048/train/F048_WY_1988_500mb_Clean.nc"...
+Reading data from: "/glade/scratch/wchapman/Reforecast/F048/train/F048_WY_2013_500mb_Clean.nc"...
+Reading data from: "/glade/scratch/wchapman/Reforecast/F048/train/F048_WY_2016_500mb_Clean.nc"...
+before shape: (523872, 1)
+deleting: (0,) values
+after shape: (523872, 1)
+before shape test: (17424, 1)
+deleting test: (0,) values
+after shape tst: (17424, 1)
+y_tst: 17424
+x_tst: 17424
+...Encoding Stations...
+...done...
+In shape:  6
+Out shape:  1
+Model: "model"
+__________________________________________________________________________________________________
+Layer (type)                    Output Shape         Param #     Connected to                     
+==================================================================================================
+input_2 (InputLayer)            [(None, 1)]          0                                            
+__________________________________________________________________________________________________
+embedding (Embedding)           (None, 1, 2)         288         input_2[0][0]                    
+__________________________________________________________________________________________________
+input_1 (InputLayer)            [(None, 6)]          0                                            
+__________________________________________________________________________________________________
+flatten (Flatten)               (None, 2)            0           embedding[0][0]                  
+__________________________________________________________________________________________________
+concatenate (Concatenate)       (None, 8)            0           input_1[0][0]                    
+                                                                 flatten[0][0]                    
+__________________________________________________________________________________________________
+dense (Dense)                   (None, 30)           270         concatenate[0][0]                
+__________________________________________________________________________________________________
+dense_1 (Dense)                 (None, 40)           1240        dense[0][0]                      
+__________________________________________________________________________________________________
+dense_2 (Dense)                 (None, 2)            82          dense_1[0][0]                    
+==================================================================================================
+Total params: 1,880
+Trainable params: 1,880
+Non-trainable params: 0
+__________________________________________________________________________________________________
+/glade/scratch/wchapman/Reforecast/models/NN_CRPS/F048/StartingYear1987/NN_2017
+/glade/scratch/wchapman/Reforecast/models/NN_CRPS/F048/StartingYear1987/NN_2017
+/glade/scratch/wchapman/Reforecast/models/NN_CRPS/F048/StartingYear1987/NN_2017
+/glade/scratch/wchapman/Reforecast/models/NN_CRPS/F048/StartingYear1987/NN_2017
+/glade/scratch/wchapman/Reforecast/models/NN_CRPS/F048/StartingYear1987/NN_2017
+/glade/scratch/wchapman/Reforecast/models/NN_CRPS/F048/StartingYear1987/NN_2017
+/glade/scratch/wchapman/Reforecast/models/NN_CRPS/F048/StartingYear1987/NN_2017
+/glade/scratch/wchapman/Reforecast/models/NN_CRPS/F048/StartingYear1987/NN_2017
+/glade/scratch/wchapman/Reforecast/models/NN_CRPS/F048/StartingYear1987/NN_2017
+/glade/scratch/wchapman/Reforecast/models/NN_CRPS/F048/StartingYear1987/NN_2017/cpf_CRPS_val_2016_test_2017.ckpt
+/glade/scratch/wchapman/Reforecast/models/NN_CRPS/F048/StartingYear1987/NN_2017/cpf_CRPS_val_2016_test_2017.ckpt
+Train on 523872 samples, validate on 17424 samples
+Epoch 1/200
+
+Epoch 00001: val_loss improved from inf to 30.36148, saving model to /glade/scratch/wchapman/Reforecast/models/NN_CRPS/F048/StartingYear1987/NN_2017/cpf_CRPS_val_2016_test_2017.ckpt
+523872/523872 - 14s - loss: 65.0821 - val_loss: 30.3615
+Epoch 2/200
+
+Epoch 00002: val_loss improved from 30.36148 to 27.26656, saving model to /glade/scratch/wchapman/Reforecast/models/NN_CRPS/F048/StartingYear1987/NN_2017/cpf_CRPS_val_2016_test_2017.ckpt
+523872/523872 - 13s - loss: 29.5892 - val_loss: 27.2666
+Epoch 3/200
+
+Epoch 00003: val_loss improved from 27.26656 to 26.59091, saving model to /glade/scratch/wchapman/Reforecast/models/NN_CRPS/F048/StartingYear1987/NN_2017/cpf_CRPS_val_2016_test_2017.ckpt
+523872/523872 - 13s - loss: 28.4514 - val_loss: 26.5909
+Epoch 4/200
+
+Epoch 00004: val_loss improved from 26.59091 to 26.38396, saving model to /glade/scratch/wchapman/Reforecast/models/NN_CRPS/F048/StartingYear1987/NN_2017/cpf_CRPS_val_2016_test_2017.ckpt
+523872/523872 - 13s - loss: 28.1504 - val_loss: 26.3840
+Epoch 5/200
+
+Epoch 00005: val_loss improved from 26.38396 to 26.23811, saving model to /glade/scratch/wchapman/Reforecast/models/NN_CRPS/F048/StartingYear1987/NN_2017/cpf_CRPS_val_2016_test_2017.ckpt
+523872/523872 - 13s - loss: 28.0238 - val_loss: 26.2381
+Epoch 6/200
+
+Epoch 00006: val_loss improved from 26.23811 to 26.12925, saving model to /glade/scratch/wchapman/Reforecast/models/NN_CRPS/F048/StartingYear1987/NN_2017/cpf_CRPS_val_2016_test_2017.ckpt
+523872/523872 - 13s - loss: 27.9503 - val_loss: 26.1292
+Epoch 7/200
+
+Epoch 00007: val_loss improved from 26.12925 to 26.08137, saving model to /glade/scratch/wchapman/Reforecast/models/NN_CRPS/F048/StartingYear1987/NN_2017/cpf_CRPS_val_2016_test_2017.ckpt
+523872/523872 - 13s - loss: 27.9025 - val_loss: 26.0814
+Epoch 8/200
+
+Epoch 00008: val_loss improved from 26.08137 to 26.05185, saving model to /glade/scratch/wchapman/Reforecast/models/NN_CRPS/F048/StartingYear1987/NN_2017/cpf_CRPS_val_2016_test_2017.ckpt
+523872/523872 - 13s - loss: 27.8689 - val_loss: 26.0519
+Epoch 9/200
+
+Epoch 00009: val_loss improved from 26.05185 to 26.00673, saving model to /glade/scratch/wchapman/Reforecast/models/NN_CRPS/F048/StartingYear1987/NN_2017/cpf_CRPS_val_2016_test_2017.ckpt
+523872/523872 - 13s - loss: 27.8445 - val_loss: 26.0067
+Epoch 10/200
+
+Epoch 00010: val_loss did not improve from 26.00673
+523872/523872 - 13s - loss: 27.8247 - val_loss: 26.0295
+Epoch 11/200
+
+Epoch 00011: val_loss improved from 26.00673 to 25.98157, saving model to /glade/scratch/wchapman/Reforecast/models/NN_CRPS/F048/StartingYear1987/NN_2017/cpf_CRPS_val_2016_test_2017.ckpt
+523872/523872 - 13s - loss: 27.8098 - val_loss: 25.9816
+Epoch 12/200
+
+Epoch 00012: val_loss improved from 25.98157 to 25.92967, saving model to /glade/scratch/wchapman/Reforecast/models/NN_CRPS/F048/StartingYear1987/NN_2017/cpf_CRPS_val_2016_test_2017.ckpt
+523872/523872 - 13s - loss: 27.7973 - val_loss: 25.9297
+Epoch 13/200
+
+Epoch 00013: val_loss did not improve from 25.92967
+523872/523872 - 13s - loss: 27.7861 - val_loss: 25.9337
+Epoch 14/200
+
+Epoch 00014: val_loss did not improve from 25.92967
+
+Epoch 00014: ReduceLROnPlateau reducing learning rate to 3.9999998989515007e-05.
+523872/523872 - 13s - loss: 27.7757 - val_loss: 25.9509
+Epoch 15/200
+
+Epoch 00015: val_loss did not improve from 25.92967
+523872/523872 - 13s - loss: 27.7646 - val_loss: 25.9781
+Epoch 16/200
+
+Epoch 00016: val_loss did not improve from 25.92967
+
+Epoch 00016: ReduceLROnPlateau reducing learning rate to 1.5999999595806004e-05.
+523872/523872 - 13s - loss: 27.7610 - val_loss: 25.9328
+Epoch 17/200
+
+Epoch 00017: val_loss did not improve from 25.92967
+523872/523872 - 13s - loss: 27.7565 - val_loss: 25.9443
+Epoch 18/200
+
+Epoch 00018: val_loss did not improve from 25.92967
+
+Epoch 00018: ReduceLROnPlateau reducing learning rate to 1e-05.
+523872/523872 - 13s - loss: 27.7550 - val_loss: 25.9356
+Epoch 19/200
+
+Epoch 00019: val_loss did not improve from 25.92967
+523872/523872 - 13s - loss: 27.7533 - val_loss: 25.9530
+Epoch 20/200
+
+Epoch 00020: val_loss did not improve from 25.92967
+523872/523872 - 13s - loss: 27.7525 - val_loss: 25.9409
+Epoch 00020: early stopping
+#################################################
+testing: ['/glade/scratch/wchapman/Reforecast/F048/test/F048_WY_2018_500mb_Clean.nc']
+validatiing: ['/glade/scratch/wchapman/Reforecast/F048/validate/F048_WY_2017_500mb_Clean.nc']
+#################################################
+Reading data from: "/glade/scratch/wchapman/Reforecast/F048/train/F048_WY_1987_500mb_Clean.nc"...
+Reading data from: "/glade/scratch/wchapman/Reforecast/F048/train/F048_WY_1988_500mb_Clean.nc"...
+Reading data from: "/glade/scratch/wchapman/Reforecast/F048/train/F048_WY_1989_500mb_Clean.nc"...
+Reading data from: "/glade/scratch/wchapman/Reforecast/F048/train/F048_WY_1990_500mb_Clean.nc"...
+Reading data from: "/glade/scratch/wchapman/Reforecast/F048/train/F048_WY_1991_500mb_Clean.nc"...
+Reading data from: "/glade/scratch/wchapman/Reforecast/F048/train/F048_WY_1992_500mb_Clean.nc"...
+Reading data from: "/glade/scratch/wchapman/Reforecast/F048/train/F048_WY_1993_500mb_Clean.nc"...
+Reading data from: "/glade/scratch/wchapman/Reforecast/F048/train/F048_WY_1994_500mb_Clean.nc"...
+Reading data from: "/glade/scratch/wchapman/Reforecast/F048/train/F048_WY_1995_500mb_Clean.nc"...
+Reading data from: "/glade/scratch/wchapman/Reforecast/F048/train/F048_WY_1996_500mb_Clean.nc"...
+Reading data from: "/glade/scratch/wchapman/Reforecast/F048/train/F048_WY_1997_500mb_Clean.nc"...
+Reading data from: "/glade/scratch/wchapman/Reforecast/F048/train/F048_WY_1998_500mb_Clean.nc"...
+Reading data from: "/glade/scratch/wchapman/Reforecast/F048/train/F048_WY_1999_500mb_Clean.nc"...
+Reading data from: "/glade/scratch/wchapman/Reforecast/F048/train/F048_WY_2000_500mb_Clean.nc"...
+Reading data from: "/glade/scratch/wchapman/Reforecast/F048/train/F048_WY_2001_500mb_Clean.nc"...
+Reading data from: "/glade/scratch/wchapman/Reforecast/F048/train/F048_WY_2002_500mb_Clean.nc"...
+Reading data from: "/glade/scratch/wchapman/Reforecast/F048/train/F048_WY_2003_500mb_Clean.nc"...
+Reading data from: "/glade/scratch/wchapman/Reforecast/F048/train/F048_WY_2004_500mb_Clean.nc"...
+Reading data from: "/glade/scratch/wchapman/Reforecast/F048/train/F048_WY_2005_500mb_Clean.nc"...
+Reading data from: "/glade/scratch/wchapman/Reforecast/F048/train/F048_WY_2006_500mb_Clean.nc"...
+Reading data from: "/glade/scratch/wchapman/Reforecast/F048/train/F048_WY_2007_500mb_Clean.nc"...
+Reading data from: "/glade/scratch/wchapman/Reforecast/F048/train/F048_WY_2008_500mb_Clean.nc"...
+Reading data from: "/glade/scratch/wchapman/Reforecast/F048/train/F048_WY_2009_500mb_Clean.nc"...
+Reading data from: "/glade/scratch/wchapman/Reforecast/F048/train/F048_WY_2010_500mb_Clean.nc"...
+Reading data from: "/glade/scratch/wchapman/Reforecast/F048/train/F048_WY_2011_500mb_Clean.nc"...
+Reading data from: "/glade/scratch/wchapman/Reforecast/F048/train/F048_WY_2012_500mb_Clean.nc"...
+Reading data from: "/glade/scratch/wchapman/Reforecast/F048/train/F048_WY_2013_500mb_Clean.nc"...
+Reading data from: "/glade/scratch/wchapman/Reforecast/F048/train/F048_WY_2014_500mb_Clean.nc"...
+Reading data from: "/glade/scratch/wchapman/Reforecast/F048/train/F048_WY_2015_500mb_Clean.nc"...
+Reading data from: "/glade/scratch/wchapman/Reforecast/F048/train/F048_WY_2016_500mb_Clean.nc"...
+Reading data from: "/glade/scratch/wchapman/Reforecast/F048/validate/F048_WY_2017_500mb_Clean.nc"...
+...gathering data...
+Reading data from: "/glade/scratch/wchapman/Reforecast/F048/train/F048_WY_2006_500mb_Clean.nc"...
+Reading data from: "/glade/scratch/wchapman/Reforecast/F048/train/F048_WY_1999_500mb_Clean.nc"...
+Reading data from: "/glade/scratch/wchapman/Reforecast/F048/train/F048_WY_2007_500mb_Clean.nc"...
+Reading data from: "/glade/scratch/wchapman/Reforecast/F048/train/F048_WY_2011_500mb_Clean.nc"...
+Reading data from: "/glade/scratch/wchapman/Reforecast/F048/train/F048_WY_2005_500mb_Clean.nc"...
+Reading data from: "/glade/scratch/wchapman/Reforecast/F048/train/F048_WY_1990_500mb_Clean.nc"...
+Reading data from: "/glade/scratch/wchapman/Reforecast/F048/train/F048_WY_2014_500mb_Clean.nc"...
+Reading data from: "/glade/scratch/wchapman/Reforecast/F048/train/F048_WY_2012_500mb_Clean.nc"...
+Reading data from: "/glade/scratch/wchapman/Reforecast/F048/train/F048_WY_2009_500mb_Clean.nc"...
+Reading data from: "/glade/scratch/wchapman/Reforecast/F048/train/F048_WY_1993_500mb_Clean.nc"...
+Reading data from: "/glade/scratch/wchapman/Reforecast/F048/train/F048_WY_1997_500mb_Clean.nc"...
+Reading data from: "/glade/scratch/wchapman/Reforecast/F048/train/F048_WY_1991_500mb_Clean.nc"...
+Reading data from: "/glade/scratch/wchapman/Reforecast/F048/train/F048_WY_2002_500mb_Clean.nc"...
+Reading data from: "/glade/scratch/wchapman/Reforecast/F048/train/F048_WY_2016_500mb_Clean.nc"...
+Reading data from: "/glade/scratch/wchapman/Reforecast/F048/train/F048_WY_2000_500mb_Clean.nc"...
+Reading data from: "/glade/scratch/wchapman/Reforecast/F048/train/F048_WY_1992_500mb_Clean.nc"...
+Reading data from: "/glade/scratch/wchapman/Reforecast/F048/train/F048_WY_1988_500mb_Clean.nc"...
+Reading data from: "/glade/scratch/wchapman/Reforecast/F048/train/F048_WY_2010_500mb_Clean.nc"...
+Reading data from: "/glade/scratch/wchapman/Reforecast/F048/train/F048_WY_2013_500mb_Clean.nc"...
+Reading data from: "/glade/scratch/wchapman/Reforecast/F048/train/F048_WY_2003_500mb_Clean.nc"...
+Reading data from: "/glade/scratch/wchapman/Reforecast/F048/train/F048_WY_1994_500mb_Clean.nc"...
+Reading data from: "/glade/scratch/wchapman/Reforecast/F048/train/F048_WY_2015_500mb_Clean.nc"...
+Reading data from: "/glade/scratch/wchapman/Reforecast/F048/train/F048_WY_1996_500mb_Clean.nc"...
+Reading data from: "/glade/scratch/wchapman/Reforecast/F048/train/F048_WY_2001_500mb_Clean.nc"...
+Reading data from: "/glade/scratch/wchapman/Reforecast/F048/train/F048_WY_2008_500mb_Clean.nc"...
+Reading data from: "/glade/scratch/wchapman/Reforecast/F048/train/F048_WY_1989_500mb_Clean.nc"...
+Reading data from: "/glade/scratch/wchapman/Reforecast/F048/train/F048_WY_1987_500mb_Clean.nc"...
+Reading data from: "/glade/scratch/wchapman/Reforecast/F048/train/F048_WY_2004_500mb_Clean.nc"...
+Reading data from: "/glade/scratch/wchapman/Reforecast/F048/train/F048_WY_1998_500mb_Clean.nc"...
+Reading data from: "/glade/scratch/wchapman/Reforecast/F048/train/F048_WY_1995_500mb_Clean.nc"...
+Reading data from: "/glade/scratch/wchapman/Reforecast/F048/validate/F048_WY_2017_500mb_Clean.nc"...
+before shape: (523872, 1)
+deleting: (0,) values
+after shape: (523872, 1)
+before shape test: (17424, 1)
+deleting test: (0,) values
+after shape tst: (17424, 1)
+y_tst: 17424
+x_tst: 17424
+...Encoding Stations...
+...done...
+In shape:  6
+Out shape:  1
+Model: "model_1"
+__________________________________________________________________________________________________
+Layer (type)                    Output Shape         Param #     Connected to                     
+==================================================================================================
+input_5 (InputLayer)            [(None, 1)]          0                                            
+__________________________________________________________________________________________________
+embedding_1 (Embedding)         (None, 1, 2)         288         input_5[0][0]                    
+__________________________________________________________________________________________________
+input_4 (InputLayer)            [(None, 6)]          0                                            
+__________________________________________________________________________________________________
+flatten_1 (Flatten)             (None, 2)            0           embedding_1[0][0]                
+__________________________________________________________________________________________________
+concatenate_1 (Concatenate)     (None, 8)            0           input_4[0][0]                    
+                                                                 flatten_1[0][0]                  
+__________________________________________________________________________________________________
+dense_3 (Dense)                 (None, 30)           270         concatenate_1[0][0]              
+__________________________________________________________________________________________________
+dense_4 (Dense)                 (None, 40)           1240        dense_3[0][0]                    
+__________________________________________________________________________________________________
+dense_5 (Dense)                 (None, 2)            82          dense_4[0][0]                    
+==================================================================================================
+Total params: 1,880
+Trainable params: 1,880
+Non-trainable params: 0
+__________________________________________________________________________________________________
+/glade/scratch/wchapman/Reforecast/models/NN_CRPS/F048/StartingYear1987/NN_2018
+/glade/scratch/wchapman/Reforecast/models/NN_CRPS/F048/StartingYear1987/NN_2018
+/glade/scratch/wchapman/Reforecast/models/NN_CRPS/F048/StartingYear1987/NN_2018
+/glade/scratch/wchapman/Reforecast/models/NN_CRPS/F048/StartingYear1987/NN_2018
+/glade/scratch/wchapman/Reforecast/models/NN_CRPS/F048/StartingYear1987/NN_2018
+/glade/scratch/wchapman/Reforecast/models/NN_CRPS/F048/StartingYear1987/NN_2018
+/glade/scratch/wchapman/Reforecast/models/NN_CRPS/F048/StartingYear1987/NN_2018
+/glade/scratch/wchapman/Reforecast/models/NN_CRPS/F048/StartingYear1987/NN_2018
+/glade/scratch/wchapman/Reforecast/models/NN_CRPS/F048/StartingYear1987/NN_2018
+/glade/scratch/wchapman/Reforecast/models/NN_CRPS/F048/StartingYear1987/NN_2018/cpf_CRPS_val_2017_test_2018.ckpt
+/glade/scratch/wchapman/Reforecast/models/NN_CRPS/F048/StartingYear1987/NN_2018/cpf_CRPS_val_2017_test_2018.ckpt
+Train on 523872 samples, validate on 17424 samples
+Epoch 1/200
+
+Epoch 00001: val_loss improved from inf to 26.82761, saving model to /glade/scratch/wchapman/Reforecast/models/NN_CRPS/F048/StartingYear1987/NN_2018/cpf_CRPS_val_2017_test_2018.ckpt
+523872/523872 - 14s - loss: 67.0163 - val_loss: 26.8276
+Epoch 2/200
+
+Epoch 00002: val_loss improved from 26.82761 to 23.20623, saving model to /glade/scratch/wchapman/Reforecast/models/NN_CRPS/F048/StartingYear1987/NN_2018/cpf_CRPS_val_2017_test_2018.ckpt
+523872/523872 - 13s - loss: 30.1164 - val_loss: 23.2062
+Epoch 3/200
+
+Epoch 00003: val_loss improved from 23.20623 to 22.24087, saving model to /glade/scratch/wchapman/Reforecast/models/NN_CRPS/F048/StartingYear1987/NN_2018/cpf_CRPS_val_2017_test_2018.ckpt
+523872/523872 - 13s - loss: 28.6985 - val_loss: 22.2409
+Epoch 4/200
+
+Epoch 00004: val_loss improved from 22.24087 to 21.88186, saving model to /glade/scratch/wchapman/Reforecast/models/NN_CRPS/F048/StartingYear1987/NN_2018/cpf_CRPS_val_2017_test_2018.ckpt
+523872/523872 - 13s - loss: 28.2946 - val_loss: 21.8819
+Epoch 5/200
+
+Epoch 00005: val_loss improved from 21.88186 to 21.72373, saving model to /glade/scratch/wchapman/Reforecast/models/NN_CRPS/F048/StartingYear1987/NN_2018/cpf_CRPS_val_2017_test_2018.ckpt
+523872/523872 - 13s - loss: 28.1293 - val_loss: 21.7237
+Epoch 6/200
+
+Epoch 00006: val_loss improved from 21.72373 to 21.66346, saving model to /glade/scratch/wchapman/Reforecast/models/NN_CRPS/F048/StartingYear1987/NN_2018/cpf_CRPS_val_2017_test_2018.ckpt
+523872/523872 - 13s - loss: 28.0446 - val_loss: 21.6635
+Epoch 7/200
+
+Epoch 00007: val_loss improved from 21.66346 to 21.64734, saving model to /glade/scratch/wchapman/Reforecast/models/NN_CRPS/F048/StartingYear1987/NN_2018/cpf_CRPS_val_2017_test_2018.ckpt
+523872/523872 - 13s - loss: 27.9951 - val_loss: 21.6473
+Epoch 8/200
+
+Epoch 00008: val_loss improved from 21.64734 to 21.64318, saving model to /glade/scratch/wchapman/Reforecast/models/NN_CRPS/F048/StartingYear1987/NN_2018/cpf_CRPS_val_2017_test_2018.ckpt
+523872/523872 - 13s - loss: 27.9613 - val_loss: 21.6432
+Epoch 9/200
+
+Epoch 00009: val_loss improved from 21.64318 to 21.60086, saving model to /glade/scratch/wchapman/Reforecast/models/NN_CRPS/F048/StartingYear1987/NN_2018/cpf_CRPS_val_2017_test_2018.ckpt
+523872/523872 - 13s - loss: 27.9386 - val_loss: 21.6009
+Epoch 10/200
+
+Epoch 00010: val_loss did not improve from 21.60086
+523872/523872 - 13s - loss: 27.9212 - val_loss: 21.6199
+Epoch 11/200
+
+Epoch 00011: val_loss improved from 21.60086 to 21.59517, saving model to /glade/scratch/wchapman/Reforecast/models/NN_CRPS/F048/StartingYear1987/NN_2018/cpf_CRPS_val_2017_test_2018.ckpt
+523872/523872 - 13s - loss: 27.9073 - val_loss: 21.5952
+Epoch 12/200
+
+Epoch 00012: val_loss did not improve from 21.59517
+523872/523872 - 13s - loss: 27.8952 - val_loss: 21.5975
+Epoch 13/200
+
+Epoch 00013: val_loss improved from 21.59517 to 21.58446, saving model to /glade/scratch/wchapman/Reforecast/models/NN_CRPS/F048/StartingYear1987/NN_2018/cpf_CRPS_val_2017_test_2018.ckpt
+523872/523872 - 13s - loss: 27.8856 - val_loss: 21.5845
+Epoch 14/200
+
+Epoch 00014: val_loss did not improve from 21.58446
+523872/523872 - 13s - loss: 27.8771 - val_loss: 21.5957
+Epoch 15/200
+
+Epoch 00015: val_loss improved from 21.58446 to 21.56173, saving model to /glade/scratch/wchapman/Reforecast/models/NN_CRPS/F048/StartingYear1987/NN_2018/cpf_CRPS_val_2017_test_2018.ckpt
+523872/523872 - 13s - loss: 27.8685 - val_loss: 21.5617
+Epoch 16/200
+
+Epoch 00016: val_loss improved from 21.56173 to 21.56104, saving model to /glade/scratch/wchapman/Reforecast/models/NN_CRPS/F048/StartingYear1987/NN_2018/cpf_CRPS_val_2017_test_2018.ckpt
+523872/523872 - 13s - loss: 27.8602 - val_loss: 21.5610
+Epoch 17/200
+
+Epoch 00017: val_loss did not improve from 21.56104
+523872/523872 - 13s - loss: 27.8529 - val_loss: 21.5780
+Epoch 18/200
+
+Epoch 00018: val_loss improved from 21.56104 to 21.55309, saving model to /glade/scratch/wchapman/Reforecast/models/NN_CRPS/F048/StartingYear1987/NN_2018/cpf_CRPS_val_2017_test_2018.ckpt
+523872/523872 - 13s - loss: 27.8451 - val_loss: 21.5531
+Epoch 19/200
+
+Epoch 00019: val_loss improved from 21.55309 to 21.54255, saving model to /glade/scratch/wchapman/Reforecast/models/NN_CRPS/F048/StartingYear1987/NN_2018/cpf_CRPS_val_2017_test_2018.ckpt
+523872/523872 - 13s - loss: 27.8375 - val_loss: 21.5425
+Epoch 20/200
+
+Epoch 00020: val_loss improved from 21.54255 to 21.53912, saving model to /glade/scratch/wchapman/Reforecast/models/NN_CRPS/F048/StartingYear1987/NN_2018/cpf_CRPS_val_2017_test_2018.ckpt
+523872/523872 - 13s - loss: 27.8301 - val_loss: 21.5391
+Epoch 21/200
+
+Epoch 00021: val_loss did not improve from 21.53912
+523872/523872 - 13s - loss: 27.8212 - val_loss: 21.5528
+Epoch 22/200
+
+Epoch 00022: val_loss did not improve from 21.53912
+
+Epoch 00022: ReduceLROnPlateau reducing learning rate to 3.9999998989515007e-05.
+523872/523872 - 13s - loss: 27.8155 - val_loss: 21.5559
+Epoch 23/200
+
+Epoch 00023: val_loss did not improve from 21.53912
+523872/523872 - 13s - loss: 27.8052 - val_loss: 21.5515
+Epoch 24/200
+
+Epoch 00024: val_loss improved from 21.53912 to 21.52364, saving model to /glade/scratch/wchapman/Reforecast/models/NN_CRPS/F048/StartingYear1987/NN_2018/cpf_CRPS_val_2017_test_2018.ckpt
+523872/523872 - 14s - loss: 27.8020 - val_loss: 21.5236
+Epoch 25/200
+
+Epoch 00025: val_loss improved from 21.52364 to 21.51928, saving model to /glade/scratch/wchapman/Reforecast/models/NN_CRPS/F048/StartingYear1987/NN_2018/cpf_CRPS_val_2017_test_2018.ckpt
+523872/523872 - 13s - loss: 27.7987 - val_loss: 21.5193
+Epoch 26/200
+
+Epoch 00026: val_loss improved from 21.51928 to 21.51721, saving model to /glade/scratch/wchapman/Reforecast/models/NN_CRPS/F048/StartingYear1987/NN_2018/cpf_CRPS_val_2017_test_2018.ckpt
+523872/523872 - 13s - loss: 27.7965 - val_loss: 21.5172
+Epoch 27/200
+
+Epoch 00027: val_loss did not improve from 21.51721
+523872/523872 - 13s - loss: 27.7932 - val_loss: 21.5370
+Epoch 28/200
+
+Epoch 00028: val_loss improved from 21.51721 to 21.50892, saving model to /glade/scratch/wchapman/Reforecast/models/NN_CRPS/F048/StartingYear1987/NN_2018/cpf_CRPS_val_2017_test_2018.ckpt
+523872/523872 - 13s - loss: 27.7907 - val_loss: 21.5089
+Epoch 29/200
+
+Epoch 00029: val_loss did not improve from 21.50892
+523872/523872 - 13s - loss: 27.7875 - val_loss: 21.5149
+Epoch 30/200
+
+Epoch 00030: val_loss did not improve from 21.50892
+
+Epoch 00030: ReduceLROnPlateau reducing learning rate to 1.5999999595806004e-05.
+523872/523872 - 14s - loss: 27.7851 - val_loss: 21.5171
+Epoch 31/200
+
+Epoch 00031: val_loss did not improve from 21.50892
+523872/523872 - 13s - loss: 27.7806 - val_loss: 21.5089
+Epoch 32/200
+
+Epoch 00032: val_loss did not improve from 21.50892
+
+Epoch 00032: ReduceLROnPlateau reducing learning rate to 1e-05.
+523872/523872 - 13s - loss: 27.7797 - val_loss: 21.5156
+Epoch 33/200
+
+Epoch 00033: val_loss did not improve from 21.50892
+523872/523872 - 13s - loss: 27.7782 - val_loss: 21.5103
+Epoch 34/200
+
+Epoch 00034: val_loss did not improve from 21.50892
+523872/523872 - 13s - loss: 27.7774 - val_loss: 21.5100
+Epoch 35/200
+
+Epoch 00035: val_loss improved from 21.50892 to 21.50588, saving model to /glade/scratch/wchapman/Reforecast/models/NN_CRPS/F048/StartingYear1987/NN_2018/cpf_CRPS_val_2017_test_2018.ckpt
+523872/523872 - 13s - loss: 27.7767 - val_loss: 21.5059
+Epoch 36/200
+
+Epoch 00036: val_loss did not improve from 21.50588
+523872/523872 - 13s - loss: 27.7760 - val_loss: 21.5108
+Epoch 37/200
+
+Epoch 00037: val_loss did not improve from 21.50588
+523872/523872 - 13s - loss: 27.7753 - val_loss: 21.5109
+Epoch 38/200
+
+Epoch 00038: val_loss did not improve from 21.50588
+523872/523872 - 13s - loss: 27.7746 - val_loss: 21.5066
+Epoch 39/200
+
+Epoch 00039: val_loss improved from 21.50588 to 21.49904, saving model to /glade/scratch/wchapman/Reforecast/models/NN_CRPS/F048/StartingYear1987/NN_2018/cpf_CRPS_val_2017_test_2018.ckpt
+523872/523872 - 13s - loss: 27.7739 - val_loss: 21.4990
+Epoch 40/200
+
+Epoch 00040: val_loss did not improve from 21.49904
+523872/523872 - 13s - loss: 27.7732 - val_loss: 21.4999
+Epoch 41/200
+
+Epoch 00041: val_loss did not improve from 21.49904
+523872/523872 - 13s - loss: 27.7725 - val_loss: 21.4992
+Epoch 42/200
+
+Epoch 00042: val_loss did not improve from 21.49904
+523872/523872 - 13s - loss: 27.7719 - val_loss: 21.4997
+Epoch 43/200
+
+Epoch 00043: val_loss did not improve from 21.49904
+523872/523872 - 13s - loss: 27.7710 - val_loss: 21.4999
+Epoch 44/200
+
+Epoch 00044: val_loss did not improve from 21.49904
+523872/523872 - 13s - loss: 27.7704 - val_loss: 21.5050
+Epoch 45/200
+
+Epoch 00045: val_loss improved from 21.49904 to 21.49832, saving model to /glade/scratch/wchapman/Reforecast/models/NN_CRPS/F048/StartingYear1987/NN_2018/cpf_CRPS_val_2017_test_2018.ckpt
+523872/523872 - 13s - loss: 27.7697 - val_loss: 21.4983
+Epoch 46/200
+
+Epoch 00046: val_loss did not improve from 21.49832
+523872/523872 - 13s - loss: 27.7691 - val_loss: 21.5046
+Epoch 47/200
+
+Epoch 00047: val_loss did not improve from 21.49832
+523872/523872 - 13s - loss: 27.7684 - val_loss: 21.5013
+Epoch 48/200
+
+Epoch 00048: val_loss did not improve from 21.49832
+523872/523872 - 13s - loss: 27.7676 - val_loss: 21.4997
+Epoch 49/200
+
+Epoch 00049: val_loss did not improve from 21.49832
+523872/523872 - 13s - loss: 27.7670 - val_loss: 21.4987
+Epoch 50/200
+
+Epoch 00050: val_loss did not improve from 21.49832
+523872/523872 - 13s - loss: 27.7663 - val_loss: 21.4984
+Epoch 51/200
+
+Epoch 00051: val_loss improved from 21.49832 to 21.49728, saving model to /glade/scratch/wchapman/Reforecast/models/NN_CRPS/F048/StartingYear1987/NN_2018/cpf_CRPS_val_2017_test_2018.ckpt
+523872/523872 - 13s - loss: 27.7656 - val_loss: 21.4973
+Epoch 52/200
+
+Epoch 00052: val_loss improved from 21.49728 to 21.49544, saving model to /glade/scratch/wchapman/Reforecast/models/NN_CRPS/F048/StartingYear1987/NN_2018/cpf_CRPS_val_2017_test_2018.ckpt
+523872/523872 - 13s - loss: 27.7648 - val_loss: 21.4954
+Epoch 53/200
+
+Epoch 00053: val_loss improved from 21.49544 to 21.49389, saving model to /glade/scratch/wchapman/Reforecast/models/NN_CRPS/F048/StartingYear1987/NN_2018/cpf_CRPS_val_2017_test_2018.ckpt
+523872/523872 - 13s - loss: 27.7642 - val_loss: 21.4939
+Epoch 54/200
+
+Epoch 00054: val_loss did not improve from 21.49389
+523872/523872 - 13s - loss: 27.7635 - val_loss: 21.4992
+Epoch 55/200
+
+Epoch 00055: val_loss improved from 21.49389 to 21.48916, saving model to /glade/scratch/wchapman/Reforecast/models/NN_CRPS/F048/StartingYear1987/NN_2018/cpf_CRPS_val_2017_test_2018.ckpt
+523872/523872 - 13s - loss: 27.7629 - val_loss: 21.4892
+Epoch 56/200
+
+Epoch 00056: val_loss did not improve from 21.48916
+523872/523872 - 13s - loss: 27.7619 - val_loss: 21.4932
+Epoch 57/200
+
+Epoch 00057: val_loss did not improve from 21.48916
+523872/523872 - 13s - loss: 27.7616 - val_loss: 21.4954
+Epoch 58/200
+
+Epoch 00058: val_loss did not improve from 21.48916
+523872/523872 - 13s - loss: 27.7608 - val_loss: 21.4893
+Epoch 59/200
+
+Epoch 00059: val_loss did not improve from 21.48916
+523872/523872 - 13s - loss: 27.7601 - val_loss: 21.4971
+Epoch 60/200
+
+Epoch 00060: val_loss improved from 21.48916 to 21.48809, saving model to /glade/scratch/wchapman/Reforecast/models/NN_CRPS/F048/StartingYear1987/NN_2018/cpf_CRPS_val_2017_test_2018.ckpt
+523872/523872 - 13s - loss: 27.7595 - val_loss: 21.4881
+Epoch 61/200
+
+Epoch 00061: val_loss did not improve from 21.48809
+523872/523872 - 13s - loss: 27.7587 - val_loss: 21.4909
+Epoch 62/200
+
+Epoch 00062: val_loss improved from 21.48809 to 21.48249, saving model to /glade/scratch/wchapman/Reforecast/models/NN_CRPS/F048/StartingYear1987/NN_2018/cpf_CRPS_val_2017_test_2018.ckpt
+523872/523872 - 13s - loss: 27.7581 - val_loss: 21.4825
+Epoch 63/200
+
+Epoch 00063: val_loss did not improve from 21.48249
+523872/523872 - 13s - loss: 27.7574 - val_loss: 21.4867
+Epoch 64/200
+
+Epoch 00064: val_loss did not improve from 21.48249
+523872/523872 - 13s - loss: 27.7567 - val_loss: 21.4941
+Epoch 65/200
+
+Epoch 00065: val_loss did not improve from 21.48249
+523872/523872 - 13s - loss: 27.7561 - val_loss: 21.4911
+Epoch 66/200
+
+Epoch 00066: val_loss did not improve from 21.48249
+523872/523872 - 13s - loss: 27.7554 - val_loss: 21.4849
+Epoch 67/200
+
+Epoch 00067: val_loss did not improve from 21.48249
+523872/523872 - 13s - loss: 27.7548 - val_loss: 21.4940
+Epoch 68/200
+
+Epoch 00068: val_loss improved from 21.48249 to 21.48124, saving model to /glade/scratch/wchapman/Reforecast/models/NN_CRPS/F048/StartingYear1987/NN_2018/cpf_CRPS_val_2017_test_2018.ckpt
+523872/523872 - 13s - loss: 27.7539 - val_loss: 21.4812
+Epoch 69/200
+
+Epoch 00069: val_loss did not improve from 21.48124
+523872/523872 - 13s - loss: 27.7534 - val_loss: 21.4842
+Epoch 70/200
+
+Epoch 00070: val_loss did not improve from 21.48124
+523872/523872 - 13s - loss: 27.7527 - val_loss: 21.4890

@@ -1,0 +1,1013 @@
+2020-11-09 20:20:54.177838: I tensorflow/core/platform/cpu_feature_guard.cc:142] Your CPU supports instructions that this TensorFlow binary was not compiled to use: SSE4.1 SSE4.2 AVX AVX2 AVX512F FMA
+2020-11-09 20:20:54.252968: I tensorflow/core/platform/profile_utils/cpu_utils.cc:94] CPU Frequency: 2300000000 Hz
+2020-11-09 20:20:54.253248: I tensorflow/compiler/xla/service/service.cc:168] XLA service 0x55ea58572230 initialized for platform Host (this does not guarantee that XLA will be used). Devices:
+2020-11-09 20:20:54.253278: I tensorflow/compiler/xla/service/service.cc:176]   StreamExecutor device (0): Host, Default Version
+2020-11-09 20:20:54.255122: I tensorflow/stream_executor/platform/default/dso_loader.cc:44] Successfully opened dynamic library libcuda.so.1
+2020-11-09 20:20:54.348398: I tensorflow/core/common_runtime/gpu/gpu_device.cc:1555] Found device 0 with properties: 
+pciBusID: 0000:1a:00.0 name: Tesla V100-SXM2-32GB computeCapability: 7.0
+coreClock: 1.53GHz coreCount: 80 deviceMemorySize: 31.75GiB deviceMemoryBandwidth: 836.37GiB/s
+2020-11-09 20:20:54.365658: I tensorflow/stream_executor/platform/default/dso_loader.cc:44] Successfully opened dynamic library libcudart.so.10.1
+2020-11-09 20:20:54.538343: I tensorflow/stream_executor/platform/default/dso_loader.cc:44] Successfully opened dynamic library libcublas.so.10
+2020-11-09 20:20:54.594396: I tensorflow/stream_executor/platform/default/dso_loader.cc:44] Successfully opened dynamic library libcufft.so.10
+2020-11-09 20:20:54.694312: I tensorflow/stream_executor/platform/default/dso_loader.cc:44] Successfully opened dynamic library libcurand.so.10
+2020-11-09 20:20:54.854758: I tensorflow/stream_executor/platform/default/dso_loader.cc:44] Successfully opened dynamic library libcusolver.so.10
+2020-11-09 20:20:54.928380: I tensorflow/stream_executor/platform/default/dso_loader.cc:44] Successfully opened dynamic library libcusparse.so.10
+2020-11-09 20:20:55.097335: I tensorflow/stream_executor/platform/default/dso_loader.cc:44] Successfully opened dynamic library libcudnn.so.7
+2020-11-09 20:20:55.101779: I tensorflow/core/common_runtime/gpu/gpu_device.cc:1697] Adding visible gpu devices: 0
+2020-11-09 20:20:55.101895: I tensorflow/stream_executor/platform/default/dso_loader.cc:44] Successfully opened dynamic library libcudart.so.10.1
+2020-11-09 20:20:55.267697: I tensorflow/core/common_runtime/gpu/gpu_device.cc:1096] Device interconnect StreamExecutor with strength 1 edge matrix:
+2020-11-09 20:20:55.267761: I tensorflow/core/common_runtime/gpu/gpu_device.cc:1102]      0 
+2020-11-09 20:20:55.267793: I tensorflow/core/common_runtime/gpu/gpu_device.cc:1115] 0:   N 
+2020-11-09 20:20:55.288274: I tensorflow/core/common_runtime/gpu/gpu_device.cc:1241] Created TensorFlow device (/device:GPU:0 with 30591 MB memory) -> physical GPU (device: 0, name: Tesla V100-SXM2-32GB, pci bus id: 0000:1a:00.0, compute capability: 7.0)
+2020-11-09 20:20:55.290972: I tensorflow/compiler/xla/service/service.cc:168] XLA service 0x55ea592ed830 initialized for platform CUDA (this does not guarantee that XLA will be used). Devices:
+2020-11-09 20:20:55.291000: I tensorflow/compiler/xla/service/service.cc:176]   StreamExecutor device (0): Tesla V100-SXM2-32GB, Compute Capability 7.0
+2020-11-09 20:20:55.297313: I tensorflow/core/common_runtime/gpu/gpu_device.cc:1555] Found device 0 with properties: 
+pciBusID: 0000:1a:00.0 name: Tesla V100-SXM2-32GB computeCapability: 7.0
+coreClock: 1.53GHz coreCount: 80 deviceMemorySize: 31.75GiB deviceMemoryBandwidth: 836.37GiB/s
+2020-11-09 20:20:55.297396: I tensorflow/stream_executor/platform/default/dso_loader.cc:44] Successfully opened dynamic library libcudart.so.10.1
+2020-11-09 20:20:55.297416: I tensorflow/stream_executor/platform/default/dso_loader.cc:44] Successfully opened dynamic library libcublas.so.10
+2020-11-09 20:20:55.297434: I tensorflow/stream_executor/platform/default/dso_loader.cc:44] Successfully opened dynamic library libcufft.so.10
+2020-11-09 20:20:55.300727: I tensorflow/stream_executor/platform/default/dso_loader.cc:44] Successfully opened dynamic library libcurand.so.10
+2020-11-09 20:20:55.300747: I tensorflow/stream_executor/platform/default/dso_loader.cc:44] Successfully opened dynamic library libcusolver.so.10
+2020-11-09 20:20:55.300762: I tensorflow/stream_executor/platform/default/dso_loader.cc:44] Successfully opened dynamic library libcusparse.so.10
+2020-11-09 20:20:55.300777: I tensorflow/stream_executor/platform/default/dso_loader.cc:44] Successfully opened dynamic library libcudnn.so.7
+2020-11-09 20:20:55.303771: I tensorflow/core/common_runtime/gpu/gpu_device.cc:1697] Adding visible gpu devices: 0
+2020-11-09 20:20:55.303805: I tensorflow/core/common_runtime/gpu/gpu_device.cc:1096] Device interconnect StreamExecutor with strength 1 edge matrix:
+2020-11-09 20:20:55.303815: I tensorflow/core/common_runtime/gpu/gpu_device.cc:1102]      0 
+2020-11-09 20:20:55.303825: I tensorflow/core/common_runtime/gpu/gpu_device.cc:1115] 0:   N 
+2020-11-09 20:20:55.306847: I tensorflow/core/common_runtime/gpu/gpu_device.cc:1241] Created TensorFlow device (/device:GPU:0 with 30591 MB memory) -> physical GPU (device: 0, name: Tesla V100-SXM2-32GB, pci bus id: 0000:1a:00.0, compute capability: 7.0)
+2020-11-09 20:20:55.309596: I tensorflow/core/common_runtime/gpu/gpu_device.cc:1555] Found device 0 with properties: 
+pciBusID: 0000:1a:00.0 name: Tesla V100-SXM2-32GB computeCapability: 7.0
+coreClock: 1.53GHz coreCount: 80 deviceMemorySize: 31.75GiB deviceMemoryBandwidth: 836.37GiB/s
+2020-11-09 20:20:55.309661: I tensorflow/stream_executor/platform/default/dso_loader.cc:44] Successfully opened dynamic library libcudart.so.10.1
+2020-11-09 20:20:55.309680: I tensorflow/stream_executor/platform/default/dso_loader.cc:44] Successfully opened dynamic library libcublas.so.10
+2020-11-09 20:20:55.309695: I tensorflow/stream_executor/platform/default/dso_loader.cc:44] Successfully opened dynamic library libcufft.so.10
+2020-11-09 20:20:55.309710: I tensorflow/stream_executor/platform/default/dso_loader.cc:44] Successfully opened dynamic library libcurand.so.10
+2020-11-09 20:20:55.309725: I tensorflow/stream_executor/platform/default/dso_loader.cc:44] Successfully opened dynamic library libcusolver.so.10
+2020-11-09 20:20:55.309740: I tensorflow/stream_executor/platform/default/dso_loader.cc:44] Successfully opened dynamic library libcusparse.so.10
+2020-11-09 20:20:55.309755: I tensorflow/stream_executor/platform/default/dso_loader.cc:44] Successfully opened dynamic library libcudnn.so.7
+2020-11-09 20:20:55.316803: I tensorflow/core/common_runtime/gpu/gpu_device.cc:1697] Adding visible gpu devices: 0
+2020-11-09 20:20:55.316838: I tensorflow/core/common_runtime/gpu/gpu_device.cc:1096] Device interconnect StreamExecutor with strength 1 edge matrix:
+2020-11-09 20:20:55.316849: I tensorflow/core/common_runtime/gpu/gpu_device.cc:1102]      0 
+2020-11-09 20:20:55.316859: I tensorflow/core/common_runtime/gpu/gpu_device.cc:1115] 0:   N 
+2020-11-09 20:20:55.321194: I tensorflow/core/common_runtime/gpu/gpu_device.cc:1241] Created TensorFlow device (/device:GPU:0 with 30591 MB memory) -> physical GPU (device: 0, name: Tesla V100-SXM2-32GB, pci bus id: 0000:1a:00.0, compute capability: 7.0)
+#############################################
+post processing forecast: F054
+#############################################
+['/device:GPU:0']
+#################################################
+#################################################
+SUCCESS: Found GPU: /device:GPU:0
+#################################################
+#################################################
+We are here: /glade/work/wchapman/AnEn/CNN/Coastal_Points_LogNormal
+...Searching...: /glade/scratch/wchapman/AnEnCNN_good/Data/WestCoast/
+/glade/scratch/wchapman/Reforecast/F000
+/glade/scratch/wchapman/Reforecast/F006
+/glade/scratch/wchapman/Reforecast/F012
+/glade/scratch/wchapman/Reforecast/F018
+/glade/scratch/wchapman/Reforecast/F024
+/glade/scratch/wchapman/Reforecast/F030
+/glade/scratch/wchapman/Reforecast/F036
+/glade/scratch/wchapman/Reforecast/F042
+/glade/scratch/wchapman/Reforecast/F048
+/glade/scratch/wchapman/Reforecast/F054
+Training on
+/glade/scratch/wchapman/Reforecast/F054/train/F054_WY_1985_500mb_Clean.nc
+/glade/scratch/wchapman/Reforecast/F054/train/F054_WY_1986_500mb_Clean.nc
+/glade/scratch/wchapman/Reforecast/F054/train/F054_WY_1987_500mb_Clean.nc
+/glade/scratch/wchapman/Reforecast/F054/train/F054_WY_1988_500mb_Clean.nc
+/glade/scratch/wchapman/Reforecast/F054/train/F054_WY_1989_500mb_Clean.nc
+/glade/scratch/wchapman/Reforecast/F054/train/F054_WY_1990_500mb_Clean.nc
+/glade/scratch/wchapman/Reforecast/F054/train/F054_WY_1991_500mb_Clean.nc
+/glade/scratch/wchapman/Reforecast/F054/train/F054_WY_1992_500mb_Clean.nc
+/glade/scratch/wchapman/Reforecast/F054/train/F054_WY_1993_500mb_Clean.nc
+/glade/scratch/wchapman/Reforecast/F054/train/F054_WY_1994_500mb_Clean.nc
+/glade/scratch/wchapman/Reforecast/F054/train/F054_WY_1995_500mb_Clean.nc
+/glade/scratch/wchapman/Reforecast/F054/train/F054_WY_1996_500mb_Clean.nc
+/glade/scratch/wchapman/Reforecast/F054/train/F054_WY_1997_500mb_Clean.nc
+/glade/scratch/wchapman/Reforecast/F054/train/F054_WY_1998_500mb_Clean.nc
+/glade/scratch/wchapman/Reforecast/F054/train/F054_WY_1999_500mb_Clean.nc
+/glade/scratch/wchapman/Reforecast/F054/train/F054_WY_2000_500mb_Clean.nc
+/glade/scratch/wchapman/Reforecast/F054/train/F054_WY_2001_500mb_Clean.nc
+/glade/scratch/wchapman/Reforecast/F054/train/F054_WY_2002_500mb_Clean.nc
+/glade/scratch/wchapman/Reforecast/F054/train/F054_WY_2003_500mb_Clean.nc
+/glade/scratch/wchapman/Reforecast/F054/train/F054_WY_2004_500mb_Clean.nc
+/glade/scratch/wchapman/Reforecast/F054/train/F054_WY_2005_500mb_Clean.nc
+/glade/scratch/wchapman/Reforecast/F054/train/F054_WY_2006_500mb_Clean.nc
+/glade/scratch/wchapman/Reforecast/F054/train/F054_WY_2007_500mb_Clean.nc
+/glade/scratch/wchapman/Reforecast/F054/train/F054_WY_2008_500mb_Clean.nc
+/glade/scratch/wchapman/Reforecast/F054/train/F054_WY_2009_500mb_Clean.nc
+/glade/scratch/wchapman/Reforecast/F054/train/F054_WY_2010_500mb_Clean.nc
+/glade/scratch/wchapman/Reforecast/F054/train/F054_WY_2011_500mb_Clean.nc
+/glade/scratch/wchapman/Reforecast/F054/train/F054_WY_2012_500mb_Clean.nc
+/glade/scratch/wchapman/Reforecast/F054/train/F054_WY_2013_500mb_Clean.nc
+/glade/scratch/wchapman/Reforecast/F054/train/F054_WY_2014_500mb_Clean.nc
+/glade/scratch/wchapman/Reforecast/F054/train/F054_WY_2015_500mb_Clean.nc
+/glade/scratch/wchapman/Reforecast/F054/train/F054_WY_2016_500mb_Clean.nc
+Validating on
+/glade/scratch/wchapman/Reforecast/F054/validate/F054_WY_2017_500mb_Clean.nc
+Testing on
+/glade/scratch/wchapman/Reforecast/F054/test/F054_WY_2018_500mb_Clean.nc
+['2010', '2011', '2012', '2013', '2014', '2015', '2016', '2017', '2018']
+trainging yearss ['/glade/scratch/wchapman/Reforecast/F054/train/F054_WY_2010_500mb_Clean.nc', '/glade/scratch/wchapman/Reforecast/F054/train/F054_WY_2011_500mb_Clean.nc', '/glade/scratch/wchapman/Reforecast/F054/train/F054_WY_2012_500mb_Clean.nc', '/glade/scratch/wchapman/Reforecast/F054/train/F054_WY_2013_500mb_Clean.nc', '/glade/scratch/wchapman/Reforecast/F054/train/F054_WY_2014_500mb_Clean.nc', '/glade/scratch/wchapman/Reforecast/F054/train/F054_WY_2015_500mb_Clean.nc', '/glade/scratch/wchapman/Reforecast/F054/train/F054_WY_2016_500mb_Clean.nc', '/glade/scratch/wchapman/Reforecast/F054/validate/F054_WY_2017_500mb_Clean.nc', '/glade/scratch/wchapman/Reforecast/F054/test/F054_WY_2018_500mb_Clean.nc']
+Reading data from: "/glade/scratch/wchapman/Reforecast/F054/train/F054_WY_2010_500mb_Clean.nc"...
+Reading data from: "/glade/scratch/wchapman/Reforecast/F054/train/F054_WY_2011_500mb_Clean.nc"...
+Reading data from: "/glade/scratch/wchapman/Reforecast/F054/train/F054_WY_2012_500mb_Clean.nc"...
+Reading data from: "/glade/scratch/wchapman/Reforecast/F054/train/F054_WY_2013_500mb_Clean.nc"...
+Reading data from: "/glade/scratch/wchapman/Reforecast/F054/train/F054_WY_2014_500mb_Clean.nc"...
+Reading data from: "/glade/scratch/wchapman/Reforecast/F054/train/F054_WY_2015_500mb_Clean.nc"...
+Reading data from: "/glade/scratch/wchapman/Reforecast/F054/train/F054_WY_2016_500mb_Clean.nc"...
+Reading data from: "/glade/scratch/wchapman/Reforecast/F054/validate/F054_WY_2017_500mb_Clean.nc"...
+Reading data from: "/glade/scratch/wchapman/Reforecast/F054/test/F054_WY_2018_500mb_Clean.nc"...
+
+
+Mean and standard deviation for "IVT" = 156.5363, 149.1344
+Mean and standard deviation for "p_sfc" = 984.9005, 62.2312
+Mean and standard deviation for "u_tr_p" = 12.0428, 12.3706
+Mean and standard deviation for "v_tr_p" = 0.9626, 13.1942
+Mean and standard deviation for "Z_p" = 5581.3040, 205.9955
+Mean and standard deviation for "IWV" = 13.4711, 7.8978
+2020-11-09 20:21:02.172852: I tensorflow/core/common_runtime/gpu/gpu_device.cc:1555] Found device 0 with properties: 
+pciBusID: 0000:1a:00.0 name: Tesla V100-SXM2-32GB computeCapability: 7.0
+coreClock: 1.53GHz coreCount: 80 deviceMemorySize: 31.75GiB deviceMemoryBandwidth: 836.37GiB/s
+2020-11-09 20:21:02.172997: I tensorflow/stream_executor/platform/default/dso_loader.cc:44] Successfully opened dynamic library libcudart.so.10.1
+2020-11-09 20:21:02.173020: I tensorflow/stream_executor/platform/default/dso_loader.cc:44] Successfully opened dynamic library libcublas.so.10
+2020-11-09 20:21:02.173039: I tensorflow/stream_executor/platform/default/dso_loader.cc:44] Successfully opened dynamic library libcufft.so.10
+2020-11-09 20:21:02.173057: I tensorflow/stream_executor/platform/default/dso_loader.cc:44] Successfully opened dynamic library libcurand.so.10
+2020-11-09 20:21:02.173074: I tensorflow/stream_executor/platform/default/dso_loader.cc:44] Successfully opened dynamic library libcusolver.so.10
+2020-11-09 20:21:02.173091: I tensorflow/stream_executor/platform/default/dso_loader.cc:44] Successfully opened dynamic library libcusparse.so.10
+2020-11-09 20:21:02.173109: I tensorflow/stream_executor/platform/default/dso_loader.cc:44] Successfully opened dynamic library libcudnn.so.7
+2020-11-09 20:21:02.180424: I tensorflow/core/common_runtime/gpu/gpu_device.cc:1697] Adding visible gpu devices: 0
+2020-11-09 20:21:02.203606: I tensorflow/core/common_runtime/gpu/gpu_device.cc:1555] Found device 0 with properties: 
+pciBusID: 0000:1a:00.0 name: Tesla V100-SXM2-32GB computeCapability: 7.0
+coreClock: 1.53GHz coreCount: 80 deviceMemorySize: 31.75GiB deviceMemoryBandwidth: 836.37GiB/s
+2020-11-09 20:21:02.203736: I tensorflow/stream_executor/platform/default/dso_loader.cc:44] Successfully opened dynamic library libcudart.so.10.1
+2020-11-09 20:21:02.203758: I tensorflow/stream_executor/platform/default/dso_loader.cc:44] Successfully opened dynamic library libcublas.so.10
+2020-11-09 20:21:02.203774: I tensorflow/stream_executor/platform/default/dso_loader.cc:44] Successfully opened dynamic library libcufft.so.10
+2020-11-09 20:21:02.203790: I tensorflow/stream_executor/platform/default/dso_loader.cc:44] Successfully opened dynamic library libcurand.so.10
+2020-11-09 20:21:02.203806: I tensorflow/stream_executor/platform/default/dso_loader.cc:44] Successfully opened dynamic library libcusolver.so.10
+2020-11-09 20:21:02.203822: I tensorflow/stream_executor/platform/default/dso_loader.cc:44] Successfully opened dynamic library libcusparse.so.10
+2020-11-09 20:21:02.203837: I tensorflow/stream_executor/platform/default/dso_loader.cc:44] Successfully opened dynamic library libcudnn.so.7
+2020-11-09 20:21:02.209170: I tensorflow/core/common_runtime/gpu/gpu_device.cc:1697] Adding visible gpu devices: 0
+2020-11-09 20:21:02.209255: I tensorflow/core/common_runtime/gpu/gpu_device.cc:1096] Device interconnect StreamExecutor with strength 1 edge matrix:
+2020-11-09 20:21:02.209271: I tensorflow/core/common_runtime/gpu/gpu_device.cc:1102]      0 
+2020-11-09 20:21:02.209283: I tensorflow/core/common_runtime/gpu/gpu_device.cc:1115] 0:   N 
+2020-11-09 20:21:02.214704: I tensorflow/core/common_runtime/gpu/gpu_device.cc:1241] Created TensorFlow device (/job:localhost/replica:0/task:0/device:GPU:0 with 30591 MB memory) -> physical GPU (device: 0, name: Tesla V100-SXM2-32GB, pci bus id: 0000:1a:00.0, compute capability: 7.0)
+2020-11-09 20:21:05.381103: I tensorflow/stream_executor/platform/default/dso_loader.cc:44] Successfully opened dynamic library libcudnn.so.7
+2020-11-09 20:21:06.667009: W tensorflow/stream_executor/gpu/redzone_allocator.cc:312] Not found: ./bin/ptxas not found
+Relying on driver to perform ptx compilation. This message will be only logged once.
+2020-11-09 20:21:06.736089: I tensorflow/stream_executor/platform/default/dso_loader.cc:44] Successfully opened dynamic library libcublas.so.10
+/glade/work/wchapman/miniconda3/envs/tfp/lib/python3.6/site-packages/dask/config.py:168: YAMLLoadWarning: calling yaml.load() without Loader=... is deprecated, as the default Loader is unsafe. Please read https://msg.pyyaml.org/load for full details.
+  data = yaml.load(f.read()) or {}
+/glade/work/wchapman/AnEn/CNN/Coastal_Points_LogNormal/utilsProb.py:216: RuntimeWarning: invalid value encountered in log
+  post_matrix = numpy.log(post_matrix)
+/glade/work/wchapman/AnEn/CNN/Coastal_Points_LogNormal/coms.py:492: RuntimeWarning: overflow encountered in double_scalars
+  v = np.exp(2 * mu + sigma**2) * (np.exp(sigma**2) - 1)
+/glade/work/wchapman/AnEn/CNN/Coastal_Points_LogNormal/coms.py:492: RuntimeWarning: overflow encountered in exp
+  v = np.exp(2 * mu + sigma**2) * (np.exp(sigma**2) - 1)
+/glade/work/wchapman/AnEn/CNN/Coastal_Points_LogNormal/coms.py:491: RuntimeWarning: overflow encountered in exp
+  m = np.exp(mu + sigma**2 / 2.0)
+/glade/work/wchapman/AnEn/CNN/Coastal_Points_LogNormal/utilsProb.py:216: RuntimeWarning: invalid value encountered in log
+  post_matrix = numpy.log(post_matrix)
+/glade/work/wchapman/AnEn/CNN/Coastal_Points_LogNormal/coms.py:492: RuntimeWarning: overflow encountered in exp
+  v = np.exp(2 * mu + sigma**2) * (np.exp(sigma**2) - 1)
+/glade/work/wchapman/AnEn/CNN/Coastal_Points_LogNormal/coms.py:492: RuntimeWarning: overflow encountered in double_scalars
+  v = np.exp(2 * mu + sigma**2) * (np.exp(sigma**2) - 1)
+/glade/work/wchapman/AnEn/CNN/Coastal_Points_LogNormal/coms.py:491: RuntimeWarning: overflow encountered in exp
+  m = np.exp(mu + sigma**2 / 2.0)
+/glade/work/wchapman/AnEn/CNN/Coastal_Points_LogNormal/utilsProb.py:216: RuntimeWarning: invalid value encountered in log
+  post_matrix = numpy.log(post_matrix)
+/glade/work/wchapman/AnEn/CNN/Coastal_Points_LogNormal/coms.py:492: RuntimeWarning: overflow encountered in exp
+  v = np.exp(2 * mu + sigma**2) * (np.exp(sigma**2) - 1)
+/glade/work/wchapman/AnEn/CNN/Coastal_Points_LogNormal/coms.py:492: RuntimeWarning: overflow encountered in double_scalars
+  v = np.exp(2 * mu + sigma**2) * (np.exp(sigma**2) - 1)
+/glade/work/wchapman/AnEn/CNN/Coastal_Points_LogNormal/coms.py:491: RuntimeWarning: overflow encountered in exp
+  m = np.exp(mu + sigma**2 / 2.0)
+/glade/work/wchapman/AnEn/CNN/Coastal_Points_LogNormal/utilsProb.py:216: RuntimeWarning: invalid value encountered in log
+  post_matrix = numpy.log(post_matrix)
+/glade/work/wchapman/AnEn/CNN/Coastal_Points_LogNormal/coms.py:492: RuntimeWarning: overflow encountered in exp
+  v = np.exp(2 * mu + sigma**2) * (np.exp(sigma**2) - 1)
+/glade/work/wchapman/AnEn/CNN/Coastal_Points_LogNormal/coms.py:491: RuntimeWarning: overflow encountered in exp
+  m = np.exp(mu + sigma**2 / 2.0)
+/glade/work/wchapman/AnEn/CNN/Coastal_Points_LogNormal/coms.py:492: RuntimeWarning: overflow encountered in double_scalars
+  v = np.exp(2 * mu + sigma**2) * (np.exp(sigma**2) - 1)
+/glade/work/wchapman/AnEn/CNN/Coastal_Points_LogNormal/utilsProb.py:216: RuntimeWarning: invalid value encountered in log
+  post_matrix = numpy.log(post_matrix)
+/glade/work/wchapman/AnEn/CNN/Coastal_Points_LogNormal/coms.py:492: RuntimeWarning: overflow encountered in double_scalars
+  v = np.exp(2 * mu + sigma**2) * (np.exp(sigma**2) - 1)
+/glade/work/wchapman/AnEn/CNN/Coastal_Points_LogNormal/coms.py:492: RuntimeWarning: overflow encountered in exp
+  v = np.exp(2 * mu + sigma**2) * (np.exp(sigma**2) - 1)
+/glade/work/wchapman/AnEn/CNN/Coastal_Points_LogNormal/coms.py:491: RuntimeWarning: overflow encountered in exp
+  m = np.exp(mu + sigma**2 / 2.0)
+/glade/work/wchapman/AnEn/CNN/Coastal_Points_LogNormal/utilsProb.py:216: RuntimeWarning: invalid value encountered in log
+  post_matrix = numpy.log(post_matrix)
+/glade/work/wchapman/AnEn/CNN/Coastal_Points_LogNormal/coms.py:492: RuntimeWarning: overflow encountered in exp
+  v = np.exp(2 * mu + sigma**2) * (np.exp(sigma**2) - 1)
+/glade/work/wchapman/AnEn/CNN/Coastal_Points_LogNormal/coms.py:492: RuntimeWarning: overflow encountered in double_scalars
+  v = np.exp(2 * mu + sigma**2) * (np.exp(sigma**2) - 1)
+/glade/work/wchapman/AnEn/CNN/Coastal_Points_LogNormal/coms.py:491: RuntimeWarning: overflow encountered in exp
+  m = np.exp(mu + sigma**2 / 2.0)
+Reading data from: "/glade/scratch/wchapman/Reforecast/F054/train/F054_WY_2010_500mb_Clean.nc"...
+Reading data from: "/glade/scratch/wchapman/Reforecast/F054/train/F054_WY_2011_500mb_Clean.nc"...
+Reading data from: "/glade/scratch/wchapman/Reforecast/F054/train/F054_WY_2012_500mb_Clean.nc"...
+Reading data from: "/glade/scratch/wchapman/Reforecast/F054/train/F054_WY_2013_500mb_Clean.nc"...
+Reading data from: "/glade/scratch/wchapman/Reforecast/F054/train/F054_WY_2014_500mb_Clean.nc"...
+Reading data from: "/glade/scratch/wchapman/Reforecast/F054/train/F054_WY_2015_500mb_Clean.nc"...
+Reading data from: "/glade/scratch/wchapman/Reforecast/F054/train/F054_WY_2016_500mb_Clean.nc"...
+Reading data from: "/glade/scratch/wchapman/Reforecast/F054/validate/F054_WY_2017_500mb_Clean.nc"...
+Reading data from: "/glade/scratch/wchapman/Reforecast/F054/test/F054_WY_2018_500mb_Clean.nc"...
+
+
+Mean and standard deviation for "IVTm" = 202.1816, 179.7816
+######### ASSEMBLE!!!! ###########
+########### DONE!!!! #############
+#################################################
+testing: ['/glade/scratch/wchapman/Reforecast/F054/validate/F054_WY_2017_500mb_Clean.nc']
+validatiing: ['/glade/scratch/wchapman/Reforecast/F054/train/F054_WY_2016_500mb_Clean.nc']
+#################################################
+Reading data from: "/glade/scratch/wchapman/Reforecast/F054/train/F054_WY_2010_500mb_Clean.nc"...
+Reading data from: "/glade/scratch/wchapman/Reforecast/F054/train/F054_WY_2011_500mb_Clean.nc"...
+Reading data from: "/glade/scratch/wchapman/Reforecast/F054/train/F054_WY_2012_500mb_Clean.nc"...
+Reading data from: "/glade/scratch/wchapman/Reforecast/F054/train/F054_WY_2013_500mb_Clean.nc"...
+Reading data from: "/glade/scratch/wchapman/Reforecast/F054/train/F054_WY_2014_500mb_Clean.nc"...
+Reading data from: "/glade/scratch/wchapman/Reforecast/F054/train/F054_WY_2015_500mb_Clean.nc"...
+Reading data from: "/glade/scratch/wchapman/Reforecast/F054/test/F054_WY_2018_500mb_Clean.nc"...
+Reading data from: "/glade/scratch/wchapman/Reforecast/F054/train/F054_WY_2016_500mb_Clean.nc"...
+...gathering data...
+Reading data from: "/glade/scratch/wchapman/Reforecast/F054/train/F054_WY_2013_500mb_Clean.nc"...
+Reading data from: "/glade/scratch/wchapman/Reforecast/F054/train/F054_WY_2011_500mb_Clean.nc"...
+Reading data from: "/glade/scratch/wchapman/Reforecast/F054/train/F054_WY_2015_500mb_Clean.nc"...
+Reading data from: "/glade/scratch/wchapman/Reforecast/F054/train/F054_WY_2014_500mb_Clean.nc"...
+Reading data from: "/glade/scratch/wchapman/Reforecast/F054/test/F054_WY_2018_500mb_Clean.nc"...
+Reading data from: "/glade/scratch/wchapman/Reforecast/F054/train/F054_WY_2010_500mb_Clean.nc"...
+Reading data from: "/glade/scratch/wchapman/Reforecast/F054/train/F054_WY_2012_500mb_Clean.nc"...
+Reading data from: "/glade/scratch/wchapman/Reforecast/F054/validate/F054_WY_2017_500mb_Clean.nc"...
+Model: "model"
+__________________________________________________________________________________________________
+Layer (type)                    Output Shape         Param #     Connected to                     
+==================================================================================================
+input_1 (InputLayer)            [(None, 71, 57, 6)]  0                                            
+__________________________________________________________________________________________________
+zero_padding2d (ZeroPadding2D)  (None, 72, 60, 6)    0           input_1[0][0]                    
+__________________________________________________________________________________________________
+downsampling_0_conv_0 (Conv2D)  (None, 72, 60, 16)   880         zero_padding2d[0][0]             
+__________________________________________________________________________________________________
+downsampling_0_batchnorm_0 (Bat (None, 72, 60, 16)   64          downsampling_0_conv_0[0][0]      
+__________________________________________________________________________________________________
+downsampling_0_activation_0 (Ac (None, 72, 60, 16)   0           downsampling_0_batchnorm_0[0][0] 
+__________________________________________________________________________________________________
+downsampling_0_conv_1 (Conv2D)  (None, 72, 60, 16)   2320        downsampling_0_activation_0[0][0]
+__________________________________________________________________________________________________
+downsampling_0_batchnorm_1 (Bat (None, 72, 60, 16)   64          downsampling_0_conv_1[0][0]      
+__________________________________________________________________________________________________
+downsampling_0_activation_1 (Ac (None, 72, 60, 16)   0           downsampling_0_batchnorm_1[0][0] 
+__________________________________________________________________________________________________
+max_pooling2d (MaxPooling2D)    (None, 36, 30, 16)   0           downsampling_0_activation_1[0][0]
+__________________________________________________________________________________________________
+bottleneck_skip_0 (Conv2D)      (None, 36, 30, 32)   4640        max_pooling2d[0][0]              
+__________________________________________________________________________________________________
+bottleneck_skip_1 (Conv2D)      (None, 36, 30, 32)   9248        bottleneck_skip_0[0][0]          
+__________________________________________________________________________________________________
+bottleneck_skip_2 (Conv2D)      (None, 36, 30, 32)   9248        bottleneck_skip_1[0][0]          
+__________________________________________________________________________________________________
+add (Add)                       (None, 36, 30, 32)   0           bottleneck_skip_0[0][0]          
+                                                                 bottleneck_skip_1[0][0]          
+                                                                 bottleneck_skip_2[0][0]          
+__________________________________________________________________________________________________
+upsampling_0_conv_trans_0 (Conv (None, 72, 60, 16)   2064        add[0][0]                        
+__________________________________________________________________________________________________
+concatenate (Concatenate)       (None, 72, 60, 32)   0           upsampling_0_conv_trans_0[0][0]  
+                                                                 downsampling_0_activation_1[0][0]
+__________________________________________________________________________________________________
+upsampling_0_conv_0 (Conv2D)    (None, 72, 60, 16)   4624        concatenate[0][0]                
+__________________________________________________________________________________________________
+upsampling_0_activation_0 (Acti (None, 72, 60, 16)   0           upsampling_0_conv_0[0][0]        
+__________________________________________________________________________________________________
+upsampling_0_conv_1 (Conv2D)    (None, 72, 60, 16)   2320        upsampling_0_activation_0[0][0]  
+__________________________________________________________________________________________________
+upsampling_0_activation_1 (Acti (None, 72, 60, 16)   0           upsampling_0_conv_1[0][0]        
+__________________________________________________________________________________________________
+linear (Conv2D)                 (None, 72, 60, 2)    34          upsampling_0_activation_1[0][0]  
+__________________________________________________________________________________________________
+cropping2d (Cropping2D)         (None, 71, 57, 2)    0           linear[0][0]                     
+==================================================================================================
+Total params: 35,506
+Trainable params: 35,442
+Non-trainable params: 64
+__________________________________________________________________________________________________
+########### model name: /glade/scratch/wchapman/Reforecast/models/NN_CRPS/F054/StartingYear2010/CNN_2017/cpf_CRPS_val_2016_test_2017.ckpt
+########### model name: /glade/scratch/wchapman/Reforecast/models/NN_CRPS/F054/StartingYear2010/CNN_2017/cpf_CRPS_val_2016_test_2017.ckpt
+...binned spread skill...
+RMSE PP: 47.26109382419463
+RMSE WWRF: 52.18349387428977
+CRMSE PP: 47.24138213881671
+CRMSE WWRF: 52.00399132930871
+BIAS PP: -1.364889753395758
+BIAS WWRF: 4.3245163
+#################################################
+testing: ['/glade/scratch/wchapman/Reforecast/F054/test/F054_WY_2018_500mb_Clean.nc']
+validatiing: ['/glade/scratch/wchapman/Reforecast/F054/validate/F054_WY_2017_500mb_Clean.nc']
+#################################################
+Reading data from: "/glade/scratch/wchapman/Reforecast/F054/train/F054_WY_2010_500mb_Clean.nc"...
+Reading data from: "/glade/scratch/wchapman/Reforecast/F054/train/F054_WY_2011_500mb_Clean.nc"...
+Reading data from: "/glade/scratch/wchapman/Reforecast/F054/train/F054_WY_2012_500mb_Clean.nc"...
+Reading data from: "/glade/scratch/wchapman/Reforecast/F054/train/F054_WY_2013_500mb_Clean.nc"...
+Reading data from: "/glade/scratch/wchapman/Reforecast/F054/train/F054_WY_2014_500mb_Clean.nc"...
+Reading data from: "/glade/scratch/wchapman/Reforecast/F054/train/F054_WY_2015_500mb_Clean.nc"...
+Reading data from: "/glade/scratch/wchapman/Reforecast/F054/train/F054_WY_2016_500mb_Clean.nc"...
+Reading data from: "/glade/scratch/wchapman/Reforecast/F054/validate/F054_WY_2017_500mb_Clean.nc"...
+...gathering data...
+Reading data from: "/glade/scratch/wchapman/Reforecast/F054/train/F054_WY_2016_500mb_Clean.nc"...
+Reading data from: "/glade/scratch/wchapman/Reforecast/F054/train/F054_WY_2013_500mb_Clean.nc"...
+Reading data from: "/glade/scratch/wchapman/Reforecast/F054/train/F054_WY_2010_500mb_Clean.nc"...
+Reading data from: "/glade/scratch/wchapman/Reforecast/F054/train/F054_WY_2015_500mb_Clean.nc"...
+Reading data from: "/glade/scratch/wchapman/Reforecast/F054/train/F054_WY_2012_500mb_Clean.nc"...
+Reading data from: "/glade/scratch/wchapman/Reforecast/F054/train/F054_WY_2014_500mb_Clean.nc"...
+Reading data from: "/glade/scratch/wchapman/Reforecast/F054/train/F054_WY_2011_500mb_Clean.nc"...
+Reading data from: "/glade/scratch/wchapman/Reforecast/F054/test/F054_WY_2018_500mb_Clean.nc"...
+Model: "model_1"
+__________________________________________________________________________________________________
+Layer (type)                    Output Shape         Param #     Connected to                     
+==================================================================================================
+input_2 (InputLayer)            [(None, 71, 57, 6)]  0                                            
+__________________________________________________________________________________________________
+zero_padding2d_1 (ZeroPadding2D (None, 72, 60, 6)    0           input_2[0][0]                    
+__________________________________________________________________________________________________
+downsampling_0_conv_0 (Conv2D)  (None, 72, 60, 16)   880         zero_padding2d_1[0][0]           
+__________________________________________________________________________________________________
+downsampling_0_batchnorm_0 (Bat (None, 72, 60, 16)   64          downsampling_0_conv_0[0][0]      
+__________________________________________________________________________________________________
+downsampling_0_activation_0 (Ac (None, 72, 60, 16)   0           downsampling_0_batchnorm_0[0][0] 
+__________________________________________________________________________________________________
+downsampling_0_conv_1 (Conv2D)  (None, 72, 60, 16)   2320        downsampling_0_activation_0[0][0]
+__________________________________________________________________________________________________
+downsampling_0_batchnorm_1 (Bat (None, 72, 60, 16)   64          downsampling_0_conv_1[0][0]      
+__________________________________________________________________________________________________
+downsampling_0_activation_1 (Ac (None, 72, 60, 16)   0           downsampling_0_batchnorm_1[0][0] 
+__________________________________________________________________________________________________
+max_pooling2d_1 (MaxPooling2D)  (None, 36, 30, 16)   0           downsampling_0_activation_1[0][0]
+__________________________________________________________________________________________________
+bottleneck_skip_0 (Conv2D)      (None, 36, 30, 32)   4640        max_pooling2d_1[0][0]            
+__________________________________________________________________________________________________
+bottleneck_skip_1 (Conv2D)      (None, 36, 30, 32)   9248        bottleneck_skip_0[0][0]          
+__________________________________________________________________________________________________
+bottleneck_skip_2 (Conv2D)      (None, 36, 30, 32)   9248        bottleneck_skip_1[0][0]          
+__________________________________________________________________________________________________
+add_1 (Add)                     (None, 36, 30, 32)   0           bottleneck_skip_0[0][0]          
+                                                                 bottleneck_skip_1[0][0]          
+                                                                 bottleneck_skip_2[0][0]          
+__________________________________________________________________________________________________
+upsampling_0_conv_trans_0 (Conv (None, 72, 60, 16)   2064        add_1[0][0]                      
+__________________________________________________________________________________________________
+concatenate_1 (Concatenate)     (None, 72, 60, 32)   0           upsampling_0_conv_trans_0[0][0]  
+                                                                 downsampling_0_activation_1[0][0]
+__________________________________________________________________________________________________
+upsampling_0_conv_0 (Conv2D)    (None, 72, 60, 16)   4624        concatenate_1[0][0]              
+__________________________________________________________________________________________________
+upsampling_0_activation_0 (Acti (None, 72, 60, 16)   0           upsampling_0_conv_0[0][0]        
+__________________________________________________________________________________________________
+upsampling_0_conv_1 (Conv2D)    (None, 72, 60, 16)   2320        upsampling_0_activation_0[0][0]  
+__________________________________________________________________________________________________
+upsampling_0_activation_1 (Acti (None, 72, 60, 16)   0           upsampling_0_conv_1[0][0]        
+__________________________________________________________________________________________________
+linear (Conv2D)                 (None, 72, 60, 2)    34          upsampling_0_activation_1[0][0]  
+__________________________________________________________________________________________________
+cropping2d_1 (Cropping2D)       (None, 71, 57, 2)    0           linear[0][0]                     
+==================================================================================================
+Total params: 35,506
+Trainable params: 35,442
+Non-trainable params: 64
+__________________________________________________________________________________________________
+########### model name: /glade/scratch/wchapman/Reforecast/models/NN_CRPS/F054/StartingYear2010/CNN_2018/cpf_CRPS_val_2017_test_2018.ckpt
+########### model name: /glade/scratch/wchapman/Reforecast/models/NN_CRPS/F054/StartingYear2010/CNN_2018/cpf_CRPS_val_2017_test_2018.ckpt
+...binned spread skill...
+RMSE PP: 58.0300586575398
+RMSE WWRF: 62.281301787405305
+CRMSE PP: 57.579877360529906
+CRMSE WWRF: 62.25994318181818
+BIAS PP: -7.214267543114261
+BIAS WWRF: -1.6312561
+#################################################
+testing: ['/glade/scratch/wchapman/Reforecast/F054/train/F054_WY_2016_500mb_Clean.nc']
+validatiing: ['/glade/scratch/wchapman/Reforecast/F054/test/F054_WY_2018_500mb_Clean.nc']
+#################################################
+Reading data from: "/glade/scratch/wchapman/Reforecast/F054/train/F054_WY_2010_500mb_Clean.nc"...
+Reading data from: "/glade/scratch/wchapman/Reforecast/F054/train/F054_WY_2011_500mb_Clean.nc"...
+Reading data from: "/glade/scratch/wchapman/Reforecast/F054/train/F054_WY_2012_500mb_Clean.nc"...
+Reading data from: "/glade/scratch/wchapman/Reforecast/F054/train/F054_WY_2013_500mb_Clean.nc"...
+Reading data from: "/glade/scratch/wchapman/Reforecast/F054/train/F054_WY_2014_500mb_Clean.nc"...
+Reading data from: "/glade/scratch/wchapman/Reforecast/F054/train/F054_WY_2015_500mb_Clean.nc"...
+Reading data from: "/glade/scratch/wchapman/Reforecast/F054/train/F054_WY_2016_500mb_Clean.nc"...
+Reading data from: "/glade/scratch/wchapman/Reforecast/F054/validate/F054_WY_2017_500mb_Clean.nc"...
+Reading data from: "/glade/scratch/wchapman/Reforecast/F054/test/F054_WY_2018_500mb_Clean.nc"...
+...gathering data...
+Reading data from: "/glade/scratch/wchapman/Reforecast/F054/train/F054_WY_2010_500mb_Clean.nc"...
+Reading data from: "/glade/scratch/wchapman/Reforecast/F054/train/F054_WY_2012_500mb_Clean.nc"...
+Reading data from: "/glade/scratch/wchapman/Reforecast/F054/train/F054_WY_2016_500mb_Clean.nc"...
+Reading data from: "/glade/scratch/wchapman/Reforecast/F054/train/F054_WY_2014_500mb_Clean.nc"...
+Reading data from: "/glade/scratch/wchapman/Reforecast/F054/validate/F054_WY_2017_500mb_Clean.nc"...
+Reading data from: "/glade/scratch/wchapman/Reforecast/F054/train/F054_WY_2015_500mb_Clean.nc"...
+Reading data from: "/glade/scratch/wchapman/Reforecast/F054/train/F054_WY_2013_500mb_Clean.nc"...
+Reading data from: "/glade/scratch/wchapman/Reforecast/F054/train/F054_WY_2011_500mb_Clean.nc"...
+Reading data from: "/glade/scratch/wchapman/Reforecast/F054/train/F054_WY_2016_500mb_Clean.nc"...
+Model: "model_2"
+__________________________________________________________________________________________________
+Layer (type)                    Output Shape         Param #     Connected to                     
+==================================================================================================
+input_3 (InputLayer)            [(None, 71, 57, 6)]  0                                            
+__________________________________________________________________________________________________
+zero_padding2d_2 (ZeroPadding2D (None, 72, 60, 6)    0           input_3[0][0]                    
+__________________________________________________________________________________________________
+downsampling_0_conv_0 (Conv2D)  (None, 72, 60, 16)   880         zero_padding2d_2[0][0]           
+__________________________________________________________________________________________________
+downsampling_0_batchnorm_0 (Bat (None, 72, 60, 16)   64          downsampling_0_conv_0[0][0]      
+__________________________________________________________________________________________________
+downsampling_0_activation_0 (Ac (None, 72, 60, 16)   0           downsampling_0_batchnorm_0[0][0] 
+__________________________________________________________________________________________________
+downsampling_0_conv_1 (Conv2D)  (None, 72, 60, 16)   2320        downsampling_0_activation_0[0][0]
+__________________________________________________________________________________________________
+downsampling_0_batchnorm_1 (Bat (None, 72, 60, 16)   64          downsampling_0_conv_1[0][0]      
+__________________________________________________________________________________________________
+downsampling_0_activation_1 (Ac (None, 72, 60, 16)   0           downsampling_0_batchnorm_1[0][0] 
+__________________________________________________________________________________________________
+max_pooling2d_2 (MaxPooling2D)  (None, 36, 30, 16)   0           downsampling_0_activation_1[0][0]
+__________________________________________________________________________________________________
+bottleneck_skip_0 (Conv2D)      (None, 36, 30, 32)   4640        max_pooling2d_2[0][0]            
+__________________________________________________________________________________________________
+bottleneck_skip_1 (Conv2D)      (None, 36, 30, 32)   9248        bottleneck_skip_0[0][0]          
+__________________________________________________________________________________________________
+bottleneck_skip_2 (Conv2D)      (None, 36, 30, 32)   9248        bottleneck_skip_1[0][0]          
+__________________________________________________________________________________________________
+add_2 (Add)                     (None, 36, 30, 32)   0           bottleneck_skip_0[0][0]          
+                                                                 bottleneck_skip_1[0][0]          
+                                                                 bottleneck_skip_2[0][0]          
+__________________________________________________________________________________________________
+upsampling_0_conv_trans_0 (Conv (None, 72, 60, 16)   2064        add_2[0][0]                      
+__________________________________________________________________________________________________
+concatenate_2 (Concatenate)     (None, 72, 60, 32)   0           upsampling_0_conv_trans_0[0][0]  
+                                                                 downsampling_0_activation_1[0][0]
+__________________________________________________________________________________________________
+upsampling_0_conv_0 (Conv2D)    (None, 72, 60, 16)   4624        concatenate_2[0][0]              
+__________________________________________________________________________________________________
+upsampling_0_activation_0 (Acti (None, 72, 60, 16)   0           upsampling_0_conv_0[0][0]        
+__________________________________________________________________________________________________
+upsampling_0_conv_1 (Conv2D)    (None, 72, 60, 16)   2320        upsampling_0_activation_0[0][0]  
+__________________________________________________________________________________________________
+upsampling_0_activation_1 (Acti (None, 72, 60, 16)   0           upsampling_0_conv_1[0][0]        
+__________________________________________________________________________________________________
+linear (Conv2D)                 (None, 72, 60, 2)    34          upsampling_0_activation_1[0][0]  
+__________________________________________________________________________________________________
+cropping2d_2 (Cropping2D)       (None, 71, 57, 2)    0           linear[0][0]                     
+==================================================================================================
+Total params: 35,506
+Trainable params: 35,442
+Non-trainable params: 64
+__________________________________________________________________________________________________
+########### model name: /glade/scratch/wchapman/Reforecast/models/NN_CRPS/F054/StartingYear2010/CNN_2016/cpf_CRPS_val_2018_test_2016.ckpt
+########### model name: /glade/scratch/wchapman/Reforecast/models/NN_CRPS/F054/StartingYear2010/CNN_2016/cpf_CRPS_val_2018_test_2016.ckpt
+...binned spread skill...
+RMSE PP: 59.91179474318888
+RMSE WWRF: 64.6500946969697
+CRMSE PP: 59.3467761621207
+CRMSE WWRF: 64.62215169270833
+BIAS PP: -8.20871826998129
+BIAS WWRF: -1.9002991
+IVTm shape: (52272,)
+IVT mean shape: (52272,)
+IVT std shape: (52272,)
+                     time         OBS       Model  ...     IVTstd   lat      lon
+0     2016-12-03 06:00:00   85.655334   94.507355  ...  23.994520  30.0 -116.875
+1     2016-12-04 06:00:00   94.746086  109.669067  ...  25.703672  30.0 -116.875
+2     2016-12-05 06:00:00   95.788979   90.148621  ...  22.112564  30.0 -116.875
+3     2016-12-06 06:00:00  158.349274  189.560150  ...  39.169041  30.0 -116.875
+4     2016-12-07 06:00:00  420.860626  301.796143  ...  54.657570  30.0 -116.875
+...                   ...         ...         ...  ...        ...   ...      ...
+52267 2019-03-29 06:00:00   11.739017   32.045296  ...  12.324331  55.0 -130.000
+52268 2019-03-30 06:00:00   11.952410   13.866623  ...  10.701080  55.0 -130.000
+52269 2019-03-31 06:00:00   20.775810   23.374023  ...  11.247364  55.0 -130.000
+52270 2019-04-01 06:00:00   35.829098   44.932487  ...  12.959241  55.0 -130.000
+52271 2019-04-02 06:00:00   35.595409   61.490005  ...  12.570758  55.0 -130.000
+
+[52272 rows x 7 columns]
+time       0
+OBS        0
+Model      0
+IVTmean    0
+IVTstd     0
+lat        0
+lon        0
+dtype: int64
+                OBS         Model  ...           lat           lon
+count  52272.000000  52272.000000  ...  52272.000000  52272.000000
+mean     142.384618    142.648945  ...     41.774306   -123.615451
+std      134.954146    129.557759  ...      6.969452      3.644501
+min        0.166441      0.499695  ...     30.000000   -130.000000
+25%       51.318610     55.090328  ...     35.875000   -125.000000
+50%      100.688225    103.490776  ...     41.750000   -124.375000
+75%      185.571129    185.067802  ...     47.625000   -121.875000
+max     1167.759644   1025.584839  ...     55.000000   -115.625000
+
+[8 rows x 6 columns]
+['/glade/scratch/wchapman/Reforecast/F054/train/F054_WY_2016_500mb_Clean.nc', '/glade/scratch/wchapman/Reforecast/F054/validate/F054_WY_2017_500mb_Clean.nc', '/glade/scratch/wchapman/Reforecast/F054/test/F054_WY_2018_500mb_Clean.nc']
+######### ASSEMBLE!!!! ###########
+########### DONE!!!! #############
+#################################################
+testing: ['/glade/scratch/wchapman/Reforecast/F054/validate/F054_WY_2017_500mb_Clean.nc']
+validatiing: ['/glade/scratch/wchapman/Reforecast/F054/train/F054_WY_2016_500mb_Clean.nc']
+#################################################
+Reading data from: "/glade/scratch/wchapman/Reforecast/F054/test/F054_WY_2018_500mb_Clean.nc"...
+Reading data from: "/glade/scratch/wchapman/Reforecast/F054/train/F054_WY_2016_500mb_Clean.nc"...
+...gathering data...
+Reading data from: "/glade/scratch/wchapman/Reforecast/F054/test/F054_WY_2018_500mb_Clean.nc"...
+Reading data from: "/glade/scratch/wchapman/Reforecast/F054/validate/F054_WY_2017_500mb_Clean.nc"...
+Model: "model_3"
+__________________________________________________________________________________________________
+Layer (type)                    Output Shape         Param #     Connected to                     
+==================================================================================================
+input_4 (InputLayer)            [(None, 71, 57, 6)]  0                                            
+__________________________________________________________________________________________________
+zero_padding2d_3 (ZeroPadding2D (None, 72, 60, 6)    0           input_4[0][0]                    
+__________________________________________________________________________________________________
+downsampling_0_conv_0 (Conv2D)  (None, 72, 60, 16)   880         zero_padding2d_3[0][0]           
+__________________________________________________________________________________________________
+downsampling_0_batchnorm_0 (Bat (None, 72, 60, 16)   64          downsampling_0_conv_0[0][0]      
+__________________________________________________________________________________________________
+downsampling_0_activation_0 (Ac (None, 72, 60, 16)   0           downsampling_0_batchnorm_0[0][0] 
+__________________________________________________________________________________________________
+downsampling_0_conv_1 (Conv2D)  (None, 72, 60, 16)   2320        downsampling_0_activation_0[0][0]
+__________________________________________________________________________________________________
+downsampling_0_batchnorm_1 (Bat (None, 72, 60, 16)   64          downsampling_0_conv_1[0][0]      
+__________________________________________________________________________________________________
+downsampling_0_activation_1 (Ac (None, 72, 60, 16)   0           downsampling_0_batchnorm_1[0][0] 
+__________________________________________________________________________________________________
+max_pooling2d_3 (MaxPooling2D)  (None, 36, 30, 16)   0           downsampling_0_activation_1[0][0]
+__________________________________________________________________________________________________
+bottleneck_skip_0 (Conv2D)      (None, 36, 30, 32)   4640        max_pooling2d_3[0][0]            
+__________________________________________________________________________________________________
+bottleneck_skip_1 (Conv2D)      (None, 36, 30, 32)   9248        bottleneck_skip_0[0][0]          
+__________________________________________________________________________________________________
+bottleneck_skip_2 (Conv2D)      (None, 36, 30, 32)   9248        bottleneck_skip_1[0][0]          
+__________________________________________________________________________________________________
+add_3 (Add)                     (None, 36, 30, 32)   0           bottleneck_skip_0[0][0]          
+                                                                 bottleneck_skip_1[0][0]          
+                                                                 bottleneck_skip_2[0][0]          
+__________________________________________________________________________________________________
+upsampling_0_conv_trans_0 (Conv (None, 72, 60, 16)   2064        add_3[0][0]                      
+__________________________________________________________________________________________________
+concatenate_3 (Concatenate)     (None, 72, 60, 32)   0           upsampling_0_conv_trans_0[0][0]  
+                                                                 downsampling_0_activation_1[0][0]
+__________________________________________________________________________________________________
+upsampling_0_conv_0 (Conv2D)    (None, 72, 60, 16)   4624        concatenate_3[0][0]              
+__________________________________________________________________________________________________
+upsampling_0_activation_0 (Acti (None, 72, 60, 16)   0           upsampling_0_conv_0[0][0]        
+__________________________________________________________________________________________________
+upsampling_0_conv_1 (Conv2D)    (None, 72, 60, 16)   2320        upsampling_0_activation_0[0][0]  
+__________________________________________________________________________________________________
+upsampling_0_activation_1 (Acti (None, 72, 60, 16)   0           upsampling_0_conv_1[0][0]        
+__________________________________________________________________________________________________
+linear (Conv2D)                 (None, 72, 60, 2)    34          upsampling_0_activation_1[0][0]  
+__________________________________________________________________________________________________
+cropping2d_3 (Cropping2D)       (None, 71, 57, 2)    0           linear[0][0]                     
+==================================================================================================
+Total params: 35,506
+Trainable params: 35,442
+Non-trainable params: 64
+__________________________________________________________________________________________________
+Model: "model_4"
+__________________________________________________________________________________________________
+Layer (type)                    Output Shape         Param #     Connected to                     
+==================================================================================================
+input_4 (InputLayer)            [(None, 71, 57, 6)]  0                                            
+__________________________________________________________________________________________________
+zero_padding2d_3 (ZeroPadding2D (None, 72, 60, 6)    0           input_4[0][0]                    
+__________________________________________________________________________________________________
+downsampling_0_conv_0 (Conv2D)  (None, 72, 60, 16)   880         zero_padding2d_3[0][0]           
+__________________________________________________________________________________________________
+downsampling_0_batchnorm_0 (Bat (None, 72, 60, 16)   64          downsampling_0_conv_0[0][0]      
+__________________________________________________________________________________________________
+downsampling_0_activation_0 (Ac (None, 72, 60, 16)   0           downsampling_0_batchnorm_0[0][0] 
+__________________________________________________________________________________________________
+downsampling_0_conv_1 (Conv2D)  (None, 72, 60, 16)   2320        downsampling_0_activation_0[0][0]
+__________________________________________________________________________________________________
+downsampling_0_batchnorm_1 (Bat (None, 72, 60, 16)   64          downsampling_0_conv_1[0][0]      
+__________________________________________________________________________________________________
+downsampling_0_activation_1 (Ac (None, 72, 60, 16)   0           downsampling_0_batchnorm_1[0][0] 
+__________________________________________________________________________________________________
+max_pooling2d_3 (MaxPooling2D)  (None, 36, 30, 16)   0           downsampling_0_activation_1[0][0]
+__________________________________________________________________________________________________
+bottleneck_skip_0 (Conv2D)      (None, 36, 30, 32)   4640        max_pooling2d_3[0][0]            
+__________________________________________________________________________________________________
+bottleneck_skip_1 (Conv2D)      (None, 36, 30, 32)   9248        bottleneck_skip_0[0][0]          
+__________________________________________________________________________________________________
+bottleneck_skip_2 (Conv2D)      (None, 36, 30, 32)   9248        bottleneck_skip_1[0][0]          
+__________________________________________________________________________________________________
+add_3 (Add)                     (None, 36, 30, 32)   0           bottleneck_skip_0[0][0]          
+                                                                 bottleneck_skip_1[0][0]          
+                                                                 bottleneck_skip_2[0][0]          
+__________________________________________________________________________________________________
+upsampling_0_conv_trans_0 (Conv (None, 72, 60, 16)   2064        add_3[0][0]                      
+__________________________________________________________________________________________________
+concatenate_3 (Concatenate)     (None, 72, 60, 32)   0           upsampling_0_conv_trans_0[0][0]  
+                                                                 downsampling_0_activation_1[0][0]
+__________________________________________________________________________________________________
+upsampling_0_conv_0 (Conv2D)    (None, 72, 60, 16)   4624        concatenate_3[0][0]              
+__________________________________________________________________________________________________
+upsampling_0_activation_0 (Acti (None, 72, 60, 16)   0           upsampling_0_conv_0[0][0]        
+__________________________________________________________________________________________________
+upsampling_0_conv_1 (Conv2D)    (None, 72, 60, 16)   2320        upsampling_0_activation_0[0][0]  
+__________________________________________________________________________________________________
+upsampling_0_activation_1 (Acti (None, 72, 60, 16)   0           upsampling_0_conv_1[0][0]        
+__________________________________________________________________________________________________
+linear (Conv2D)                 (None, 72, 60, 2)    34          upsampling_0_activation_1[0][0]  
+__________________________________________________________________________________________________
+cropping2d_3 (Cropping2D)       (None, 71, 57, 2)    0           linear[0][0]                     
+__________________________________________________________________________________________________
+conv2d (Conv2D)                 (None, 71, 57, 32)   608         cropping2d_3[0][0]               
+__________________________________________________________________________________________________
+conv2d_1 (Conv2D)               (None, 71, 57, 2)    578         conv2d[0][0]                     
+==================================================================================================
+Total params: 36,692
+Trainable params: 36,628
+Non-trainable params: 64
+__________________________________________________________________________________________________
+########### Loading old model weights name: /glade/scratch/wchapman/Reforecast/models/NN_CRPS/F054/StartingYear2010/CNN_2017/cpf_CRPS_FINETUNE_val_2016_test_2017.ckpt
+...binned spread skill...
+RMSE PP: 47.25822290467791
+RMSE WWRF: 52.18349387428977
+CRMSE PP: 47.255988568592436
+CRMSE WWRF: 52.00399132930871
+BIAS PP: -0.4596431958664482
+BIAS WWRF: 4.3245163
+#################################################
+testing: ['/glade/scratch/wchapman/Reforecast/F054/test/F054_WY_2018_500mb_Clean.nc']
+validatiing: ['/glade/scratch/wchapman/Reforecast/F054/validate/F054_WY_2017_500mb_Clean.nc']
+#################################################
+Reading data from: "/glade/scratch/wchapman/Reforecast/F054/train/F054_WY_2016_500mb_Clean.nc"...
+Reading data from: "/glade/scratch/wchapman/Reforecast/F054/validate/F054_WY_2017_500mb_Clean.nc"...
+...gathering data...
+Reading data from: "/glade/scratch/wchapman/Reforecast/F054/train/F054_WY_2016_500mb_Clean.nc"...
+Reading data from: "/glade/scratch/wchapman/Reforecast/F054/test/F054_WY_2018_500mb_Clean.nc"...
+Model: "model_5"
+__________________________________________________________________________________________________
+Layer (type)                    Output Shape         Param #     Connected to                     
+==================================================================================================
+input_5 (InputLayer)            [(None, 71, 57, 6)]  0                                            
+__________________________________________________________________________________________________
+zero_padding2d_4 (ZeroPadding2D (None, 72, 60, 6)    0           input_5[0][0]                    
+__________________________________________________________________________________________________
+downsampling_0_conv_0 (Conv2D)  (None, 72, 60, 16)   880         zero_padding2d_4[0][0]           
+__________________________________________________________________________________________________
+downsampling_0_batchnorm_0 (Bat (None, 72, 60, 16)   64          downsampling_0_conv_0[0][0]      
+__________________________________________________________________________________________________
+downsampling_0_activation_0 (Ac (None, 72, 60, 16)   0           downsampling_0_batchnorm_0[0][0] 
+__________________________________________________________________________________________________
+downsampling_0_conv_1 (Conv2D)  (None, 72, 60, 16)   2320        downsampling_0_activation_0[0][0]
+__________________________________________________________________________________________________
+downsampling_0_batchnorm_1 (Bat (None, 72, 60, 16)   64          downsampling_0_conv_1[0][0]      
+__________________________________________________________________________________________________
+downsampling_0_activation_1 (Ac (None, 72, 60, 16)   0           downsampling_0_batchnorm_1[0][0] 
+__________________________________________________________________________________________________
+max_pooling2d_4 (MaxPooling2D)  (None, 36, 30, 16)   0           downsampling_0_activation_1[0][0]
+__________________________________________________________________________________________________
+bottleneck_skip_0 (Conv2D)      (None, 36, 30, 32)   4640        max_pooling2d_4[0][0]            
+__________________________________________________________________________________________________
+bottleneck_skip_1 (Conv2D)      (None, 36, 30, 32)   9248        bottleneck_skip_0[0][0]          
+__________________________________________________________________________________________________
+bottleneck_skip_2 (Conv2D)      (None, 36, 30, 32)   9248        bottleneck_skip_1[0][0]          
+__________________________________________________________________________________________________
+add_4 (Add)                     (None, 36, 30, 32)   0           bottleneck_skip_0[0][0]          
+                                                                 bottleneck_skip_1[0][0]          
+                                                                 bottleneck_skip_2[0][0]          
+__________________________________________________________________________________________________
+upsampling_0_conv_trans_0 (Conv (None, 72, 60, 16)   2064        add_4[0][0]                      
+__________________________________________________________________________________________________
+concatenate_4 (Concatenate)     (None, 72, 60, 32)   0           upsampling_0_conv_trans_0[0][0]  
+                                                                 downsampling_0_activation_1[0][0]
+__________________________________________________________________________________________________
+upsampling_0_conv_0 (Conv2D)    (None, 72, 60, 16)   4624        concatenate_4[0][0]              
+__________________________________________________________________________________________________
+upsampling_0_activation_0 (Acti (None, 72, 60, 16)   0           upsampling_0_conv_0[0][0]        
+__________________________________________________________________________________________________
+upsampling_0_conv_1 (Conv2D)    (None, 72, 60, 16)   2320        upsampling_0_activation_0[0][0]  
+__________________________________________________________________________________________________
+upsampling_0_activation_1 (Acti (None, 72, 60, 16)   0           upsampling_0_conv_1[0][0]        
+__________________________________________________________________________________________________
+linear (Conv2D)                 (None, 72, 60, 2)    34          upsampling_0_activation_1[0][0]  
+__________________________________________________________________________________________________
+cropping2d_4 (Cropping2D)       (None, 71, 57, 2)    0           linear[0][0]                     
+==================================================================================================
+Total params: 35,506
+Trainable params: 35,442
+Non-trainable params: 64
+__________________________________________________________________________________________________
+Model: "model_6"
+__________________________________________________________________________________________________
+Layer (type)                    Output Shape         Param #     Connected to                     
+==================================================================================================
+input_5 (InputLayer)            [(None, 71, 57, 6)]  0                                            
+__________________________________________________________________________________________________
+zero_padding2d_4 (ZeroPadding2D (None, 72, 60, 6)    0           input_5[0][0]                    
+__________________________________________________________________________________________________
+downsampling_0_conv_0 (Conv2D)  (None, 72, 60, 16)   880         zero_padding2d_4[0][0]           
+__________________________________________________________________________________________________
+downsampling_0_batchnorm_0 (Bat (None, 72, 60, 16)   64          downsampling_0_conv_0[0][0]      
+__________________________________________________________________________________________________
+downsampling_0_activation_0 (Ac (None, 72, 60, 16)   0           downsampling_0_batchnorm_0[0][0] 
+__________________________________________________________________________________________________
+downsampling_0_conv_1 (Conv2D)  (None, 72, 60, 16)   2320        downsampling_0_activation_0[0][0]
+__________________________________________________________________________________________________
+downsampling_0_batchnorm_1 (Bat (None, 72, 60, 16)   64          downsampling_0_conv_1[0][0]      
+__________________________________________________________________________________________________
+downsampling_0_activation_1 (Ac (None, 72, 60, 16)   0           downsampling_0_batchnorm_1[0][0] 
+__________________________________________________________________________________________________
+max_pooling2d_4 (MaxPooling2D)  (None, 36, 30, 16)   0           downsampling_0_activation_1[0][0]
+__________________________________________________________________________________________________
+bottleneck_skip_0 (Conv2D)      (None, 36, 30, 32)   4640        max_pooling2d_4[0][0]            
+__________________________________________________________________________________________________
+bottleneck_skip_1 (Conv2D)      (None, 36, 30, 32)   9248        bottleneck_skip_0[0][0]          
+__________________________________________________________________________________________________
+bottleneck_skip_2 (Conv2D)      (None, 36, 30, 32)   9248        bottleneck_skip_1[0][0]          
+__________________________________________________________________________________________________
+add_4 (Add)                     (None, 36, 30, 32)   0           bottleneck_skip_0[0][0]          
+                                                                 bottleneck_skip_1[0][0]          
+                                                                 bottleneck_skip_2[0][0]          
+__________________________________________________________________________________________________
+upsampling_0_conv_trans_0 (Conv (None, 72, 60, 16)   2064        add_4[0][0]                      
+__________________________________________________________________________________________________
+concatenate_4 (Concatenate)     (None, 72, 60, 32)   0           upsampling_0_conv_trans_0[0][0]  
+                                                                 downsampling_0_activation_1[0][0]
+__________________________________________________________________________________________________
+upsampling_0_conv_0 (Conv2D)    (None, 72, 60, 16)   4624        concatenate_4[0][0]              
+__________________________________________________________________________________________________
+upsampling_0_activation_0 (Acti (None, 72, 60, 16)   0           upsampling_0_conv_0[0][0]        
+__________________________________________________________________________________________________
+upsampling_0_conv_1 (Conv2D)    (None, 72, 60, 16)   2320        upsampling_0_activation_0[0][0]  
+__________________________________________________________________________________________________
+upsampling_0_activation_1 (Acti (None, 72, 60, 16)   0           upsampling_0_conv_1[0][0]        
+__________________________________________________________________________________________________
+linear (Conv2D)                 (None, 72, 60, 2)    34          upsampling_0_activation_1[0][0]  
+__________________________________________________________________________________________________
+cropping2d_4 (Cropping2D)       (None, 71, 57, 2)    0           linear[0][0]                     
+__________________________________________________________________________________________________
+conv2d_2 (Conv2D)               (None, 71, 57, 32)   608         cropping2d_4[0][0]               
+__________________________________________________________________________________________________
+conv2d_3 (Conv2D)               (None, 71, 57, 2)    578         conv2d_2[0][0]                   
+==================================================================================================
+Total params: 36,692
+Trainable params: 36,628
+Non-trainable params: 64
+__________________________________________________________________________________________________
+########### Loading old model weights name: /glade/scratch/wchapman/Reforecast/models/NN_CRPS/F054/StartingYear2010/CNN_2018/cpf_CRPS_FINETUNE_val_2017_test_2018.ckpt
+...binned spread skill...
+RMSE PP: 57.66578350473644
+RMSE WWRF: 62.281301787405305
+CRMSE PP: 57.28297286339109
+CRMSE WWRF: 62.25994318181818
+BIAS PP: -6.633538007900398
+BIAS WWRF: -1.6312561
+#################################################
+testing: ['/glade/scratch/wchapman/Reforecast/F054/train/F054_WY_2016_500mb_Clean.nc']
+validatiing: ['/glade/scratch/wchapman/Reforecast/F054/test/F054_WY_2018_500mb_Clean.nc']
+#################################################
+Reading data from: "/glade/scratch/wchapman/Reforecast/F054/train/F054_WY_2016_500mb_Clean.nc"...
+Reading data from: "/glade/scratch/wchapman/Reforecast/F054/validate/F054_WY_2017_500mb_Clean.nc"...
+Reading data from: "/glade/scratch/wchapman/Reforecast/F054/test/F054_WY_2018_500mb_Clean.nc"...
+...gathering data...
+Reading data from: "/glade/scratch/wchapman/Reforecast/F054/train/F054_WY_2016_500mb_Clean.nc"...
+Reading data from: "/glade/scratch/wchapman/Reforecast/F054/validate/F054_WY_2017_500mb_Clean.nc"...
+Reading data from: "/glade/scratch/wchapman/Reforecast/F054/train/F054_WY_2016_500mb_Clean.nc"...
+Model: "model_7"
+__________________________________________________________________________________________________
+Layer (type)                    Output Shape         Param #     Connected to                     
+==================================================================================================
+input_6 (InputLayer)            [(None, 71, 57, 6)]  0                                            
+__________________________________________________________________________________________________
+zero_padding2d_5 (ZeroPadding2D (None, 72, 60, 6)    0           input_6[0][0]                    
+__________________________________________________________________________________________________
+downsampling_0_conv_0 (Conv2D)  (None, 72, 60, 16)   880         zero_padding2d_5[0][0]           
+__________________________________________________________________________________________________
+downsampling_0_batchnorm_0 (Bat (None, 72, 60, 16)   64          downsampling_0_conv_0[0][0]      
+__________________________________________________________________________________________________
+downsampling_0_activation_0 (Ac (None, 72, 60, 16)   0           downsampling_0_batchnorm_0[0][0] 
+__________________________________________________________________________________________________
+downsampling_0_conv_1 (Conv2D)  (None, 72, 60, 16)   2320        downsampling_0_activation_0[0][0]
+__________________________________________________________________________________________________
+downsampling_0_batchnorm_1 (Bat (None, 72, 60, 16)   64          downsampling_0_conv_1[0][0]      
+__________________________________________________________________________________________________
+downsampling_0_activation_1 (Ac (None, 72, 60, 16)   0           downsampling_0_batchnorm_1[0][0] 
+__________________________________________________________________________________________________
+max_pooling2d_5 (MaxPooling2D)  (None, 36, 30, 16)   0           downsampling_0_activation_1[0][0]
+__________________________________________________________________________________________________
+bottleneck_skip_0 (Conv2D)      (None, 36, 30, 32)   4640        max_pooling2d_5[0][0]            
+__________________________________________________________________________________________________
+bottleneck_skip_1 (Conv2D)      (None, 36, 30, 32)   9248        bottleneck_skip_0[0][0]          
+__________________________________________________________________________________________________
+bottleneck_skip_2 (Conv2D)      (None, 36, 30, 32)   9248        bottleneck_skip_1[0][0]          
+__________________________________________________________________________________________________
+add_5 (Add)                     (None, 36, 30, 32)   0           bottleneck_skip_0[0][0]          
+                                                                 bottleneck_skip_1[0][0]          
+                                                                 bottleneck_skip_2[0][0]          
+__________________________________________________________________________________________________
+upsampling_0_conv_trans_0 (Conv (None, 72, 60, 16)   2064        add_5[0][0]                      
+__________________________________________________________________________________________________
+concatenate_5 (Concatenate)     (None, 72, 60, 32)   0           upsampling_0_conv_trans_0[0][0]  
+                                                                 downsampling_0_activation_1[0][0]
+__________________________________________________________________________________________________
+upsampling_0_conv_0 (Conv2D)    (None, 72, 60, 16)   4624        concatenate_5[0][0]              
+__________________________________________________________________________________________________
+upsampling_0_activation_0 (Acti (None, 72, 60, 16)   0           upsampling_0_conv_0[0][0]        
+__________________________________________________________________________________________________
+upsampling_0_conv_1 (Conv2D)    (None, 72, 60, 16)   2320        upsampling_0_activation_0[0][0]  
+__________________________________________________________________________________________________
+upsampling_0_activation_1 (Acti (None, 72, 60, 16)   0           upsampling_0_conv_1[0][0]        
+__________________________________________________________________________________________________
+linear (Conv2D)                 (None, 72, 60, 2)    34          upsampling_0_activation_1[0][0]  
+__________________________________________________________________________________________________
+cropping2d_5 (Cropping2D)       (None, 71, 57, 2)    0           linear[0][0]                     
+==================================================================================================
+Total params: 35,506
+Trainable params: 35,442
+Non-trainable params: 64
+__________________________________________________________________________________________________
+Model: "model_8"
+__________________________________________________________________________________________________
+Layer (type)                    Output Shape         Param #     Connected to                     
+==================================================================================================
+input_6 (InputLayer)            [(None, 71, 57, 6)]  0                                            
+__________________________________________________________________________________________________
+zero_padding2d_5 (ZeroPadding2D (None, 72, 60, 6)    0           input_6[0][0]                    
+__________________________________________________________________________________________________
+downsampling_0_conv_0 (Conv2D)  (None, 72, 60, 16)   880         zero_padding2d_5[0][0]           
+__________________________________________________________________________________________________
+downsampling_0_batchnorm_0 (Bat (None, 72, 60, 16)   64          downsampling_0_conv_0[0][0]      
+__________________________________________________________________________________________________
+downsampling_0_activation_0 (Ac (None, 72, 60, 16)   0           downsampling_0_batchnorm_0[0][0] 
+__________________________________________________________________________________________________
+downsampling_0_conv_1 (Conv2D)  (None, 72, 60, 16)   2320        downsampling_0_activation_0[0][0]
+__________________________________________________________________________________________________
+downsampling_0_batchnorm_1 (Bat (None, 72, 60, 16)   64          downsampling_0_conv_1[0][0]      
+__________________________________________________________________________________________________
+downsampling_0_activation_1 (Ac (None, 72, 60, 16)   0           downsampling_0_batchnorm_1[0][0] 
+__________________________________________________________________________________________________
+max_pooling2d_5 (MaxPooling2D)  (None, 36, 30, 16)   0           downsampling_0_activation_1[0][0]
+__________________________________________________________________________________________________
+bottleneck_skip_0 (Conv2D)      (None, 36, 30, 32)   4640        max_pooling2d_5[0][0]            
+__________________________________________________________________________________________________
+bottleneck_skip_1 (Conv2D)      (None, 36, 30, 32)   9248        bottleneck_skip_0[0][0]          
+__________________________________________________________________________________________________
+bottleneck_skip_2 (Conv2D)      (None, 36, 30, 32)   9248        bottleneck_skip_1[0][0]          
+__________________________________________________________________________________________________
+add_5 (Add)                     (None, 36, 30, 32)   0           bottleneck_skip_0[0][0]          
+                                                                 bottleneck_skip_1[0][0]          
+                                                                 bottleneck_skip_2[0][0]          
+__________________________________________________________________________________________________
+upsampling_0_conv_trans_0 (Conv (None, 72, 60, 16)   2064        add_5[0][0]                      
+__________________________________________________________________________________________________
+concatenate_5 (Concatenate)     (None, 72, 60, 32)   0           upsampling_0_conv_trans_0[0][0]  
+                                                                 downsampling_0_activation_1[0][0]
+__________________________________________________________________________________________________
+upsampling_0_conv_0 (Conv2D)    (None, 72, 60, 16)   4624        concatenate_5[0][0]              
+__________________________________________________________________________________________________
+upsampling_0_activation_0 (Acti (None, 72, 60, 16)   0           upsampling_0_conv_0[0][0]        
+__________________________________________________________________________________________________
+upsampling_0_conv_1 (Conv2D)    (None, 72, 60, 16)   2320        upsampling_0_activation_0[0][0]  
+__________________________________________________________________________________________________
+upsampling_0_activation_1 (Acti (None, 72, 60, 16)   0           upsampling_0_conv_1[0][0]        
+__________________________________________________________________________________________________
+linear (Conv2D)                 (None, 72, 60, 2)    34          upsampling_0_activation_1[0][0]  
+__________________________________________________________________________________________________
+cropping2d_5 (Cropping2D)       (None, 71, 57, 2)    0           linear[0][0]                     
+__________________________________________________________________________________________________
+conv2d_4 (Conv2D)               (None, 71, 57, 32)   608         cropping2d_5[0][0]               
+__________________________________________________________________________________________________
+conv2d_5 (Conv2D)               (None, 71, 57, 2)    578         conv2d_4[0][0]                   
+==================================================================================================
+Total params: 36,692
+Trainable params: 36,628
+Non-trainable params: 64
+__________________________________________________________________________________________________
+########### Loading old model weights name: /glade/scratch/wchapman/Reforecast/models/NN_CRPS/F054/StartingYear2010/CNN_2016/cpf_CRPS_FINETUNE_val_2018_test_2016.ckpt
+...binned spread skill...
+RMSE PP: 59.31490592760735
+RMSE WWRF: 64.6500946969697
+CRMSE PP: 58.91313080881963
+CRMSE WWRF: 64.62215169270833
+BIAS PP: -6.892087175716938
+BIAS WWRF: -1.9002991
+IVTm shape: (52272,)
+IVT mean shape: (52272,)
+IVT std shape: (52272,)
+#############################################################################
+############## *I hope that is okay baby* - gale beggy ######################
+#############################################################################
+done
+                     time         OBS       Model  ...     IVTstd   lat      lon
+0     2016-12-03 06:00:00   85.655334   94.507355  ...  27.057516  30.0 -116.875
+1     2016-12-04 06:00:00   94.746086  109.669067  ...  26.252844  30.0 -116.875
+2     2016-12-05 06:00:00   95.788979   90.148621  ...  19.495789  30.0 -116.875
+3     2016-12-06 06:00:00  158.349274  189.560150  ...  37.050316  30.0 -116.875
+4     2016-12-07 06:00:00  420.860626  301.796143  ...  49.526947  30.0 -116.875
+...                   ...         ...         ...  ...        ...   ...      ...
+52267 2019-03-29 06:00:00   11.739017   32.045296  ...  11.759927  55.0 -130.000
+52268 2019-03-30 06:00:00   11.952410   13.866623  ...   9.051201  55.0 -130.000
+52269 2019-03-31 06:00:00   20.775810   23.374023  ...   9.729233  55.0 -130.000
+52270 2019-04-01 06:00:00   35.829098   44.932487  ...  11.591430  55.0 -130.000
+52271 2019-04-02 06:00:00   35.595409   61.490005  ...  11.570783  55.0 -130.000
+
+[52272 rows x 7 columns]
+time       0
+OBS        0
+Model      0
+IVTmean    0
+IVTstd     0
+lat        0
+lon        0
+dtype: int64
+                OBS         Model  ...           lat           lon
+count  52272.000000  52272.000000  ...  52272.000000  52272.000000
+mean     142.384618    142.648945  ...     41.774306   -123.615451
+std      134.954146    129.557759  ...      6.969452      3.644501
+min        0.166441      0.499695  ...     30.000000   -130.000000
+25%       51.318610     55.090328  ...     35.875000   -125.000000
+50%      100.688225    103.490776  ...     41.750000   -124.375000
+75%      185.571129    185.067802  ...     47.625000   -121.875000
+max     1167.759644   1025.584839  ...     55.000000   -115.625000
+
+[8 rows x 6 columns]
+                     time         OBS       Model  ...     IVTstd   lat      lon
+0     2016-12-03 06:00:00   85.655334   94.507355  ...  23.994520  30.0 -116.875
+1     2016-12-04 06:00:00   94.746086  109.669067  ...  25.703672  30.0 -116.875
+2     2016-12-05 06:00:00   95.788979   90.148621  ...  22.112564  30.0 -116.875
+3     2016-12-06 06:00:00  158.349274  189.560150  ...  39.169041  30.0 -116.875
+4     2016-12-07 06:00:00  420.860626  301.796143  ...  54.657570  30.0 -116.875
+...                   ...         ...         ...  ...        ...   ...      ...
+52267 2019-03-29 06:00:00   11.739017   32.045296  ...  12.324331  55.0 -130.000
+52268 2019-03-30 06:00:00   11.952410   13.866623  ...  10.701080  55.0 -130.000
+52269 2019-03-31 06:00:00   20.775810   23.374023  ...  11.247364  55.0 -130.000
+52270 2019-04-01 06:00:00   35.829098   44.932487  ...  12.959241  55.0 -130.000
+52271 2019-04-02 06:00:00   35.595409   61.490005  ...  12.570758  55.0 -130.000
+
+[52272 rows x 7 columns]
+time       0
+OBS        0
+Model      0
+IVTmean    0
+IVTstd     0
+lat        0
+lon        0
+dtype: int64
+                OBS         Model  ...           lat           lon
+count  52272.000000  52272.000000  ...  52272.000000  52272.000000
+mean     142.384618    142.648945  ...     41.774306   -123.615451
+std      134.954146    129.557759  ...      6.969452      3.644501
+min        0.166441      0.499695  ...     30.000000   -130.000000
+25%       51.318610     55.090328  ...     35.875000   -125.000000
+50%      100.688225    103.490776  ...     41.750000   -124.375000
+75%      185.571129    185.067802  ...     47.625000   -121.875000
+max     1167.759644   1025.584839  ...     55.000000   -115.625000
+
+[8 rows x 6 columns]
+#############################################################################
+############## *I hope that is okay baby* - gale beggy ######################
+#############################################################################
+/glade/scratch/wchapman/Reforecast/models/NN_CRPS/F054/Reforecast_out/NN_CRPS_CNNPP_StartingYear2010_FINETUNEref2.pkl
+/glade/scratch/wchapman/Reforecast/models/NN_CRPS/F054/Reforecast_out/NN_CRPS_CNNPP_StartingYear2010_FINETUNEref2.pkl
+/glade/scratch/wchapman/Reforecast/models/NN_CRPS/F054/Reforecast_out/NN_CRPS_CNNPP_StartingYear2010_FINETUNEref2.pkl
+/glade/scratch/wchapman/Reforecast/models/NN_CRPS/F054/Reforecast_out/NN_CRPS_CNNPP_StartingYear2010_FINETUNEref2.pkl
+/glade/scratch/wchapman/Reforecast/models/NN_CRPS/F054/Reforecast_out/NN_CRPS_CNNPP_StartingYear2010_FINETUNEref2.pkl
+/glade/scratch/wchapman/Reforecast/models/NN_CRPS/F054/Reforecast_out/NN_CRPS_CNNPP_StartingYear2010_FINETUNEref2.pkl
+/glade/scratch/wchapman/Reforecast/models/NN_CRPS/F054/Reforecast_out/NN_CRPS_CNNPP_StartingYear2010_FINETUNEref2.pkl
+/glade/scratch/wchapman/Reforecast/models/NN_CRPS/F054/Reforecast_out/NN_CRPS_CNNPP_StartingYear2010_FINETUNEref2.pkl
+/glade/scratch/wchapman/Reforecast/models/NN_CRPS/F054/Reforecast_out/NN_CRPS_CNNPP_StartingYear2010_FINETUNEref2.pkl
+/glade/scratch/wchapman/Reforecast/models/NN_CRPS/F054/Reforecast_out/NN_CRPS_CNNPP_StartingYear2010_FINETUNEref2.pkl
+WARNING:tensorflow:Unresolved object in checkpoint: (root).optimizer.iter
+WARNING:tensorflow:Unresolved object in checkpoint: (root).optimizer.beta_1
+WARNING:tensorflow:Unresolved object in checkpoint: (root).optimizer.beta_2
+WARNING:tensorflow:Unresolved object in checkpoint: (root).optimizer.decay
+WARNING:tensorflow:Unresolved object in checkpoint: (root).optimizer.learning_rate
+WARNING:tensorflow:A checkpoint was restored (e.g. tf.train.Checkpoint.restore or tf.keras.Model.load_weights) but not all checkpointed values were used. See above for specific issues. Use expect_partial() on the load status object, e.g. tf.train.Checkpoint.restore(...).expect_partial(), to silence these warnings, or use assert_consumed() to make the check explicit. See https://www.tensorflow.org/guide/checkpoint#loading_mechanics for details.
+WARNING:tensorflow:Unresolved object in checkpoint: (root).optimizer.iter
+WARNING:tensorflow:Unresolved object in checkpoint: (root).optimizer.beta_1
+WARNING:tensorflow:Unresolved object in checkpoint: (root).optimizer.beta_2
+WARNING:tensorflow:Unresolved object in checkpoint: (root).optimizer.decay
+WARNING:tensorflow:Unresolved object in checkpoint: (root).optimizer.learning_rate
+WARNING:tensorflow:A checkpoint was restored (e.g. tf.train.Checkpoint.restore or tf.keras.Model.load_weights) but not all checkpointed values were used. See above for specific issues. Use expect_partial() on the load status object, e.g. tf.train.Checkpoint.restore(...).expect_partial(), to silence these warnings, or use assert_consumed() to make the check explicit. See https://www.tensorflow.org/guide/checkpoint#loading_mechanics for details.
+WARNING:tensorflow:Unresolved object in checkpoint: (root).optimizer.iter
+WARNING:tensorflow:Unresolved object in checkpoint: (root).optimizer.beta_1
+WARNING:tensorflow:Unresolved object in checkpoint: (root).optimizer.beta_2
+WARNING:tensorflow:Unresolved object in checkpoint: (root).optimizer.decay
+WARNING:tensorflow:Unresolved object in checkpoint: (root).optimizer.learning_rate
+WARNING:tensorflow:A checkpoint was restored (e.g. tf.train.Checkpoint.restore or tf.keras.Model.load_weights) but not all checkpointed values were used. See above for specific issues. Use expect_partial() on the load status object, e.g. tf.train.Checkpoint.restore(...).expect_partial(), to silence these warnings, or use assert_consumed() to make the check explicit. See https://www.tensorflow.org/guide/checkpoint#loading_mechanics for details.
+WARNING:tensorflow:Unresolved object in checkpoint: (root).optimizer.iter
+WARNING:tensorflow:Unresolved object in checkpoint: (root).optimizer.beta_1
+WARNING:tensorflow:Unresolved object in checkpoint: (root).optimizer.beta_2
+WARNING:tensorflow:Unresolved object in checkpoint: (root).optimizer.decay
+WARNING:tensorflow:Unresolved object in checkpoint: (root).optimizer.learning_rate
+WARNING:tensorflow:A checkpoint was restored (e.g. tf.train.Checkpoint.restore or tf.keras.Model.load_weights) but not all checkpointed values were used. See above for specific issues. Use expect_partial() on the load status object, e.g. tf.train.Checkpoint.restore(...).expect_partial(), to silence these warnings, or use assert_consumed() to make the check explicit. See https://www.tensorflow.org/guide/checkpoint#loading_mechanics for details.
+WARNING:tensorflow:Unresolved object in checkpoint: (root).optimizer.iter
+WARNING:tensorflow:Unresolved object in checkpoint: (root).optimizer.beta_1
+WARNING:tensorflow:Unresolved object in checkpoint: (root).optimizer.beta_2
+WARNING:tensorflow:Unresolved object in checkpoint: (root).optimizer.decay
+WARNING:tensorflow:Unresolved object in checkpoint: (root).optimizer.learning_rate
+WARNING:tensorflow:A checkpoint was restored (e.g. tf.train.Checkpoint.restore or tf.keras.Model.load_weights) but not all checkpointed values were used. See above for specific issues. Use expect_partial() on the load status object, e.g. tf.train.Checkpoint.restore(...).expect_partial(), to silence these warnings, or use assert_consumed() to make the check explicit. See https://www.tensorflow.org/guide/checkpoint#loading_mechanics for details.

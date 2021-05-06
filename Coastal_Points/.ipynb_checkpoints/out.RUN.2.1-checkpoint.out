@@ -1,0 +1,321 @@
+2020-11-09 15:46:07.481950: I tensorflow/core/platform/cpu_feature_guard.cc:142] Your CPU supports instructions that this TensorFlow binary was not compiled to use: SSE4.1 SSE4.2 AVX AVX2 AVX512F FMA
+2020-11-09 15:46:07.488712: I tensorflow/core/platform/profile_utils/cpu_utils.cc:94] CPU Frequency: 2300000000 Hz
+2020-11-09 15:46:07.488843: I tensorflow/compiler/xla/service/service.cc:168] XLA service 0x558a75f67d00 initialized for platform Host (this does not guarantee that XLA will be used). Devices:
+2020-11-09 15:46:07.488862: I tensorflow/compiler/xla/service/service.cc:176]   StreamExecutor device (0): Host, Default Version
+2020-11-09 15:46:07.490165: I tensorflow/stream_executor/platform/default/dso_loader.cc:44] Successfully opened dynamic library libcuda.so.1
+2020-11-09 15:46:07.507288: I tensorflow/core/common_runtime/gpu/gpu_device.cc:1555] Found device 0 with properties: 
+pciBusID: 0000:1a:00.0 name: Tesla V100-SXM2-32GB computeCapability: 7.0
+coreClock: 1.53GHz coreCount: 80 deviceMemorySize: 31.75GiB deviceMemoryBandwidth: 836.37GiB/s
+2020-11-09 15:46:07.507570: I tensorflow/stream_executor/platform/default/dso_loader.cc:44] Successfully opened dynamic library libcudart.so.10.1
+2020-11-09 15:46:07.510199: I tensorflow/stream_executor/platform/default/dso_loader.cc:44] Successfully opened dynamic library libcublas.so.10
+2020-11-09 15:46:07.512583: I tensorflow/stream_executor/platform/default/dso_loader.cc:44] Successfully opened dynamic library libcufft.so.10
+2020-11-09 15:46:07.512953: I tensorflow/stream_executor/platform/default/dso_loader.cc:44] Successfully opened dynamic library libcurand.so.10
+2020-11-09 15:46:07.515709: I tensorflow/stream_executor/platform/default/dso_loader.cc:44] Successfully opened dynamic library libcusolver.so.10
+2020-11-09 15:46:07.516935: I tensorflow/stream_executor/platform/default/dso_loader.cc:44] Successfully opened dynamic library libcusparse.so.10
+2020-11-09 15:46:07.522434: I tensorflow/stream_executor/platform/default/dso_loader.cc:44] Successfully opened dynamic library libcudnn.so.7
+2020-11-09 15:46:07.525395: I tensorflow/core/common_runtime/gpu/gpu_device.cc:1697] Adding visible gpu devices: 0
+2020-11-09 15:46:07.525439: I tensorflow/stream_executor/platform/default/dso_loader.cc:44] Successfully opened dynamic library libcudart.so.10.1
+2020-11-09 15:46:07.669972: I tensorflow/core/common_runtime/gpu/gpu_device.cc:1096] Device interconnect StreamExecutor with strength 1 edge matrix:
+2020-11-09 15:46:07.670042: I tensorflow/core/common_runtime/gpu/gpu_device.cc:1102]      0 
+2020-11-09 15:46:07.670057: I tensorflow/core/common_runtime/gpu/gpu_device.cc:1115] 0:   N 
+2020-11-09 15:46:07.674578: I tensorflow/core/common_runtime/gpu/gpu_device.cc:1241] Created TensorFlow device (/device:GPU:0 with 30300 MB memory) -> physical GPU (device: 0, name: Tesla V100-SXM2-32GB, pci bus id: 0000:1a:00.0, compute capability: 7.0)
+2020-11-09 15:46:07.676550: I tensorflow/compiler/xla/service/service.cc:168] XLA service 0x558a76ce32f0 initialized for platform CUDA (this does not guarantee that XLA will be used). Devices:
+2020-11-09 15:46:07.676583: I tensorflow/compiler/xla/service/service.cc:176]   StreamExecutor device (0): Tesla V100-SXM2-32GB, Compute Capability 7.0
+2020-11-09 15:46:07.678716: I tensorflow/core/common_runtime/gpu/gpu_device.cc:1555] Found device 0 with properties: 
+pciBusID: 0000:1a:00.0 name: Tesla V100-SXM2-32GB computeCapability: 7.0
+coreClock: 1.53GHz coreCount: 80 deviceMemorySize: 31.75GiB deviceMemoryBandwidth: 836.37GiB/s
+2020-11-09 15:46:07.678789: I tensorflow/stream_executor/platform/default/dso_loader.cc:44] Successfully opened dynamic library libcudart.so.10.1
+2020-11-09 15:46:07.678807: I tensorflow/stream_executor/platform/default/dso_loader.cc:44] Successfully opened dynamic library libcublas.so.10
+2020-11-09 15:46:07.678821: I tensorflow/stream_executor/platform/default/dso_loader.cc:44] Successfully opened dynamic library libcufft.so.10
+2020-11-09 15:46:07.680174: I tensorflow/stream_executor/platform/default/dso_loader.cc:44] Successfully opened dynamic library libcurand.so.10
+2020-11-09 15:46:07.680190: I tensorflow/stream_executor/platform/default/dso_loader.cc:44] Successfully opened dynamic library libcusolver.so.10
+2020-11-09 15:46:07.680204: I tensorflow/stream_executor/platform/default/dso_loader.cc:44] Successfully opened dynamic library libcusparse.so.10
+2020-11-09 15:46:07.680218: I tensorflow/stream_executor/platform/default/dso_loader.cc:44] Successfully opened dynamic library libcudnn.so.7
+2020-11-09 15:46:07.683004: I tensorflow/core/common_runtime/gpu/gpu_device.cc:1697] Adding visible gpu devices: 0
+2020-11-09 15:46:07.683036: I tensorflow/core/common_runtime/gpu/gpu_device.cc:1096] Device interconnect StreamExecutor with strength 1 edge matrix:
+2020-11-09 15:46:07.683046: I tensorflow/core/common_runtime/gpu/gpu_device.cc:1102]      0 
+2020-11-09 15:46:07.683055: I tensorflow/core/common_runtime/gpu/gpu_device.cc:1115] 0:   N 
+2020-11-09 15:46:07.685848: I tensorflow/core/common_runtime/gpu/gpu_device.cc:1241] Created TensorFlow device (/device:GPU:0 with 30300 MB memory) -> physical GPU (device: 0, name: Tesla V100-SXM2-32GB, pci bus id: 0000:1a:00.0, compute capability: 7.0)
+2020-11-09 15:46:07.687531: I tensorflow/core/common_runtime/gpu/gpu_device.cc:1555] Found device 0 with properties: 
+pciBusID: 0000:1a:00.0 name: Tesla V100-SXM2-32GB computeCapability: 7.0
+coreClock: 1.53GHz coreCount: 80 deviceMemorySize: 31.75GiB deviceMemoryBandwidth: 836.37GiB/s
+2020-11-09 15:46:07.687591: I tensorflow/stream_executor/platform/default/dso_loader.cc:44] Successfully opened dynamic library libcudart.so.10.1
+2020-11-09 15:46:07.687607: I tensorflow/stream_executor/platform/default/dso_loader.cc:44] Successfully opened dynamic library libcublas.so.10
+2020-11-09 15:46:07.687621: I tensorflow/stream_executor/platform/default/dso_loader.cc:44] Successfully opened dynamic library libcufft.so.10
+2020-11-09 15:46:07.687635: I tensorflow/stream_executor/platform/default/dso_loader.cc:44] Successfully opened dynamic library libcurand.so.10
+2020-11-09 15:46:07.687648: I tensorflow/stream_executor/platform/default/dso_loader.cc:44] Successfully opened dynamic library libcusolver.so.10
+2020-11-09 15:46:07.687661: I tensorflow/stream_executor/platform/default/dso_loader.cc:44] Successfully opened dynamic library libcusparse.so.10
+2020-11-09 15:46:07.687675: I tensorflow/stream_executor/platform/default/dso_loader.cc:44] Successfully opened dynamic library libcudnn.so.7
+2020-11-09 15:46:07.690436: I tensorflow/core/common_runtime/gpu/gpu_device.cc:1697] Adding visible gpu devices: 0
+2020-11-09 15:46:07.690461: I tensorflow/core/common_runtime/gpu/gpu_device.cc:1096] Device interconnect StreamExecutor with strength 1 edge matrix:
+2020-11-09 15:46:07.690471: I tensorflow/core/common_runtime/gpu/gpu_device.cc:1102]      0 
+2020-11-09 15:46:07.690479: I tensorflow/core/common_runtime/gpu/gpu_device.cc:1115] 0:   N 
+2020-11-09 15:46:07.693280: I tensorflow/core/common_runtime/gpu/gpu_device.cc:1241] Created TensorFlow device (/device:GPU:0 with 30300 MB memory) -> physical GPU (device: 0, name: Tesla V100-SXM2-32GB, pci bus id: 0000:1a:00.0, compute capability: 7.0)
+#############################################
+post processing forecast: F006
+#############################################
+['/device:GPU:0']
+#################################################
+#################################################
+SUCCESS: Found GPU: /device:GPU:0
+#################################################
+#################################################
+We are here: /glade/work/wchapman/AnEn/CNN/Coastal_Points_LogNormal
+...Searching...: /glade/scratch/wchapman/AnEnCNN_good/Data/WestCoast/
+/glade/scratch/wchapman/Reforecast/F000
+/glade/scratch/wchapman/Reforecast/F006
+Training on
+/glade/scratch/wchapman/Reforecast/F006/train/F006_WY_1985_500mb_Clean.nc
+/glade/scratch/wchapman/Reforecast/F006/train/F006_WY_1986_500mb_Clean.nc
+/glade/scratch/wchapman/Reforecast/F006/train/F006_WY_1987_500mb_Clean.nc
+/glade/scratch/wchapman/Reforecast/F006/train/F006_WY_1988_500mb_Clean.nc
+/glade/scratch/wchapman/Reforecast/F006/train/F006_WY_1989_500mb_Clean.nc
+/glade/scratch/wchapman/Reforecast/F006/train/F006_WY_1990_500mb_Clean.nc
+/glade/scratch/wchapman/Reforecast/F006/train/F006_WY_1991_500mb_Clean.nc
+/glade/scratch/wchapman/Reforecast/F006/train/F006_WY_1992_500mb_Clean.nc
+/glade/scratch/wchapman/Reforecast/F006/train/F006_WY_1993_500mb_Clean.nc
+/glade/scratch/wchapman/Reforecast/F006/train/F006_WY_1994_500mb_Clean.nc
+/glade/scratch/wchapman/Reforecast/F006/train/F006_WY_1995_500mb_Clean.nc
+/glade/scratch/wchapman/Reforecast/F006/train/F006_WY_1996_500mb_Clean.nc
+/glade/scratch/wchapman/Reforecast/F006/train/F006_WY_1997_500mb_Clean.nc
+/glade/scratch/wchapman/Reforecast/F006/train/F006_WY_1998_500mb_Clean.nc
+/glade/scratch/wchapman/Reforecast/F006/train/F006_WY_1999_500mb_Clean.nc
+/glade/scratch/wchapman/Reforecast/F006/train/F006_WY_2000_500mb_Clean.nc
+/glade/scratch/wchapman/Reforecast/F006/train/F006_WY_2001_500mb_Clean.nc
+/glade/scratch/wchapman/Reforecast/F006/train/F006_WY_2002_500mb_Clean.nc
+/glade/scratch/wchapman/Reforecast/F006/train/F006_WY_2003_500mb_Clean.nc
+/glade/scratch/wchapman/Reforecast/F006/train/F006_WY_2004_500mb_Clean.nc
+/glade/scratch/wchapman/Reforecast/F006/train/F006_WY_2005_500mb_Clean.nc
+/glade/scratch/wchapman/Reforecast/F006/train/F006_WY_2006_500mb_Clean.nc
+/glade/scratch/wchapman/Reforecast/F006/train/F006_WY_2007_500mb_Clean.nc
+/glade/scratch/wchapman/Reforecast/F006/train/F006_WY_2008_500mb_Clean.nc
+/glade/scratch/wchapman/Reforecast/F006/train/F006_WY_2009_500mb_Clean.nc
+/glade/scratch/wchapman/Reforecast/F006/train/F006_WY_2010_500mb_Clean.nc
+/glade/scratch/wchapman/Reforecast/F006/train/F006_WY_2011_500mb_Clean.nc
+/glade/scratch/wchapman/Reforecast/F006/train/F006_WY_2012_500mb_Clean.nc
+/glade/scratch/wchapman/Reforecast/F006/train/F006_WY_2013_500mb_Clean.nc
+/glade/scratch/wchapman/Reforecast/F006/train/F006_WY_2014_500mb_Clean.nc
+/glade/scratch/wchapman/Reforecast/F006/train/F006_WY_2015_500mb_Clean.nc
+/glade/scratch/wchapman/Reforecast/F006/train/F006_WY_2016_500mb_Clean.nc
+Validating on
+/glade/scratch/wchapman/Reforecast/F006/validate/F006_WY_2017_500mb_Clean.nc
+Testing on
+/glade/scratch/wchapman/Reforecast/F006/test/F006_WY_2018_500mb_Clean.nc
+['2017', '2018']
+trainging yearss ['/glade/scratch/wchapman/Reforecast/F006/validate/F006_WY_2017_500mb_Clean.nc', '/glade/scratch/wchapman/Reforecast/F006/test/F006_WY_2018_500mb_Clean.nc']
+Reading data from: "/glade/scratch/wchapman/Reforecast/F006/validate/F006_WY_2017_500mb_Clean.nc"...
+Reading data from: "/glade/scratch/wchapman/Reforecast/F006/test/F006_WY_2018_500mb_Clean.nc"...
+
+
+Mean and standard deviation for "IVT" = 155.7700, 146.4146
+Mean and standard deviation for "p_sfc" = 985.6187, 61.8911
+Mean and standard deviation for "u_tr_p" = 10.7601, 11.8523
+Mean and standard deviation for "v_tr_p" = 0.3133, 13.8188
+Mean and standard deviation for "Z_p" = 5592.0832, 187.5354
+Mean and standard deviation for "IWV" = 13.6977, 7.9237
+2020-11-09 15:46:08.767651: I tensorflow/core/common_runtime/gpu/gpu_device.cc:1555] Found device 0 with properties: 
+pciBusID: 0000:1a:00.0 name: Tesla V100-SXM2-32GB computeCapability: 7.0
+coreClock: 1.53GHz coreCount: 80 deviceMemorySize: 31.75GiB deviceMemoryBandwidth: 836.37GiB/s
+2020-11-09 15:46:08.767767: I tensorflow/stream_executor/platform/default/dso_loader.cc:44] Successfully opened dynamic library libcudart.so.10.1
+2020-11-09 15:46:08.767785: I tensorflow/stream_executor/platform/default/dso_loader.cc:44] Successfully opened dynamic library libcublas.so.10
+2020-11-09 15:46:08.767799: I tensorflow/stream_executor/platform/default/dso_loader.cc:44] Successfully opened dynamic library libcufft.so.10
+2020-11-09 15:46:08.767813: I tensorflow/stream_executor/platform/default/dso_loader.cc:44] Successfully opened dynamic library libcurand.so.10
+2020-11-09 15:46:08.767827: I tensorflow/stream_executor/platform/default/dso_loader.cc:44] Successfully opened dynamic library libcusolver.so.10
+2020-11-09 15:46:08.767841: I tensorflow/stream_executor/platform/default/dso_loader.cc:44] Successfully opened dynamic library libcusparse.so.10
+2020-11-09 15:46:08.767856: I tensorflow/stream_executor/platform/default/dso_loader.cc:44] Successfully opened dynamic library libcudnn.so.7
+2020-11-09 15:46:08.770710: I tensorflow/core/common_runtime/gpu/gpu_device.cc:1697] Adding visible gpu devices: 0
+2020-11-09 15:46:08.772520: I tensorflow/core/common_runtime/gpu/gpu_device.cc:1555] Found device 0 with properties: 
+pciBusID: 0000:1a:00.0 name: Tesla V100-SXM2-32GB computeCapability: 7.0
+coreClock: 1.53GHz coreCount: 80 deviceMemorySize: 31.75GiB deviceMemoryBandwidth: 836.37GiB/s
+2020-11-09 15:46:08.772586: I tensorflow/stream_executor/platform/default/dso_loader.cc:44] Successfully opened dynamic library libcudart.so.10.1
+2020-11-09 15:46:08.772603: I tensorflow/stream_executor/platform/default/dso_loader.cc:44] Successfully opened dynamic library libcublas.so.10
+2020-11-09 15:46:08.772617: I tensorflow/stream_executor/platform/default/dso_loader.cc:44] Successfully opened dynamic library libcufft.so.10
+2020-11-09 15:46:08.772630: I tensorflow/stream_executor/platform/default/dso_loader.cc:44] Successfully opened dynamic library libcurand.so.10
+2020-11-09 15:46:08.772643: I tensorflow/stream_executor/platform/default/dso_loader.cc:44] Successfully opened dynamic library libcusolver.so.10
+2020-11-09 15:46:08.772657: I tensorflow/stream_executor/platform/default/dso_loader.cc:44] Successfully opened dynamic library libcusparse.so.10
+2020-11-09 15:46:08.772670: I tensorflow/stream_executor/platform/default/dso_loader.cc:44] Successfully opened dynamic library libcudnn.so.7
+2020-11-09 15:46:08.775458: I tensorflow/core/common_runtime/gpu/gpu_device.cc:1697] Adding visible gpu devices: 0
+2020-11-09 15:46:08.775493: I tensorflow/core/common_runtime/gpu/gpu_device.cc:1096] Device interconnect StreamExecutor with strength 1 edge matrix:
+2020-11-09 15:46:08.775504: I tensorflow/core/common_runtime/gpu/gpu_device.cc:1102]      0 
+2020-11-09 15:46:08.775512: I tensorflow/core/common_runtime/gpu/gpu_device.cc:1115] 0:   N 
+2020-11-09 15:46:08.778332: I tensorflow/core/common_runtime/gpu/gpu_device.cc:1241] Created TensorFlow device (/job:localhost/replica:0/task:0/device:GPU:0 with 30300 MB memory) -> physical GPU (device: 0, name: Tesla V100-SXM2-32GB, pci bus id: 0000:1a:00.0, compute capability: 7.0)
+2020-11-09 15:46:10.394316: I tensorflow/stream_executor/platform/default/dso_loader.cc:44] Successfully opened dynamic library libcudnn.so.7
+2020-11-09 15:46:11.432046: W tensorflow/stream_executor/gpu/redzone_allocator.cc:312] Not found: ./bin/ptxas not found
+Relying on driver to perform ptx compilation. This message will be only logged once.
+2020-11-09 15:46:11.445938: I tensorflow/stream_executor/platform/default/dso_loader.cc:44] Successfully opened dynamic library libcublas.so.10
+Reading data from: "/glade/scratch/wchapman/Reforecast/F006/validate/F006_WY_2017_500mb_Clean.nc"...
+Reading data from: "/glade/scratch/wchapman/Reforecast/F006/test/F006_WY_2018_500mb_Clean.nc"...
+
+
+Mean and standard deviation for "IVTm" = 184.8743, 159.2712
+#################################################
+testing: ['/glade/scratch/wchapman/Reforecast/F006/validate/F006_WY_2017_500mb_Clean.nc']
+validatiing: ['/glade/scratch/wchapman/Reforecast/F006/test/F006_WY_2018_500mb_Clean.nc']
+#################################################
+Reading data from: "/glade/scratch/wchapman/Reforecast/F006/test/F006_WY_2018_500mb_Clean.nc"...
+Reading data from: "/glade/scratch/wchapman/Reforecast/F006/test/F006_WY_2018_500mb_Clean.nc"...
+...gathering data...
+Reading data from: "/glade/scratch/wchapman/Reforecast/F006/test/F006_WY_2018_500mb_Clean.nc"...
+Reading data from: "/glade/scratch/wchapman/Reforecast/F006/test/F006_WY_2018_500mb_Clean.nc"...
+Model: "model"
+__________________________________________________________________________________________________
+Layer (type)                    Output Shape         Param #     Connected to                     
+==================================================================================================
+input_1 (InputLayer)            [(None, 71, 57, 6)]  0                                            
+__________________________________________________________________________________________________
+zero_padding2d (ZeroPadding2D)  (None, 72, 60, 6)    0           input_1[0][0]                    
+__________________________________________________________________________________________________
+downsampling_0_conv_0 (Conv2D)  (None, 72, 60, 16)   880         zero_padding2d[0][0]             
+__________________________________________________________________________________________________
+downsampling_0_batchnorm_0 (Bat (None, 72, 60, 16)   64          downsampling_0_conv_0[0][0]      
+__________________________________________________________________________________________________
+downsampling_0_activation_0 (Ac (None, 72, 60, 16)   0           downsampling_0_batchnorm_0[0][0] 
+__________________________________________________________________________________________________
+downsampling_0_conv_1 (Conv2D)  (None, 72, 60, 16)   2320        downsampling_0_activation_0[0][0]
+__________________________________________________________________________________________________
+downsampling_0_batchnorm_1 (Bat (None, 72, 60, 16)   64          downsampling_0_conv_1[0][0]      
+__________________________________________________________________________________________________
+downsampling_0_activation_1 (Ac (None, 72, 60, 16)   0           downsampling_0_batchnorm_1[0][0] 
+__________________________________________________________________________________________________
+max_pooling2d (MaxPooling2D)    (None, 36, 30, 16)   0           downsampling_0_activation_1[0][0]
+__________________________________________________________________________________________________
+bottleneck_skip_0 (Conv2D)      (None, 36, 30, 32)   4640        max_pooling2d[0][0]              
+__________________________________________________________________________________________________
+bottleneck_skip_1 (Conv2D)      (None, 36, 30, 32)   9248        bottleneck_skip_0[0][0]          
+__________________________________________________________________________________________________
+bottleneck_skip_2 (Conv2D)      (None, 36, 30, 32)   9248        bottleneck_skip_1[0][0]          
+__________________________________________________________________________________________________
+add (Add)                       (None, 36, 30, 32)   0           bottleneck_skip_0[0][0]          
+                                                                 bottleneck_skip_1[0][0]          
+                                                                 bottleneck_skip_2[0][0]          
+__________________________________________________________________________________________________
+upsampling_0_conv_trans_0 (Conv (None, 72, 60, 16)   2064        add[0][0]                        
+__________________________________________________________________________________________________
+concatenate (Concatenate)       (None, 72, 60, 32)   0           upsampling_0_conv_trans_0[0][0]  
+                                                                 downsampling_0_activation_1[0][0]
+__________________________________________________________________________________________________
+upsampling_0_conv_0 (Conv2D)    (None, 72, 60, 16)   4624        concatenate[0][0]                
+__________________________________________________________________________________________________
+upsampling_0_activation_0 (Acti (None, 72, 60, 16)   0           upsampling_0_conv_0[0][0]        
+__________________________________________________________________________________________________
+upsampling_0_conv_1 (Conv2D)    (None, 72, 60, 16)   2320        upsampling_0_activation_0[0][0]  
+__________________________________________________________________________________________________
+upsampling_0_activation_1 (Acti (None, 72, 60, 16)   0           upsampling_0_conv_1[0][0]        
+__________________________________________________________________________________________________
+linear (Conv2D)                 (None, 72, 60, 2)    34          upsampling_0_activation_1[0][0]  
+__________________________________________________________________________________________________
+cropping2d (Cropping2D)         (None, 71, 57, 2)    0           linear[0][0]                     
+==================================================================================================
+Total params: 35,506
+Trainable params: 35,442
+Non-trainable params: 64
+__________________________________________________________________________________________________
+/glade/scratch/wchapman/Reforecast/models/NN_CRPS/F006/StartingYear2017/CNN_2017
+/glade/scratch/wchapman/Reforecast/models/NN_CRPS/F006/StartingYear2017/CNN_2017
+/glade/scratch/wchapman/Reforecast/models/NN_CRPS/F006/StartingYear2017/CNN_2017
+/glade/scratch/wchapman/Reforecast/models/NN_CRPS/F006/StartingYear2017/CNN_2017
+/glade/scratch/wchapman/Reforecast/models/NN_CRPS/F006/StartingYear2017/CNN_2017
+/glade/scratch/wchapman/Reforecast/models/NN_CRPS/F006/StartingYear2017/CNN_2017
+/glade/scratch/wchapman/Reforecast/models/NN_CRPS/F006/StartingYear2017/CNN_2017
+/glade/scratch/wchapman/Reforecast/models/NN_CRPS/F006/StartingYear2017/CNN_2017
+/glade/scratch/wchapman/Reforecast/models/NN_CRPS/F006/StartingYear2017/CNN_2017
+....saving.... /glade/scratch/wchapman/Reforecast/models/NN_CRPS/F006/StartingYear2017/CNN_2017/cpf_CRPS_val_2018_test_2017.ckpt
+....saving.... /glade/scratch/wchapman/Reforecast/models/NN_CRPS/F006/StartingYear2017/CNN_2017/cpf_CRPS_val_2018_test_2017.ckpt
+Train on 121 samples, validate on 121 samples
+Epoch 1/50
+ 50/121 [===========>..................] - ETA: 3s - loss: 148.9823
+Epoch 00001: val_loss improved from inf to 145.80963, saving model to /glade/scratch/wchapman/Reforecast/models/NN_CRPS/F006/StartingYear2017/CNN_2017/cpf_CRPS_val_2018_test_2017.ckpt
+121/121 [==============================] - 3s 22ms/sample - loss: 146.2718 - val_loss: 145.8096
+Epoch 2/50
+ 50/121 [===========>..................] - ETA: 0s - loss: 148.3632
+Epoch 00002: val_loss improved from 145.80963 to 144.39487, saving model to /glade/scratch/wchapman/Reforecast/models/NN_CRPS/F006/StartingYear2017/CNN_2017/cpf_CRPS_val_2018_test_2017.ckpt
+121/121 [==============================] - 0s 694us/sample - loss: 144.7822 - val_loss: 144.3949
+Epoch 3/50
+ 50/121 [===========>..................] - ETA: 0s - loss: 135.5291
+Epoch 00003: val_loss improved from 144.39487 to 140.94769, saving model to /glade/scratch/wchapman/Reforecast/models/NN_CRPS/F006/StartingYear2017/CNN_2017/cpf_CRPS_val_2018_test_2017.ckpt
+121/121 [==============================] - 0s 623us/sample - loss: 141.6593 - val_loss: 140.9477
+Epoch 4/50
+ 50/121 [===========>..................] - ETA: 0s - loss: 134.4203
+Epoch 00004: val_loss improved from 140.94769 to 132.91193, saving model to /glade/scratch/wchapman/Reforecast/models/NN_CRPS/F006/StartingYear2017/CNN_2017/cpf_CRPS_val_2018_test_2017.ckpt
+121/121 [==============================] - 0s 623us/sample - loss: 133.8515 - val_loss: 132.9119
+Epoch 5/50
+ 50/121 [===========>..................] - ETA: 0s - loss: 124.6019
+Epoch 00005: val_loss improved from 132.91193 to 114.13169, saving model to /glade/scratch/wchapman/Reforecast/models/NN_CRPS/F006/StartingYear2017/CNN_2017/cpf_CRPS_val_2018_test_2017.ckpt
+121/121 [==============================] - 0s 605us/sample - loss: 114.1473 - val_loss: 114.1317
+Epoch 6/50
+ 50/121 [===========>..................] - ETA: 0s - loss: 83.4907
+Epoch 00006: val_loss improved from 114.13169 to 73.48700, saving model to /glade/scratch/wchapman/Reforecast/models/NN_CRPS/F006/StartingYear2017/CNN_2017/cpf_CRPS_val_2018_test_2017.ckpt
+121/121 [==============================] - 0s 596us/sample - loss: 72.9650 - val_loss: 73.4870
+Epoch 7/50
+ 50/121 [===========>..................] - ETA: 0s - loss: 44.1788
+Epoch 00007: val_loss improved from 73.48700 to 44.99766, saving model to /glade/scratch/wchapman/Reforecast/models/NN_CRPS/F006/StartingYear2017/CNN_2017/cpf_CRPS_val_2018_test_2017.ckpt
+121/121 [==============================] - 0s 606us/sample - loss: 48.2739 - val_loss: 44.9977
+Epoch 8/50
+ 50/121 [===========>..................] - ETA: 0s - loss: 57.4724
+Epoch 00008: val_loss did not improve from 44.99766
+121/121 [==============================] - 0s 398us/sample - loss: 53.5886 - val_loss: 50.9722
+Epoch 9/50
+ 50/121 [===========>..................] - ETA: 0s - loss: 42.1025
+Epoch 00009: val_loss did not improve from 44.99766
+
+Epoch 00009: ReduceLROnPlateau reducing learning rate to 0.0004000000189989805.
+121/121 [==============================] - 0s 399us/sample - loss: 40.4303 - val_loss: 68.0999
+Epoch 10/50
+ 50/121 [===========>..................] - ETA: 0s - loss: 44.2891
+Epoch 00010: val_loss did not improve from 44.99766
+121/121 [==============================] - 0s 391us/sample - loss: 41.8586 - val_loss: 70.5069
+Epoch 11/50
+ 50/121 [===========>..................] - ETA: 0s - loss: 44.6528
+Epoch 00011: val_loss did not improve from 44.99766
+
+Epoch 00011: ReduceLROnPlateau reducing learning rate to 0.00016000000759959222.
+121/121 [==============================] - 0s 395us/sample - loss: 41.7858 - val_loss: 67.5235
+Epoch 12/50
+ 50/121 [===========>..................] - ETA: 0s - loss: 37.6466
+Epoch 00012: val_loss did not improve from 44.99766
+121/121 [==============================] - 0s 422us/sample - loss: 39.2471 - val_loss: 64.7994
+Epoch 13/50
+ 50/121 [===========>..................] - ETA: 0s - loss: 37.5720
+Epoch 00013: val_loss did not improve from 44.99766
+
+Epoch 00013: ReduceLROnPlateau reducing learning rate to 6.40000042039901e-05.
+121/121 [==============================] - 0s 408us/sample - loss: 37.7449 - val_loss: 61.5627
+Epoch 14/50
+ 50/121 [===========>..................] - ETA: 0s - loss: 37.1880
+Epoch 00014: val_loss did not improve from 44.99766
+121/121 [==============================] - 0s 392us/sample - loss: 36.7357 - val_loss: 59.9537
+Epoch 15/50
+ 50/121 [===========>..................] - ETA: 0s - loss: 34.7820
+Epoch 00015: val_loss did not improve from 44.99766
+
+Epoch 00015: ReduceLROnPlateau reducing learning rate to 2.560000284574926e-05.
+121/121 [==============================] - 0s 396us/sample - loss: 36.4662 - val_loss: 58.4540
+Epoch 16/50
+ 50/121 [===========>..................] - ETA: 0s - loss: 35.4279
+Epoch 00016: val_loss did not improve from 44.99766
+121/121 [==============================] - 0s 390us/sample - loss: 36.1641 - val_loss: 57.6011
+Epoch 17/50
+ 50/121 [===========>..................] - ETA: 0s - loss: 34.5993
+Epoch 00017: val_loss did not improve from 44.99766
+
+Epoch 00017: ReduceLROnPlateau reducing learning rate to 1.0240000847261399e-05.
+121/121 [==============================] - 0s 397us/sample - loss: 36.1497 - val_loss: 56.8025
+/glade/work/wchapman/miniconda3/envs/tfp/lib/python3.6/site-packages/dask/config.py:168: YAMLLoadWarning: calling yaml.load() without Loader=... is deprecated, as the default Loader is unsafe. Please read https://msg.pyyaml.org/load for full details.
+  data = yaml.load(f.read()) or {}
+Run_CNN_FineTune_ByYear.py:178: FutureWarning: in the future negative indices will not be ignored by `numpy.delete`.
+  rest = np.delete(allinds,[bb,bb+1])
+/glade/work/wchapman/AnEn/CNN/Coastal_Points_LogNormal/utilsProb.py:216: RuntimeWarning: invalid value encountered in log
+  post_matrix = numpy.log(post_matrix)
+Epoch 00017: early stopping
+#################################################
+testing: ['/glade/scratch/wchapman/Reforecast/F006/test/F006_WY_2018_500mb_Clean.nc']
+validatiing: ['/glade/scratch/wchapman/Reforecast/F006/validate/F006_WY_2017_500mb_Clean.nc']
+#################################################
+Reading data from: "/glade/scratch/wchapman/Reforecast/F006/validate/F006_WY_2017_500mb_Clean.nc"...
+...gathering data...
+Traceback (most recent call last):
+  File "Run_CNN_FineTune_ByYear.py", line 191, in <module>
+    adf = next(aa)
+  File "/glade/work/wchapman/AnEn/CNN/Coastal_Points_LogNormal/utils_CNN.py", line 851, in deep_learning_generator
+    predictor_matrix=full_predictor_matrix[batch_indices, ...],
+TypeError: 'NoneType' object is not subscriptable

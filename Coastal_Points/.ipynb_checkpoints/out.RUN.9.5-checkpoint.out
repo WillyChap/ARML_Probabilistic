@@ -1,0 +1,1844 @@
+2020-11-09 17:08:32.075708: I tensorflow/core/platform/cpu_feature_guard.cc:142] Your CPU supports instructions that this TensorFlow binary was not compiled to use: SSE4.1 SSE4.2 AVX AVX2 AVX512F FMA
+2020-11-09 17:08:32.082742: I tensorflow/core/platform/profile_utils/cpu_utils.cc:94] CPU Frequency: 2300000000 Hz
+2020-11-09 17:08:32.082874: I tensorflow/compiler/xla/service/service.cc:168] XLA service 0x55f30ad67410 initialized for platform Host (this does not guarantee that XLA will be used). Devices:
+2020-11-09 17:08:32.082893: I tensorflow/compiler/xla/service/service.cc:176]   StreamExecutor device (0): Host, Default Version
+2020-11-09 17:08:32.084200: I tensorflow/stream_executor/platform/default/dso_loader.cc:44] Successfully opened dynamic library libcuda.so.1
+2020-11-09 17:08:32.101099: I tensorflow/core/common_runtime/gpu/gpu_device.cc:1555] Found device 0 with properties: 
+pciBusID: 0000:1a:00.0 name: Tesla V100-SXM2-32GB computeCapability: 7.0
+coreClock: 1.53GHz coreCount: 80 deviceMemorySize: 31.75GiB deviceMemoryBandwidth: 836.37GiB/s
+2020-11-09 17:08:32.101378: I tensorflow/stream_executor/platform/default/dso_loader.cc:44] Successfully opened dynamic library libcudart.so.10.1
+2020-11-09 17:08:32.104041: I tensorflow/stream_executor/platform/default/dso_loader.cc:44] Successfully opened dynamic library libcublas.so.10
+2020-11-09 17:08:32.106471: I tensorflow/stream_executor/platform/default/dso_loader.cc:44] Successfully opened dynamic library libcufft.so.10
+2020-11-09 17:08:32.106852: I tensorflow/stream_executor/platform/default/dso_loader.cc:44] Successfully opened dynamic library libcurand.so.10
+2020-11-09 17:08:32.109702: I tensorflow/stream_executor/platform/default/dso_loader.cc:44] Successfully opened dynamic library libcusolver.so.10
+2020-11-09 17:08:32.110943: I tensorflow/stream_executor/platform/default/dso_loader.cc:44] Successfully opened dynamic library libcusparse.so.10
+2020-11-09 17:08:32.116502: I tensorflow/stream_executor/platform/default/dso_loader.cc:44] Successfully opened dynamic library libcudnn.so.7
+2020-11-09 17:08:32.119416: I tensorflow/core/common_runtime/gpu/gpu_device.cc:1697] Adding visible gpu devices: 0
+2020-11-09 17:08:32.119459: I tensorflow/stream_executor/platform/default/dso_loader.cc:44] Successfully opened dynamic library libcudart.so.10.1
+2020-11-09 17:08:32.270339: I tensorflow/core/common_runtime/gpu/gpu_device.cc:1096] Device interconnect StreamExecutor with strength 1 edge matrix:
+2020-11-09 17:08:32.270403: I tensorflow/core/common_runtime/gpu/gpu_device.cc:1102]      0 
+2020-11-09 17:08:32.270418: I tensorflow/core/common_runtime/gpu/gpu_device.cc:1115] 0:   N 
+2020-11-09 17:08:32.274963: I tensorflow/core/common_runtime/gpu/gpu_device.cc:1241] Created TensorFlow device (/device:GPU:0 with 30300 MB memory) -> physical GPU (device: 0, name: Tesla V100-SXM2-32GB, pci bus id: 0000:1a:00.0, compute capability: 7.0)
+2020-11-09 17:08:32.276938: I tensorflow/compiler/xla/service/service.cc:168] XLA service 0x55f30bae2910 initialized for platform CUDA (this does not guarantee that XLA will be used). Devices:
+2020-11-09 17:08:32.276967: I tensorflow/compiler/xla/service/service.cc:176]   StreamExecutor device (0): Tesla V100-SXM2-32GB, Compute Capability 7.0
+2020-11-09 17:08:32.279110: I tensorflow/core/common_runtime/gpu/gpu_device.cc:1555] Found device 0 with properties: 
+pciBusID: 0000:1a:00.0 name: Tesla V100-SXM2-32GB computeCapability: 7.0
+coreClock: 1.53GHz coreCount: 80 deviceMemorySize: 31.75GiB deviceMemoryBandwidth: 836.37GiB/s
+2020-11-09 17:08:32.279184: I tensorflow/stream_executor/platform/default/dso_loader.cc:44] Successfully opened dynamic library libcudart.so.10.1
+2020-11-09 17:08:32.279201: I tensorflow/stream_executor/platform/default/dso_loader.cc:44] Successfully opened dynamic library libcublas.so.10
+2020-11-09 17:08:32.279216: I tensorflow/stream_executor/platform/default/dso_loader.cc:44] Successfully opened dynamic library libcufft.so.10
+2020-11-09 17:08:32.280597: I tensorflow/stream_executor/platform/default/dso_loader.cc:44] Successfully opened dynamic library libcurand.so.10
+2020-11-09 17:08:32.280654: I tensorflow/stream_executor/platform/default/dso_loader.cc:44] Successfully opened dynamic library libcusolver.so.10
+2020-11-09 17:08:32.280703: I tensorflow/stream_executor/platform/default/dso_loader.cc:44] Successfully opened dynamic library libcusparse.so.10
+2020-11-09 17:08:32.280757: I tensorflow/stream_executor/platform/default/dso_loader.cc:44] Successfully opened dynamic library libcudnn.so.7
+2020-11-09 17:08:32.283568: I tensorflow/core/common_runtime/gpu/gpu_device.cc:1697] Adding visible gpu devices: 0
+2020-11-09 17:08:32.283599: I tensorflow/core/common_runtime/gpu/gpu_device.cc:1096] Device interconnect StreamExecutor with strength 1 edge matrix:
+2020-11-09 17:08:32.283609: I tensorflow/core/common_runtime/gpu/gpu_device.cc:1102]      0 
+2020-11-09 17:08:32.283618: I tensorflow/core/common_runtime/gpu/gpu_device.cc:1115] 0:   N 
+2020-11-09 17:08:32.286443: I tensorflow/core/common_runtime/gpu/gpu_device.cc:1241] Created TensorFlow device (/device:GPU:0 with 30300 MB memory) -> physical GPU (device: 0, name: Tesla V100-SXM2-32GB, pci bus id: 0000:1a:00.0, compute capability: 7.0)
+2020-11-09 17:08:32.288134: I tensorflow/core/common_runtime/gpu/gpu_device.cc:1555] Found device 0 with properties: 
+pciBusID: 0000:1a:00.0 name: Tesla V100-SXM2-32GB computeCapability: 7.0
+coreClock: 1.53GHz coreCount: 80 deviceMemorySize: 31.75GiB deviceMemoryBandwidth: 836.37GiB/s
+2020-11-09 17:08:32.288184: I tensorflow/stream_executor/platform/default/dso_loader.cc:44] Successfully opened dynamic library libcudart.so.10.1
+2020-11-09 17:08:32.288200: I tensorflow/stream_executor/platform/default/dso_loader.cc:44] Successfully opened dynamic library libcublas.so.10
+2020-11-09 17:08:32.288214: I tensorflow/stream_executor/platform/default/dso_loader.cc:44] Successfully opened dynamic library libcufft.so.10
+2020-11-09 17:08:32.288227: I tensorflow/stream_executor/platform/default/dso_loader.cc:44] Successfully opened dynamic library libcurand.so.10
+2020-11-09 17:08:32.288241: I tensorflow/stream_executor/platform/default/dso_loader.cc:44] Successfully opened dynamic library libcusolver.so.10
+2020-11-09 17:08:32.288255: I tensorflow/stream_executor/platform/default/dso_loader.cc:44] Successfully opened dynamic library libcusparse.so.10
+2020-11-09 17:08:32.288269: I tensorflow/stream_executor/platform/default/dso_loader.cc:44] Successfully opened dynamic library libcudnn.so.7
+2020-11-09 17:08:32.291041: I tensorflow/core/common_runtime/gpu/gpu_device.cc:1697] Adding visible gpu devices: 0
+2020-11-09 17:08:32.291066: I tensorflow/core/common_runtime/gpu/gpu_device.cc:1096] Device interconnect StreamExecutor with strength 1 edge matrix:
+2020-11-09 17:08:32.291076: I tensorflow/core/common_runtime/gpu/gpu_device.cc:1102]      0 
+2020-11-09 17:08:32.291084: I tensorflow/core/common_runtime/gpu/gpu_device.cc:1115] 0:   N 
+2020-11-09 17:08:32.293897: I tensorflow/core/common_runtime/gpu/gpu_device.cc:1241] Created TensorFlow device (/device:GPU:0 with 30300 MB memory) -> physical GPU (device: 0, name: Tesla V100-SXM2-32GB, pci bus id: 0000:1a:00.0, compute capability: 7.0)
+#############################################
+post processing forecast: F048
+#############################################
+['/device:GPU:0']
+#################################################
+#################################################
+SUCCESS: Found GPU: /device:GPU:0
+#################################################
+#################################################
+We are here: /glade/work/wchapman/AnEn/CNN/Coastal_Points_LogNormal
+...Searching...: /glade/scratch/wchapman/AnEnCNN_good/Data/WestCoast/
+/glade/scratch/wchapman/Reforecast/F000
+/glade/scratch/wchapman/Reforecast/F006
+/glade/scratch/wchapman/Reforecast/F012
+/glade/scratch/wchapman/Reforecast/F018
+/glade/scratch/wchapman/Reforecast/F024
+/glade/scratch/wchapman/Reforecast/F030
+/glade/scratch/wchapman/Reforecast/F036
+/glade/scratch/wchapman/Reforecast/F042
+/glade/scratch/wchapman/Reforecast/F048
+Training on
+/glade/scratch/wchapman/Reforecast/F048/train/F048_WY_1985_500mb_Clean.nc
+/glade/scratch/wchapman/Reforecast/F048/train/F048_WY_1986_500mb_Clean.nc
+/glade/scratch/wchapman/Reforecast/F048/train/F048_WY_1987_500mb_Clean.nc
+/glade/scratch/wchapman/Reforecast/F048/train/F048_WY_1988_500mb_Clean.nc
+/glade/scratch/wchapman/Reforecast/F048/train/F048_WY_1989_500mb_Clean.nc
+/glade/scratch/wchapman/Reforecast/F048/train/F048_WY_1990_500mb_Clean.nc
+/glade/scratch/wchapman/Reforecast/F048/train/F048_WY_1991_500mb_Clean.nc
+/glade/scratch/wchapman/Reforecast/F048/train/F048_WY_1992_500mb_Clean.nc
+/glade/scratch/wchapman/Reforecast/F048/train/F048_WY_1993_500mb_Clean.nc
+/glade/scratch/wchapman/Reforecast/F048/train/F048_WY_1994_500mb_Clean.nc
+/glade/scratch/wchapman/Reforecast/F048/train/F048_WY_1995_500mb_Clean.nc
+/glade/scratch/wchapman/Reforecast/F048/train/F048_WY_1996_500mb_Clean.nc
+/glade/scratch/wchapman/Reforecast/F048/train/F048_WY_1997_500mb_Clean.nc
+/glade/scratch/wchapman/Reforecast/F048/train/F048_WY_1998_500mb_Clean.nc
+/glade/scratch/wchapman/Reforecast/F048/train/F048_WY_1999_500mb_Clean.nc
+/glade/scratch/wchapman/Reforecast/F048/train/F048_WY_2000_500mb_Clean.nc
+/glade/scratch/wchapman/Reforecast/F048/train/F048_WY_2001_500mb_Clean.nc
+/glade/scratch/wchapman/Reforecast/F048/train/F048_WY_2002_500mb_Clean.nc
+/glade/scratch/wchapman/Reforecast/F048/train/F048_WY_2003_500mb_Clean.nc
+/glade/scratch/wchapman/Reforecast/F048/train/F048_WY_2004_500mb_Clean.nc
+/glade/scratch/wchapman/Reforecast/F048/train/F048_WY_2005_500mb_Clean.nc
+/glade/scratch/wchapman/Reforecast/F048/train/F048_WY_2006_500mb_Clean.nc
+/glade/scratch/wchapman/Reforecast/F048/train/F048_WY_2007_500mb_Clean.nc
+/glade/scratch/wchapman/Reforecast/F048/train/F048_WY_2008_500mb_Clean.nc
+/glade/scratch/wchapman/Reforecast/F048/train/F048_WY_2009_500mb_Clean.nc
+/glade/scratch/wchapman/Reforecast/F048/train/F048_WY_2010_500mb_Clean.nc
+/glade/scratch/wchapman/Reforecast/F048/train/F048_WY_2011_500mb_Clean.nc
+/glade/scratch/wchapman/Reforecast/F048/train/F048_WY_2012_500mb_Clean.nc
+/glade/scratch/wchapman/Reforecast/F048/train/F048_WY_2013_500mb_Clean.nc
+/glade/scratch/wchapman/Reforecast/F048/train/F048_WY_2014_500mb_Clean.nc
+/glade/scratch/wchapman/Reforecast/F048/train/F048_WY_2015_500mb_Clean.nc
+/glade/scratch/wchapman/Reforecast/F048/train/F048_WY_2016_500mb_Clean.nc
+Validating on
+/glade/scratch/wchapman/Reforecast/F048/validate/F048_WY_2017_500mb_Clean.nc
+Testing on
+/glade/scratch/wchapman/Reforecast/F048/test/F048_WY_2018_500mb_Clean.nc
+['2013', '2014', '2015', '2016', '2017', '2018']
+trainging yearss ['/glade/scratch/wchapman/Reforecast/F048/train/F048_WY_2013_500mb_Clean.nc', '/glade/scratch/wchapman/Reforecast/F048/train/F048_WY_2014_500mb_Clean.nc', '/glade/scratch/wchapman/Reforecast/F048/train/F048_WY_2015_500mb_Clean.nc', '/glade/scratch/wchapman/Reforecast/F048/train/F048_WY_2016_500mb_Clean.nc', '/glade/scratch/wchapman/Reforecast/F048/validate/F048_WY_2017_500mb_Clean.nc', '/glade/scratch/wchapman/Reforecast/F048/test/F048_WY_2018_500mb_Clean.nc']
+Reading data from: "/glade/scratch/wchapman/Reforecast/F048/train/F048_WY_2013_500mb_Clean.nc"...
+Reading data from: "/glade/scratch/wchapman/Reforecast/F048/train/F048_WY_2014_500mb_Clean.nc"...
+Reading data from: "/glade/scratch/wchapman/Reforecast/F048/train/F048_WY_2015_500mb_Clean.nc"...
+Reading data from: "/glade/scratch/wchapman/Reforecast/F048/train/F048_WY_2016_500mb_Clean.nc"...
+Reading data from: "/glade/scratch/wchapman/Reforecast/F048/validate/F048_WY_2017_500mb_Clean.nc"...
+Reading data from: "/glade/scratch/wchapman/Reforecast/F048/test/F048_WY_2018_500mb_Clean.nc"...
+
+
+Mean and standard deviation for "IVT" = 163.9232, 157.6009
+Mean and standard deviation for "p_sfc" = 984.2737, 61.5837
+Mean and standard deviation for "u_tr_p" = 12.3808, 12.2954
+Mean and standard deviation for "v_tr_p" = 1.6986, 13.3487
+Mean and standard deviation for "Z_p" = 5583.0085, 197.0169
+Mean and standard deviation for "IWV" = 13.8951, 8.0499
+2020-11-09 17:08:35.394970: I tensorflow/core/common_runtime/gpu/gpu_device.cc:1555] Found device 0 with properties: 
+pciBusID: 0000:1a:00.0 name: Tesla V100-SXM2-32GB computeCapability: 7.0
+coreClock: 1.53GHz coreCount: 80 deviceMemorySize: 31.75GiB deviceMemoryBandwidth: 836.37GiB/s
+2020-11-09 17:08:35.431278: I tensorflow/stream_executor/platform/default/dso_loader.cc:44] Successfully opened dynamic library libcudart.so.10.1
+2020-11-09 17:08:35.431319: I tensorflow/stream_executor/platform/default/dso_loader.cc:44] Successfully opened dynamic library libcublas.so.10
+2020-11-09 17:08:35.431340: I tensorflow/stream_executor/platform/default/dso_loader.cc:44] Successfully opened dynamic library libcufft.so.10
+2020-11-09 17:08:35.431357: I tensorflow/stream_executor/platform/default/dso_loader.cc:44] Successfully opened dynamic library libcurand.so.10
+2020-11-09 17:08:35.431374: I tensorflow/stream_executor/platform/default/dso_loader.cc:44] Successfully opened dynamic library libcusolver.so.10
+2020-11-09 17:08:35.431388: I tensorflow/stream_executor/platform/default/dso_loader.cc:44] Successfully opened dynamic library libcusparse.so.10
+2020-11-09 17:08:35.431402: I tensorflow/stream_executor/platform/default/dso_loader.cc:44] Successfully opened dynamic library libcudnn.so.7
+2020-11-09 17:08:35.434261: I tensorflow/core/common_runtime/gpu/gpu_device.cc:1697] Adding visible gpu devices: 0
+2020-11-09 17:08:35.436007: I tensorflow/core/common_runtime/gpu/gpu_device.cc:1555] Found device 0 with properties: 
+pciBusID: 0000:1a:00.0 name: Tesla V100-SXM2-32GB computeCapability: 7.0
+coreClock: 1.53GHz coreCount: 80 deviceMemorySize: 31.75GiB deviceMemoryBandwidth: 836.37GiB/s
+2020-11-09 17:08:35.436056: I tensorflow/stream_executor/platform/default/dso_loader.cc:44] Successfully opened dynamic library libcudart.so.10.1
+2020-11-09 17:08:35.436072: I tensorflow/stream_executor/platform/default/dso_loader.cc:44] Successfully opened dynamic library libcublas.so.10
+2020-11-09 17:08:35.436086: I tensorflow/stream_executor/platform/default/dso_loader.cc:44] Successfully opened dynamic library libcufft.so.10
+2020-11-09 17:08:35.436099: I tensorflow/stream_executor/platform/default/dso_loader.cc:44] Successfully opened dynamic library libcurand.so.10
+2020-11-09 17:08:35.436113: I tensorflow/stream_executor/platform/default/dso_loader.cc:44] Successfully opened dynamic library libcusolver.so.10
+2020-11-09 17:08:35.436126: I tensorflow/stream_executor/platform/default/dso_loader.cc:44] Successfully opened dynamic library libcusparse.so.10
+2020-11-09 17:08:35.436140: I tensorflow/stream_executor/platform/default/dso_loader.cc:44] Successfully opened dynamic library libcudnn.so.7
+2020-11-09 17:08:35.438941: I tensorflow/core/common_runtime/gpu/gpu_device.cc:1697] Adding visible gpu devices: 0
+2020-11-09 17:08:35.438976: I tensorflow/core/common_runtime/gpu/gpu_device.cc:1096] Device interconnect StreamExecutor with strength 1 edge matrix:
+2020-11-09 17:08:35.438987: I tensorflow/core/common_runtime/gpu/gpu_device.cc:1102]      0 
+2020-11-09 17:08:35.438995: I tensorflow/core/common_runtime/gpu/gpu_device.cc:1115] 0:   N 
+2020-11-09 17:08:35.441876: I tensorflow/core/common_runtime/gpu/gpu_device.cc:1241] Created TensorFlow device (/job:localhost/replica:0/task:0/device:GPU:0 with 30300 MB memory) -> physical GPU (device: 0, name: Tesla V100-SXM2-32GB, pci bus id: 0000:1a:00.0, compute capability: 7.0)
+2020-11-09 17:08:37.081676: I tensorflow/stream_executor/platform/default/dso_loader.cc:44] Successfully opened dynamic library libcudnn.so.7
+2020-11-09 17:08:38.085688: W tensorflow/stream_executor/gpu/redzone_allocator.cc:312] Not found: ./bin/ptxas not found
+Relying on driver to perform ptx compilation. This message will be only logged once.
+2020-11-09 17:08:38.100870: I tensorflow/stream_executor/platform/default/dso_loader.cc:44] Successfully opened dynamic library libcublas.so.10
+Reading data from: "/glade/scratch/wchapman/Reforecast/F048/train/F048_WY_2013_500mb_Clean.nc"...
+Reading data from: "/glade/scratch/wchapman/Reforecast/F048/train/F048_WY_2014_500mb_Clean.nc"...
+Reading data from: "/glade/scratch/wchapman/Reforecast/F048/train/F048_WY_2015_500mb_Clean.nc"...
+Reading data from: "/glade/scratch/wchapman/Reforecast/F048/train/F048_WY_2016_500mb_Clean.nc"...
+Reading data from: "/glade/scratch/wchapman/Reforecast/F048/validate/F048_WY_2017_500mb_Clean.nc"...
+Reading data from: "/glade/scratch/wchapman/Reforecast/F048/test/F048_WY_2018_500mb_Clean.nc"...
+
+
+Mean and standard deviation for "IVTm" = 206.0128, 179.4708
+#################################################
+testing: ['/glade/scratch/wchapman/Reforecast/F048/validate/F048_WY_2017_500mb_Clean.nc']
+validatiing: ['/glade/scratch/wchapman/Reforecast/F048/train/F048_WY_2016_500mb_Clean.nc']
+#################################################
+Reading data from: "/glade/scratch/wchapman/Reforecast/F048/train/F048_WY_2013_500mb_Clean.nc"...
+Reading data from: "/glade/scratch/wchapman/Reforecast/F048/train/F048_WY_2014_500mb_Clean.nc"...
+Reading data from: "/glade/scratch/wchapman/Reforecast/F048/train/F048_WY_2015_500mb_Clean.nc"...
+Reading data from: "/glade/scratch/wchapman/Reforecast/F048/test/F048_WY_2018_500mb_Clean.nc"...
+Reading data from: "/glade/scratch/wchapman/Reforecast/F048/train/F048_WY_2016_500mb_Clean.nc"...
+...gathering data...
+Reading data from: "/glade/scratch/wchapman/Reforecast/F048/train/F048_WY_2014_500mb_Clean.nc"...
+Reading data from: "/glade/scratch/wchapman/Reforecast/F048/train/F048_WY_2013_500mb_Clean.nc"...
+Reading data from: "/glade/scratch/wchapman/Reforecast/F048/test/F048_WY_2018_500mb_Clean.nc"...
+Reading data from: "/glade/scratch/wchapman/Reforecast/F048/train/F048_WY_2015_500mb_Clean.nc"...
+Reading data from: "/glade/scratch/wchapman/Reforecast/F048/train/F048_WY_2016_500mb_Clean.nc"...
+Model: "model"
+__________________________________________________________________________________________________
+Layer (type)                    Output Shape         Param #     Connected to                     
+==================================================================================================
+input_1 (InputLayer)            [(None, 71, 57, 6)]  0                                            
+__________________________________________________________________________________________________
+zero_padding2d (ZeroPadding2D)  (None, 72, 60, 6)    0           input_1[0][0]                    
+__________________________________________________________________________________________________
+downsampling_0_conv_0 (Conv2D)  (None, 72, 60, 16)   880         zero_padding2d[0][0]             
+__________________________________________________________________________________________________
+downsampling_0_batchnorm_0 (Bat (None, 72, 60, 16)   64          downsampling_0_conv_0[0][0]      
+__________________________________________________________________________________________________
+downsampling_0_activation_0 (Ac (None, 72, 60, 16)   0           downsampling_0_batchnorm_0[0][0] 
+__________________________________________________________________________________________________
+downsampling_0_conv_1 (Conv2D)  (None, 72, 60, 16)   2320        downsampling_0_activation_0[0][0]
+__________________________________________________________________________________________________
+downsampling_0_batchnorm_1 (Bat (None, 72, 60, 16)   64          downsampling_0_conv_1[0][0]      
+__________________________________________________________________________________________________
+downsampling_0_activation_1 (Ac (None, 72, 60, 16)   0           downsampling_0_batchnorm_1[0][0] 
+__________________________________________________________________________________________________
+max_pooling2d (MaxPooling2D)    (None, 36, 30, 16)   0           downsampling_0_activation_1[0][0]
+__________________________________________________________________________________________________
+bottleneck_skip_0 (Conv2D)      (None, 36, 30, 32)   4640        max_pooling2d[0][0]              
+__________________________________________________________________________________________________
+bottleneck_skip_1 (Conv2D)      (None, 36, 30, 32)   9248        bottleneck_skip_0[0][0]          
+__________________________________________________________________________________________________
+bottleneck_skip_2 (Conv2D)      (None, 36, 30, 32)   9248        bottleneck_skip_1[0][0]          
+__________________________________________________________________________________________________
+add (Add)                       (None, 36, 30, 32)   0           bottleneck_skip_0[0][0]          
+                                                                 bottleneck_skip_1[0][0]          
+                                                                 bottleneck_skip_2[0][0]          
+__________________________________________________________________________________________________
+upsampling_0_conv_trans_0 (Conv (None, 72, 60, 16)   2064        add[0][0]                        
+__________________________________________________________________________________________________
+concatenate (Concatenate)       (None, 72, 60, 32)   0           upsampling_0_conv_trans_0[0][0]  
+                                                                 downsampling_0_activation_1[0][0]
+__________________________________________________________________________________________________
+upsampling_0_conv_0 (Conv2D)    (None, 72, 60, 16)   4624        concatenate[0][0]                
+__________________________________________________________________________________________________
+upsampling_0_activation_0 (Acti (None, 72, 60, 16)   0           upsampling_0_conv_0[0][0]        
+__________________________________________________________________________________________________
+upsampling_0_conv_1 (Conv2D)    (None, 72, 60, 16)   2320        upsampling_0_activation_0[0][0]  
+__________________________________________________________________________________________________
+upsampling_0_activation_1 (Acti (None, 72, 60, 16)   0           upsampling_0_conv_1[0][0]        
+__________________________________________________________________________________________________
+linear (Conv2D)                 (None, 72, 60, 2)    34          upsampling_0_activation_1[0][0]  
+__________________________________________________________________________________________________
+cropping2d (Cropping2D)         (None, 71, 57, 2)    0           linear[0][0]                     
+==================================================================================================
+Total params: 35,506
+Trainable params: 35,442
+Non-trainable params: 64
+__________________________________________________________________________________________________
+/glade/scratch/wchapman/Reforecast/models/NN_CRPS/F048/StartingYear2013/CNN_2017
+/glade/scratch/wchapman/Reforecast/models/NN_CRPS/F048/StartingYear2013/CNN_2017
+/glade/scratch/wchapman/Reforecast/models/NN_CRPS/F048/StartingYear2013/CNN_2017
+/glade/scratch/wchapman/Reforecast/models/NN_CRPS/F048/StartingYear2013/CNN_2017
+/glade/scratch/wchapman/Reforecast/models/NN_CRPS/F048/StartingYear2013/CNN_2017
+/glade/scratch/wchapman/Reforecast/models/NN_CRPS/F048/StartingYear2013/CNN_2017
+/glade/scratch/wchapman/Reforecast/models/NN_CRPS/F048/StartingYear2013/CNN_2017
+/glade/scratch/wchapman/Reforecast/models/NN_CRPS/F048/StartingYear2013/CNN_2017
+/glade/scratch/wchapman/Reforecast/models/NN_CRPS/F048/StartingYear2013/CNN_2017
+....saving.... /glade/scratch/wchapman/Reforecast/models/NN_CRPS/F048/StartingYear2013/CNN_2017/cpf_CRPS_val_2016_test_2017.ckpt
+....saving.... /glade/scratch/wchapman/Reforecast/models/NN_CRPS/F048/StartingYear2013/CNN_2017/cpf_CRPS_val_2016_test_2017.ckpt
+Train on 485 samples, validate on 121 samples
+Epoch 1/50
+ 50/485 [==>...........................] - ETA: 19s - loss: 160.0125250/485 [==============>...............] - ETA: 2s - loss: 162.2392 
+Epoch 00001: val_loss improved from inf to 150.68888, saving model to /glade/scratch/wchapman/Reforecast/models/NN_CRPS/F048/StartingYear2013/CNN_2017/cpf_CRPS_val_2016_test_2017.ckpt
+485/485 [==============================] - 3s 6ms/sample - loss: 161.1439 - val_loss: 150.6889
+Epoch 2/50
+ 50/485 [==>...........................] - ETA: 0s - loss: 154.2351300/485 [=================>............] - ETA: 0s - loss: 128.4096
+Epoch 00002: val_loss improved from 150.68888 to 47.21856, saving model to /glade/scratch/wchapman/Reforecast/models/NN_CRPS/F048/StartingYear2013/CNN_2017/cpf_CRPS_val_2016_test_2017.ckpt
+485/485 [==============================] - 0s 338us/sample - loss: 105.4448 - val_loss: 47.2186
+Epoch 3/50
+ 50/485 [==>...........................] - ETA: 0s - loss: 66.6545300/485 [=================>............] - ETA: 0s - loss: 56.3153
+Epoch 00003: val_loss did not improve from 47.21856
+485/485 [==============================] - 0s 269us/sample - loss: 54.0359 - val_loss: 71.3400
+Epoch 4/50
+ 50/485 [==>...........................] - ETA: 0s - loss: 56.7559300/485 [=================>............] - ETA: 0s - loss: 46.2536
+Epoch 00004: val_loss did not improve from 47.21856
+
+Epoch 00004: ReduceLROnPlateau reducing learning rate to 0.0004000000189989805.
+485/485 [==============================] - 0s 268us/sample - loss: 45.5722 - val_loss: 54.4342
+Epoch 5/50
+ 50/485 [==>...........................] - ETA: 0s - loss: 42.8125300/485 [=================>............] - ETA: 0s - loss: 41.2318
+Epoch 00005: val_loss did not improve from 47.21856
+485/485 [==============================] - 0s 268us/sample - loss: 41.0403 - val_loss: 64.4588
+Epoch 6/50
+ 50/485 [==>...........................] - ETA: 0s - loss: 37.5975300/485 [=================>............] - ETA: 0s - loss: 39.6909
+Epoch 00006: val_loss did not improve from 47.21856
+
+Epoch 00006: ReduceLROnPlateau reducing learning rate to 0.00016000000759959222.
+485/485 [==============================] - 0s 269us/sample - loss: 39.2076 - val_loss: 57.7952
+Epoch 7/50
+ 50/485 [==>...........................] - ETA: 0s - loss: 37.7853300/485 [=================>............] - ETA: 0s - loss: 37.9761
+Epoch 00007: val_loss did not improve from 47.21856
+485/485 [==============================] - 0s 267us/sample - loss: 37.5253 - val_loss: 57.9616
+Epoch 8/50
+ 50/485 [==>...........................] - ETA: 0s - loss: 35.5537300/485 [=================>............] - ETA: 0s - loss: 36.8583
+Epoch 00008: val_loss did not improve from 47.21856
+
+Epoch 00008: ReduceLROnPlateau reducing learning rate to 6.40000042039901e-05.
+485/485 [==============================] - 0s 268us/sample - loss: 36.7758 - val_loss: 59.0591
+Epoch 9/50
+ 50/485 [==>...........................] - ETA: 0s - loss: 37.2961300/485 [=================>............] - ETA: 0s - loss: 36.3584
+Epoch 00009: val_loss did not improve from 47.21856
+485/485 [==============================] - 0s 267us/sample - loss: 36.2630 - val_loss: 56.2026
+Epoch 10/50
+ 50/485 [==>...........................] - ETA: 0s - loss: 37.2646300/485 [=================>............] - ETA: 0s - loss: 35.4342
+Epoch 00010: val_loss did not improve from 47.21856
+
+Epoch 00010: ReduceLROnPlateau reducing learning rate to 2.560000284574926e-05.
+485/485 [==============================] - 0s 267us/sample - loss: 35.9640 - val_loss: 53.8199
+Epoch 11/50
+ 50/485 [==>...........................] - ETA: 0s - loss: 34.0944300/485 [=================>............] - ETA: 0s - loss: 35.5117
+Epoch 00011: val_loss did not improve from 47.21856
+485/485 [==============================] - 0s 267us/sample - loss: 35.7968 - val_loss: 51.2686
+Epoch 12/50
+ 50/485 [==>...........................] - ETA: 0s - loss: 36.7109300/485 [=================>............] - ETA: 0s - loss: 35.9598
+Epoch 00012: val_loss did not improve from 47.21856
+
+Epoch 00012: ReduceLROnPlateau reducing learning rate to 1.0240000847261399e-05.
+485/485 [==============================] - 0s 271us/sample - loss: 35.6152 - val_loss: 49.1054
+Epoch 00012: early stopping
+#################################################
+testing: ['/glade/scratch/wchapman/Reforecast/F048/test/F048_WY_2018_500mb_Clean.nc']
+validatiing: ['/glade/scratch/wchapman/Reforecast/F048/validate/F048_WY_2017_500mb_Clean.nc']
+#################################################
+Reading data from: "/glade/scratch/wchapman/Reforecast/F048/train/F048_WY_2013_500mb_Clean.nc"...
+Reading data from: "/glade/scratch/wchapman/Reforecast/F048/train/F048_WY_2014_500mb_Clean.nc"...
+Reading data from: "/glade/scratch/wchapman/Reforecast/F048/train/F048_WY_2015_500mb_Clean.nc"...
+Reading data from: "/glade/scratch/wchapman/Reforecast/F048/train/F048_WY_2016_500mb_Clean.nc"...
+Reading data from: "/glade/scratch/wchapman/Reforecast/F048/validate/F048_WY_2017_500mb_Clean.nc"...
+...gathering data...
+Reading data from: "/glade/scratch/wchapman/Reforecast/F048/train/F048_WY_2016_500mb_Clean.nc"...
+Reading data from: "/glade/scratch/wchapman/Reforecast/F048/train/F048_WY_2015_500mb_Clean.nc"...
+Reading data from: "/glade/scratch/wchapman/Reforecast/F048/train/F048_WY_2014_500mb_Clean.nc"...
+Reading data from: "/glade/scratch/wchapman/Reforecast/F048/train/F048_WY_2013_500mb_Clean.nc"...
+Reading data from: "/glade/scratch/wchapman/Reforecast/F048/validate/F048_WY_2017_500mb_Clean.nc"...
+Model: "model_1"
+__________________________________________________________________________________________________
+Layer (type)                    Output Shape         Param #     Connected to                     
+==================================================================================================
+input_2 (InputLayer)            [(None, 71, 57, 6)]  0                                            
+__________________________________________________________________________________________________
+zero_padding2d_1 (ZeroPadding2D (None, 72, 60, 6)    0           input_2[0][0]                    
+__________________________________________________________________________________________________
+downsampling_0_conv_0 (Conv2D)  (None, 72, 60, 16)   880         zero_padding2d_1[0][0]           
+__________________________________________________________________________________________________
+downsampling_0_batchnorm_0 (Bat (None, 72, 60, 16)   64          downsampling_0_conv_0[0][0]      
+__________________________________________________________________________________________________
+downsampling_0_activation_0 (Ac (None, 72, 60, 16)   0           downsampling_0_batchnorm_0[0][0] 
+__________________________________________________________________________________________________
+downsampling_0_conv_1 (Conv2D)  (None, 72, 60, 16)   2320        downsampling_0_activation_0[0][0]
+__________________________________________________________________________________________________
+downsampling_0_batchnorm_1 (Bat (None, 72, 60, 16)   64          downsampling_0_conv_1[0][0]      
+__________________________________________________________________________________________________
+downsampling_0_activation_1 (Ac (None, 72, 60, 16)   0           downsampling_0_batchnorm_1[0][0] 
+__________________________________________________________________________________________________
+max_pooling2d_1 (MaxPooling2D)  (None, 36, 30, 16)   0           downsampling_0_activation_1[0][0]
+__________________________________________________________________________________________________
+bottleneck_skip_0 (Conv2D)      (None, 36, 30, 32)   4640        max_pooling2d_1[0][0]            
+__________________________________________________________________________________________________
+bottleneck_skip_1 (Conv2D)      (None, 36, 30, 32)   9248        bottleneck_skip_0[0][0]          
+__________________________________________________________________________________________________
+bottleneck_skip_2 (Conv2D)      (None, 36, 30, 32)   9248        bottleneck_skip_1[0][0]          
+__________________________________________________________________________________________________
+add_1 (Add)                     (None, 36, 30, 32)   0           bottleneck_skip_0[0][0]          
+                                                                 bottleneck_skip_1[0][0]          
+                                                                 bottleneck_skip_2[0][0]          
+__________________________________________________________________________________________________
+upsampling_0_conv_trans_0 (Conv (None, 72, 60, 16)   2064        add_1[0][0]                      
+__________________________________________________________________________________________________
+concatenate_1 (Concatenate)     (None, 72, 60, 32)   0           upsampling_0_conv_trans_0[0][0]  
+                                                                 downsampling_0_activation_1[0][0]
+__________________________________________________________________________________________________
+upsampling_0_conv_0 (Conv2D)    (None, 72, 60, 16)   4624        concatenate_1[0][0]              
+__________________________________________________________________________________________________
+upsampling_0_activation_0 (Acti (None, 72, 60, 16)   0           upsampling_0_conv_0[0][0]        
+__________________________________________________________________________________________________
+upsampling_0_conv_1 (Conv2D)    (None, 72, 60, 16)   2320        upsampling_0_activation_0[0][0]  
+__________________________________________________________________________________________________
+upsampling_0_activation_1 (Acti (None, 72, 60, 16)   0           upsampling_0_conv_1[0][0]        
+__________________________________________________________________________________________________
+linear (Conv2D)                 (None, 72, 60, 2)    34          upsampling_0_activation_1[0][0]  
+__________________________________________________________________________________________________
+cropping2d_1 (Cropping2D)       (None, 71, 57, 2)    0           linear[0][0]                     
+==================================================================================================
+Total params: 35,506
+Trainable params: 35,442
+Non-trainable params: 64
+__________________________________________________________________________________________________
+/glade/scratch/wchapman/Reforecast/models/NN_CRPS/F048/StartingYear2013/CNN_2018
+/glade/scratch/wchapman/Reforecast/models/NN_CRPS/F048/StartingYear2013/CNN_2018
+/glade/scratch/wchapman/Reforecast/models/NN_CRPS/F048/StartingYear2013/CNN_2018
+/glade/scratch/wchapman/Reforecast/models/NN_CRPS/F048/StartingYear2013/CNN_2018
+/glade/scratch/wchapman/Reforecast/models/NN_CRPS/F048/StartingYear2013/CNN_2018
+/glade/scratch/wchapman/Reforecast/models/NN_CRPS/F048/StartingYear2013/CNN_2018
+/glade/scratch/wchapman/Reforecast/models/NN_CRPS/F048/StartingYear2013/CNN_2018
+/glade/scratch/wchapman/Reforecast/models/NN_CRPS/F048/StartingYear2013/CNN_2018
+/glade/scratch/wchapman/Reforecast/models/NN_CRPS/F048/StartingYear2013/CNN_2018
+....saving.... /glade/scratch/wchapman/Reforecast/models/NN_CRPS/F048/StartingYear2013/CNN_2018/cpf_CRPS_val_2017_test_2018.ckpt
+....saving.... /glade/scratch/wchapman/Reforecast/models/NN_CRPS/F048/StartingYear2013/CNN_2018/cpf_CRPS_val_2017_test_2018.ckpt
+Train on 485 samples, validate on 121 samples
+Epoch 1/50
+ 50/485 [==>...........................] - ETA: 7s - loss: 167.1149300/485 [=================>............] - ETA: 0s - loss: 165.0515
+Epoch 00001: val_loss improved from inf to 139.65015, saving model to /glade/scratch/wchapman/Reforecast/models/NN_CRPS/F048/StartingYear2013/CNN_2018/cpf_CRPS_val_2017_test_2018.ckpt
+485/485 [==============================] - 1s 2ms/sample - loss: 162.7451 - val_loss: 139.6501
+Epoch 2/50
+ 50/485 [==>...........................] - ETA: 0s - loss: 134.4119300/485 [=================>............] - ETA: 0s - loss: 127.8970
+Epoch 00002: val_loss improved from 139.65015 to 66.21907, saving model to /glade/scratch/wchapman/Reforecast/models/NN_CRPS/F048/StartingYear2013/CNN_2018/cpf_CRPS_val_2017_test_2018.ckpt
+485/485 [==============================] - 0s 332us/sample - loss: 107.9782 - val_loss: 66.2191
+Epoch 3/50
+ 50/485 [==>...........................] - ETA: 0s - loss: 79.9129300/485 [=================>............] - ETA: 0s - loss: 77.1841
+Epoch 00003: val_loss did not improve from 66.21907
+485/485 [==============================] - 0s 269us/sample - loss: 72.3249 - val_loss: 69.0886
+Epoch 4/50
+ 50/485 [==>...........................] - ETA: 0s - loss: 63.4454300/485 [=================>............] - ETA: 0s - loss: 62.5388
+Epoch 00004: val_loss improved from 66.21907 to 50.31830, saving model to /glade/scratch/wchapman/Reforecast/models/NN_CRPS/F048/StartingYear2013/CNN_2018/cpf_CRPS_val_2017_test_2018.ckpt
+485/485 [==============================] - 0s 325us/sample - loss: 59.9687 - val_loss: 50.3183
+Epoch 5/50
+ 50/485 [==>...........................] - ETA: 0s - loss: 54.1010300/485 [=================>............] - ETA: 0s - loss: 51.9131
+Epoch 00005: val_loss did not improve from 50.31830
+485/485 [==============================] - 0s 271us/sample - loss: 51.5964 - val_loss: 55.5194
+Epoch 6/50
+ 50/485 [==>...........................] - ETA: 0s - loss: 43.7898300/485 [=================>............] - ETA: 0s - loss: 45.3728
+Epoch 00006: val_loss did not improve from 50.31830
+
+Epoch 00006: ReduceLROnPlateau reducing learning rate to 0.0004000000189989805.
+485/485 [==============================] - 0s 268us/sample - loss: 44.1054 - val_loss: 59.4882
+Epoch 7/50
+ 50/485 [==>...........................] - ETA: 0s - loss: 37.8854300/485 [=================>............] - ETA: 0s - loss: 39.3245
+Epoch 00007: val_loss did not improve from 50.31830
+485/485 [==============================] - 0s 268us/sample - loss: 39.6934 - val_loss: 58.0031
+Epoch 8/50
+ 50/485 [==>...........................] - ETA: 0s - loss: 38.1695300/485 [=================>............] - ETA: 0s - loss: 37.8208
+Epoch 00008: val_loss did not improve from 50.31830
+
+Epoch 00008: ReduceLROnPlateau reducing learning rate to 0.00016000000759959222.
+485/485 [==============================] - 0s 269us/sample - loss: 37.6454 - val_loss: 65.1591
+Epoch 9/50
+ 50/485 [==>...........................] - ETA: 0s - loss: 34.7062300/485 [=================>............] - ETA: 0s - loss: 35.4341
+Epoch 00009: val_loss did not improve from 50.31830
+485/485 [==============================] - 0s 269us/sample - loss: 36.0146 - val_loss: 62.5235
+Epoch 10/50
+ 50/485 [==>...........................] - ETA: 0s - loss: 35.3363300/485 [=================>............] - ETA: 0s - loss: 35.4869
+Epoch 00010: val_loss did not improve from 50.31830
+
+Epoch 00010: ReduceLROnPlateau reducing learning rate to 6.40000042039901e-05.
+485/485 [==============================] - 0s 270us/sample - loss: 35.4261 - val_loss: 60.5378
+Epoch 11/50
+ 50/485 [==>...........................] - ETA: 0s - loss: 34.8140300/485 [=================>............] - ETA: 0s - loss: 35.2260
+Epoch 00011: val_loss did not improve from 50.31830
+485/485 [==============================] - 0s 270us/sample - loss: 34.9801 - val_loss: 59.3158
+Epoch 12/50
+ 50/485 [==>...........................] - ETA: 0s - loss: 34.8074300/485 [=================>............] - ETA: 0s - loss: 34.5005
+Epoch 00012: val_loss did not improve from 50.31830
+
+Epoch 00012: ReduceLROnPlateau reducing learning rate to 2.560000284574926e-05.
+485/485 [==============================] - 0s 270us/sample - loss: 34.5107 - val_loss: 57.2353
+Epoch 13/50
+ 50/485 [==>...........................] - ETA: 0s - loss: 35.1125300/485 [=================>............] - ETA: 0s - loss: 34.7164
+Epoch 00013: val_loss did not improve from 50.31830
+485/485 [==============================] - 0s 268us/sample - loss: 34.4425 - val_loss: 54.6783
+Epoch 14/50
+ 50/485 [==>...........................] - ETA: 0s - loss: 35.6219300/485 [=================>............] - ETA: 0s - loss: 33.8850
+Epoch 00014: val_loss did not improve from 50.31830
+
+Epoch 00014: ReduceLROnPlateau reducing learning rate to 1.0240000847261399e-05.
+485/485 [==============================] - 0s 268us/sample - loss: 34.3131 - val_loss: 52.2647
+Epoch 00014: early stopping
+#################################################
+testing: ['/glade/scratch/wchapman/Reforecast/F048/train/F048_WY_2016_500mb_Clean.nc']
+validatiing: ['/glade/scratch/wchapman/Reforecast/F048/test/F048_WY_2018_500mb_Clean.nc']
+#################################################
+Reading data from: "/glade/scratch/wchapman/Reforecast/F048/train/F048_WY_2013_500mb_Clean.nc"...
+Reading data from: "/glade/scratch/wchapman/Reforecast/F048/train/F048_WY_2014_500mb_Clean.nc"...
+Reading data from: "/glade/scratch/wchapman/Reforecast/F048/train/F048_WY_2015_500mb_Clean.nc"...
+Reading data from: "/glade/scratch/wchapman/Reforecast/F048/train/F048_WY_2016_500mb_Clean.nc"...
+Reading data from: "/glade/scratch/wchapman/Reforecast/F048/validate/F048_WY_2017_500mb_Clean.nc"...
+Reading data from: "/glade/scratch/wchapman/Reforecast/F048/test/F048_WY_2018_500mb_Clean.nc"...
+...gathering data...
+Reading data from: "/glade/scratch/wchapman/Reforecast/F048/validate/F048_WY_2017_500mb_Clean.nc"...
+Reading data from: "/glade/scratch/wchapman/Reforecast/F048/train/F048_WY_2013_500mb_Clean.nc"...
+Reading data from: "/glade/scratch/wchapman/Reforecast/F048/train/F048_WY_2015_500mb_Clean.nc"...
+Reading data from: "/glade/scratch/wchapman/Reforecast/F048/train/F048_WY_2014_500mb_Clean.nc"...
+Reading data from: "/glade/scratch/wchapman/Reforecast/F048/train/F048_WY_2016_500mb_Clean.nc"...
+Reading data from: "/glade/scratch/wchapman/Reforecast/F048/test/F048_WY_2018_500mb_Clean.nc"...
+Model: "model_2"
+__________________________________________________________________________________________________
+Layer (type)                    Output Shape         Param #     Connected to                     
+==================================================================================================
+input_3 (InputLayer)            [(None, 71, 57, 6)]  0                                            
+__________________________________________________________________________________________________
+zero_padding2d_2 (ZeroPadding2D (None, 72, 60, 6)    0           input_3[0][0]                    
+__________________________________________________________________________________________________
+downsampling_0_conv_0 (Conv2D)  (None, 72, 60, 16)   880         zero_padding2d_2[0][0]           
+__________________________________________________________________________________________________
+downsampling_0_batchnorm_0 (Bat (None, 72, 60, 16)   64          downsampling_0_conv_0[0][0]      
+__________________________________________________________________________________________________
+downsampling_0_activation_0 (Ac (None, 72, 60, 16)   0           downsampling_0_batchnorm_0[0][0] 
+__________________________________________________________________________________________________
+downsampling_0_conv_1 (Conv2D)  (None, 72, 60, 16)   2320        downsampling_0_activation_0[0][0]
+__________________________________________________________________________________________________
+downsampling_0_batchnorm_1 (Bat (None, 72, 60, 16)   64          downsampling_0_conv_1[0][0]      
+__________________________________________________________________________________________________
+downsampling_0_activation_1 (Ac (None, 72, 60, 16)   0           downsampling_0_batchnorm_1[0][0] 
+__________________________________________________________________________________________________
+max_pooling2d_2 (MaxPooling2D)  (None, 36, 30, 16)   0           downsampling_0_activation_1[0][0]
+__________________________________________________________________________________________________
+bottleneck_skip_0 (Conv2D)      (None, 36, 30, 32)   4640        max_pooling2d_2[0][0]            
+__________________________________________________________________________________________________
+bottleneck_skip_1 (Conv2D)      (None, 36, 30, 32)   9248        bottleneck_skip_0[0][0]          
+__________________________________________________________________________________________________
+bottleneck_skip_2 (Conv2D)      (None, 36, 30, 32)   9248        bottleneck_skip_1[0][0]          
+__________________________________________________________________________________________________
+add_2 (Add)                     (None, 36, 30, 32)   0           bottleneck_skip_0[0][0]          
+                                                                 bottleneck_skip_1[0][0]          
+                                                                 bottleneck_skip_2[0][0]          
+__________________________________________________________________________________________________
+upsampling_0_conv_trans_0 (Conv (None, 72, 60, 16)   2064        add_2[0][0]                      
+__________________________________________________________________________________________________
+concatenate_2 (Concatenate)     (None, 72, 60, 32)   0           upsampling_0_conv_trans_0[0][0]  
+                                                                 downsampling_0_activation_1[0][0]
+__________________________________________________________________________________________________
+upsampling_0_conv_0 (Conv2D)    (None, 72, 60, 16)   4624        concatenate_2[0][0]              
+__________________________________________________________________________________________________
+upsampling_0_activation_0 (Acti (None, 72, 60, 16)   0           upsampling_0_conv_0[0][0]        
+__________________________________________________________________________________________________
+upsampling_0_conv_1 (Conv2D)    (None, 72, 60, 16)   2320        upsampling_0_activation_0[0][0]  
+__________________________________________________________________________________________________
+upsampling_0_activation_1 (Acti (None, 72, 60, 16)   0           upsampling_0_conv_1[0][0]        
+__________________________________________________________________________________________________
+linear (Conv2D)                 (None, 72, 60, 2)    34          upsampling_0_activation_1[0][0]  
+__________________________________________________________________________________________________
+cropping2d_2 (Cropping2D)       (None, 71, 57, 2)    0           linear[0][0]                     
+==================================================================================================
+Total params: 35,506
+Trainable params: 35,442
+Non-trainable params: 64
+__________________________________________________________________________________________________
+/glade/scratch/wchapman/Reforecast/models/NN_CRPS/F048/StartingYear2013/CNN_2016
+/glade/scratch/wchapman/Reforecast/models/NN_CRPS/F048/StartingYear2013/CNN_2016
+/glade/scratch/wchapman/Reforecast/models/NN_CRPS/F048/StartingYear2013/CNN_2016
+/glade/scratch/wchapman/Reforecast/models/NN_CRPS/F048/StartingYear2013/CNN_2016
+/glade/scratch/wchapman/Reforecast/models/NN_CRPS/F048/StartingYear2013/CNN_2016
+/glade/scratch/wchapman/Reforecast/models/NN_CRPS/F048/StartingYear2013/CNN_2016
+/glade/scratch/wchapman/Reforecast/models/NN_CRPS/F048/StartingYear2013/CNN_2016
+/glade/scratch/wchapman/Reforecast/models/NN_CRPS/F048/StartingYear2013/CNN_2016
+/glade/scratch/wchapman/Reforecast/models/NN_CRPS/F048/StartingYear2013/CNN_2016
+....saving.... /glade/scratch/wchapman/Reforecast/models/NN_CRPS/F048/StartingYear2013/CNN_2016/cpf_CRPS_val_2018_test_2016.ckpt
+....saving.... /glade/scratch/wchapman/Reforecast/models/NN_CRPS/F048/StartingYear2013/CNN_2016/cpf_CRPS_val_2018_test_2016.ckpt
+Train on 606 samples, validate on 121 samples
+Epoch 1/50
+ 50/606 [=>............................] - ETA: 7s - loss: 157.9859300/606 [=============>................] - ETA: 0s - loss: 160.6066550/606 [==========================>...] - ETA: 0s - loss: 157.0446
+Epoch 00001: val_loss improved from inf to 121.85544, saving model to /glade/scratch/wchapman/Reforecast/models/NN_CRPS/F048/StartingYear2013/CNN_2016/cpf_CRPS_val_2018_test_2016.ckpt
+606/606 [==============================] - 1s 2ms/sample - loss: 153.7308 - val_loss: 121.8554
+Epoch 2/50
+ 50/606 [=>............................] - ETA: 0s - loss: 108.6797300/606 [=============>................] - ETA: 0s - loss: 73.9378 550/606 [==========================>...] - ETA: 0s - loss: 69.0723
+Epoch 00002: val_loss improved from 121.85544 to 61.92985, saving model to /glade/scratch/wchapman/Reforecast/models/NN_CRPS/F048/StartingYear2013/CNN_2016/cpf_CRPS_val_2018_test_2016.ckpt
+606/606 [==============================] - 0s 313us/sample - loss: 67.2676 - val_loss: 61.9299
+Epoch 3/50
+ 50/606 [=>............................] - ETA: 0s - loss: 41.3319300/606 [=============>................] - ETA: 0s - loss: 47.9361550/606 [==========================>...] - ETA: 0s - loss: 45.4907
+Epoch 00003: val_loss did not improve from 61.92985
+606/606 [==============================] - 0s 268us/sample - loss: 45.2110 - val_loss: 67.5479
+Epoch 4/50
+ 50/606 [=>............................] - ETA: 0s - loss: 37.8815300/606 [=============>................] - ETA: 0s - loss: 40.4842550/606 [==========================>...] - ETA: 0s - loss: 39.3500
+Epoch 00004: val_loss improved from 61.92985 to 60.36373, saving model to /glade/scratch/wchapman/Reforecast/models/NN_CRPS/F048/StartingYear2013/CNN_2016/cpf_CRPS_val_2018_test_2016.ckpt
+606/606 [==============================] - 0s 309us/sample - loss: 39.3053 - val_loss: 60.3637
+Epoch 5/50
+ 50/606 [=>............................] - ETA: 0s - loss: 39.3572300/606 [=============>................] - ETA: 0s - loss: 37.0628550/606 [==========================>...] - ETA: 0s - loss: 35.9700
+Epoch 00005: val_loss did not improve from 60.36373
+606/606 [==============================] - 0s 266us/sample - loss: 35.6709 - val_loss: 68.3174
+Epoch 6/50
+ 50/606 [=>............................] - ETA: 0s - loss: 33.0504300/606 [=============>................] - ETA: 0s - loss: 32.4927550/606 [==========================>...] - ETA: 0s - loss: 32.1472
+Epoch 00006: val_loss did not improve from 60.36373
+
+Epoch 00006: ReduceLROnPlateau reducing learning rate to 0.0004000000189989805.
+606/606 [==============================] - 0s 263us/sample - loss: 32.0449 - val_loss: 69.2834
+Epoch 7/50
+ 50/606 [=>............................] - ETA: 0s - loss: 30.3364300/606 [=============>................] - ETA: 0s - loss: 31.0164550/606 [==========================>...] - ETA: 0s - loss: 30.4307
+Epoch 00007: val_loss did not improve from 60.36373
+606/606 [==============================] - 0s 263us/sample - loss: 30.3934 - val_loss: 72.2705
+Epoch 8/50
+ 50/606 [=>............................] - ETA: 0s - loss: 28.7759300/606 [=============>................] - ETA: 0s - loss: 29.9640550/606 [==========================>...] - ETA: 0s - loss: 29.7786
+Epoch 00008: val_loss did not improve from 60.36373
+
+Epoch 00008: ReduceLROnPlateau reducing learning rate to 0.00016000000759959222.
+606/606 [==============================] - 0s 263us/sample - loss: 29.9288 - val_loss: 66.9838
+Epoch 9/50
+ 50/606 [=>............................] - ETA: 0s - loss: 28.8849300/606 [=============>................] - ETA: 0s - loss: 30.1454550/606 [==========================>...] - ETA: 0s - loss: 29.5174
+Epoch 00009: val_loss improved from 60.36373 to 58.93944, saving model to /glade/scratch/wchapman/Reforecast/models/NN_CRPS/F048/StartingYear2013/CNN_2016/cpf_CRPS_val_2018_test_2016.ckpt
+606/606 [==============================] - 0s 305us/sample - loss: 29.5328 - val_loss: 58.9394
+Epoch 10/50
+ 50/606 [=>............................] - ETA: 0s - loss: 29.0994300/606 [=============>................] - ETA: 0s - loss: 29.1748550/606 [==========================>...] - ETA: 0s - loss: 29.3610
+Epoch 00010: val_loss improved from 58.93944 to 56.30125, saving model to /glade/scratch/wchapman/Reforecast/models/NN_CRPS/F048/StartingYear2013/CNN_2016/cpf_CRPS_val_2018_test_2016.ckpt
+606/606 [==============================] - 0s 308us/sample - loss: 29.3960 - val_loss: 56.3012
+Epoch 11/50
+ 50/606 [=>............................] - ETA: 0s - loss: 28.2715300/606 [=============>................] - ETA: 0s - loss: 28.8346550/606 [==========================>...] - ETA: 0s - loss: 28.8081
+Epoch 00011: val_loss improved from 56.30125 to 52.20388, saving model to /glade/scratch/wchapman/Reforecast/models/NN_CRPS/F048/StartingYear2013/CNN_2016/cpf_CRPS_val_2018_test_2016.ckpt
+606/606 [==============================] - 0s 308us/sample - loss: 29.0645 - val_loss: 52.2039
+Epoch 12/50
+ 50/606 [=>............................] - ETA: 0s - loss: 28.1285300/606 [=============>................] - ETA: 0s - loss: 29.0087550/606 [==========================>...] - ETA: 0s - loss: 28.9000
+Epoch 00012: val_loss improved from 52.20388 to 48.87230, saving model to /glade/scratch/wchapman/Reforecast/models/NN_CRPS/F048/StartingYear2013/CNN_2016/cpf_CRPS_val_2018_test_2016.ckpt
+606/606 [==============================] - 0s 310us/sample - loss: 28.8134 - val_loss: 48.8723
+Epoch 13/50
+ 50/606 [=>............................] - ETA: 0s - loss: 28.9212300/606 [=============>................] - ETA: 0s - loss: 28.4722550/606 [==========================>...] - ETA: 0s - loss: 28.4941
+Epoch 00013: val_loss improved from 48.87230 to 46.32861, saving model to /glade/scratch/wchapman/Reforecast/models/NN_CRPS/F048/StartingYear2013/CNN_2016/cpf_CRPS_val_2018_test_2016.ckpt
+606/606 [==============================] - 0s 308us/sample - loss: 28.5224 - val_loss: 46.3286
+Epoch 14/50
+ 50/606 [=>............................] - ETA: 0s - loss: 27.7010300/606 [=============>................] - ETA: 0s - loss: 28.4193550/606 [==========================>...] - ETA: 0s - loss: 28.4702
+Epoch 00014: val_loss improved from 46.32861 to 42.74821, saving model to /glade/scratch/wchapman/Reforecast/models/NN_CRPS/F048/StartingYear2013/CNN_2016/cpf_CRPS_val_2018_test_2016.ckpt
+606/606 [==============================] - 0s 309us/sample - loss: 28.5647 - val_loss: 42.7482
+Epoch 15/50
+ 50/606 [=>............................] - ETA: 0s - loss: 29.7735300/606 [=============>................] - ETA: 0s - loss: 28.6396550/606 [==========================>...] - ETA: 0s - loss: 28.5792
+Epoch 00015: val_loss improved from 42.74821 to 41.21056, saving model to /glade/scratch/wchapman/Reforecast/models/NN_CRPS/F048/StartingYear2013/CNN_2016/cpf_CRPS_val_2018_test_2016.ckpt
+606/606 [==============================] - 0s 307us/sample - loss: 28.4852 - val_loss: 41.2106
+Epoch 16/50
+ 50/606 [=>............................] - ETA: 0s - loss: 26.8911300/606 [=============>................] - ETA: 0s - loss: 28.2422550/606 [==========================>...] - ETA: 0s - loss: 28.4627
+Epoch 00016: val_loss improved from 41.21056 to 36.76895, saving model to /glade/scratch/wchapman/Reforecast/models/NN_CRPS/F048/StartingYear2013/CNN_2016/cpf_CRPS_val_2018_test_2016.ckpt
+606/606 [==============================] - 0s 311us/sample - loss: 28.5173 - val_loss: 36.7690
+Epoch 17/50
+ 50/606 [=>............................] - ETA: 0s - loss: 27.7518300/606 [=============>................] - ETA: 0s - loss: 28.8801550/606 [==========================>...] - ETA: 0s - loss: 28.4058
+Epoch 00017: val_loss did not improve from 36.76895
+606/606 [==============================] - 0s 269us/sample - loss: 28.4532 - val_loss: 36.8115
+Epoch 18/50
+ 50/606 [=>............................] - ETA: 0s - loss: 27.6426300/606 [=============>................] - ETA: 0s - loss: 28.3462550/606 [==========================>...] - ETA: 0s - loss: 28.0393
+Epoch 00018: val_loss improved from 36.76895 to 33.88133, saving model to /glade/scratch/wchapman/Reforecast/models/NN_CRPS/F048/StartingYear2013/CNN_2016/cpf_CRPS_val_2018_test_2016.ckpt
+606/606 [==============================] - 0s 319us/sample - loss: 28.1091 - val_loss: 33.8813
+Epoch 19/50
+ 50/606 [=>............................] - ETA: 0s - loss: 27.4174300/606 [=============>................] - ETA: 0s - loss: 27.5880550/606 [==========================>...] - ETA: 0s - loss: 28.1307
+Epoch 00019: val_loss improved from 33.88133 to 32.14933, saving model to /glade/scratch/wchapman/Reforecast/models/NN_CRPS/F048/StartingYear2013/CNN_2016/cpf_CRPS_val_2018_test_2016.ckpt
+606/606 [==============================] - 0s 319us/sample - loss: 28.0708 - val_loss: 32.1493
+Epoch 20/50
+ 50/606 [=>............................] - ETA: 0s - loss: 26.7462300/606 [=============>................] - ETA: 0s - loss: 27.6510550/606 [==========================>...] - ETA: 0s - loss: 27.8555
+Epoch 00020: val_loss improved from 32.14933 to 31.79805, saving model to /glade/scratch/wchapman/Reforecast/models/NN_CRPS/F048/StartingYear2013/CNN_2016/cpf_CRPS_val_2018_test_2016.ckpt
+606/606 [==============================] - 0s 318us/sample - loss: 27.8741 - val_loss: 31.7980
+Epoch 21/50
+ 50/606 [=>............................] - ETA: 0s - loss: 27.8198300/606 [=============>................] - ETA: 0s - loss: 27.9762550/606 [==========================>...] - ETA: 0s - loss: 27.4715
+Epoch 00021: val_loss improved from 31.79805 to 30.07782, saving model to /glade/scratch/wchapman/Reforecast/models/NN_CRPS/F048/StartingYear2013/CNN_2016/cpf_CRPS_val_2018_test_2016.ckpt
+606/606 [==============================] - 0s 312us/sample - loss: 27.6605 - val_loss: 30.0778
+Epoch 22/50
+ 50/606 [=>............................] - ETA: 0s - loss: 27.9055300/606 [=============>................] - ETA: 0s - loss: 27.6534550/606 [==========================>...] - ETA: 0s - loss: 27.6125
+Epoch 00022: val_loss improved from 30.07782 to 29.92360, saving model to /glade/scratch/wchapman/Reforecast/models/NN_CRPS/F048/StartingYear2013/CNN_2016/cpf_CRPS_val_2018_test_2016.ckpt
+606/606 [==============================] - 0s 312us/sample - loss: 27.5879 - val_loss: 29.9236
+Epoch 23/50
+ 50/606 [=>............................] - ETA: 0s - loss: 26.2219300/606 [=============>................] - ETA: 0s - loss: 27.4879550/606 [==========================>...] - ETA: 0s - loss: 27.2290
+Epoch 00023: val_loss improved from 29.92360 to 28.80601, saving model to /glade/scratch/wchapman/Reforecast/models/NN_CRPS/F048/StartingYear2013/CNN_2016/cpf_CRPS_val_2018_test_2016.ckpt
+606/606 [==============================] - 0s 324us/sample - loss: 27.3730 - val_loss: 28.8060
+Epoch 24/50
+ 50/606 [=>............................] - ETA: 0s - loss: 27.0341300/606 [=============>................] - ETA: 0s - loss: 27.5016550/606 [==========================>...] - ETA: 0s - loss: 27.2056
+Epoch 00024: val_loss did not improve from 28.80601
+606/606 [==============================] - 0s 265us/sample - loss: 27.1820 - val_loss: 28.9315
+Epoch 25/50
+ 50/606 [=>............................] - ETA: 0s - loss: 25.8787300/606 [=============>................] - ETA: 0s - loss: 26.8686550/606 [==========================>...] - ETA: 0s - loss: 27.5644
+Epoch 00025: val_loss improved from 28.80601 to 26.84147, saving model to /glade/scratch/wchapman/Reforecast/models/NN_CRPS/F048/StartingYear2013/CNN_2016/cpf_CRPS_val_2018_test_2016.ckpt
+606/606 [==============================] - 0s 308us/sample - loss: 27.6462 - val_loss: 26.8415
+Epoch 26/50
+ 50/606 [=>............................] - ETA: 0s - loss: 29.0333300/606 [=============>................] - ETA: 0s - loss: 28.3720550/606 [==========================>...] - ETA: 0s - loss: 27.6581
+Epoch 00026: val_loss did not improve from 26.84147
+606/606 [==============================] - 0s 266us/sample - loss: 27.6248 - val_loss: 28.8289
+Epoch 27/50
+ 50/606 [=>............................] - ETA: 0s - loss: 26.0230300/606 [=============>................] - ETA: 0s - loss: 27.6196550/606 [==========================>...] - ETA: 0s - loss: 27.5515
+Epoch 00027: val_loss improved from 26.84147 to 26.42016, saving model to /glade/scratch/wchapman/Reforecast/models/NN_CRPS/F048/StartingYear2013/CNN_2016/cpf_CRPS_val_2018_test_2016.ckpt
+606/606 [==============================] - 0s 314us/sample - loss: 27.5360 - val_loss: 26.4202
+Epoch 28/50
+ 50/606 [=>............................] - ETA: 0s - loss: 27.1084300/606 [=============>................] - ETA: 0s - loss: 27.1041550/606 [==========================>...] - ETA: 0s - loss: 26.8045
+Epoch 00028: val_loss did not improve from 26.42016
+606/606 [==============================] - 0s 265us/sample - loss: 26.8859 - val_loss: 26.8593
+Epoch 29/50
+ 50/606 [=>............................] - ETA: 0s - loss: 28.8206300/606 [=============>................] - ETA: 0s - loss: 27.2833550/606 [==========================>...] - ETA: 0s - loss: 27.1122
+Epoch 00029: val_loss did not improve from 26.42016
+
+Epoch 00029: ReduceLROnPlateau reducing learning rate to 6.40000042039901e-05.
+606/606 [==============================] - 0s 263us/sample - loss: 27.0134 - val_loss: 26.6114
+Epoch 30/50
+ 50/606 [=>............................] - ETA: 0s - loss: 26.0325300/606 [=============>................] - ETA: 0s - loss: 26.5883550/606 [==========================>...] - ETA: 0s - loss: 26.7861
+Epoch 00030: val_loss improved from 26.42016 to 26.33751, saving model to /glade/scratch/wchapman/Reforecast/models/NN_CRPS/F048/StartingYear2013/CNN_2016/cpf_CRPS_val_2018_test_2016.ckpt
+606/606 [==============================] - 0s 306us/sample - loss: 26.8335 - val_loss: 26.3375
+Epoch 31/50
+ 50/606 [=>............................] - ETA: 0s - loss: 28.1944300/606 [=============>................] - ETA: 0s - loss: 26.8806550/606 [==========================>...] - ETA: 0s - loss: 26.8691
+Epoch 00031: val_loss improved from 26.33751 to 25.88091, saving model to /glade/scratch/wchapman/Reforecast/models/NN_CRPS/F048/StartingYear2013/CNN_2016/cpf_CRPS_val_2018_test_2016.ckpt
+606/606 [==============================] - 0s 310us/sample - loss: 26.7321 - val_loss: 25.8809
+Epoch 32/50
+ 50/606 [=>............................] - ETA: 0s - loss: 26.6549300/606 [=============>................] - ETA: 0s - loss: 26.7557550/606 [==========================>...] - ETA: 0s - loss: 26.9100
+Epoch 00032: val_loss improved from 25.88091 to 25.74856, saving model to /glade/scratch/wchapman/Reforecast/models/NN_CRPS/F048/StartingYear2013/CNN_2016/cpf_CRPS_val_2018_test_2016.ckpt
+606/606 [==============================] - 0s 311us/sample - loss: 26.8865 - val_loss: 25.7486
+Epoch 33/50
+ 50/606 [=>............................] - ETA: 0s - loss: 27.7027300/606 [=============>................] - ETA: 0s - loss: 26.7549550/606 [==========================>...] - ETA: 0s - loss: 26.4367
+Epoch 00033: val_loss improved from 25.74856 to 25.49976, saving model to /glade/scratch/wchapman/Reforecast/models/NN_CRPS/F048/StartingYear2013/CNN_2016/cpf_CRPS_val_2018_test_2016.ckpt
+606/606 [==============================] - 0s 308us/sample - loss: 26.6470 - val_loss: 25.4998
+Epoch 34/50
+ 50/606 [=>............................] - ETA: 0s - loss: 25.7206300/606 [=============>................] - ETA: 0s - loss: 26.1824550/606 [==========================>...] - ETA: 0s - loss: 26.5798
+Epoch 00034: val_loss did not improve from 25.49976
+606/606 [==============================] - 0s 263us/sample - loss: 26.6840 - val_loss: 25.6351
+Epoch 35/50
+ 50/606 [=>............................] - ETA: 0s - loss: 25.3538300/606 [=============>................] - ETA: 0s - loss: 26.3894550/606 [==========================>...] - ETA: 0s - loss: 26.6061
+Epoch 00035: val_loss improved from 25.49976 to 25.25066, saving model to /glade/scratch/wchapman/Reforecast/models/NN_CRPS/F048/StartingYear2013/CNN_2016/cpf_CRPS_val_2018_test_2016.ckpt
+606/606 [==============================] - 0s 310us/sample - loss: 26.6081 - val_loss: 25.2507
+Epoch 36/50
+ 50/606 [=>............................] - ETA: 0s - loss: 26.2449300/606 [=============>................] - ETA: 0s - loss: 26.2180550/606 [==========================>...] - ETA: 0s - loss: 26.5324
+Epoch 00036: val_loss did not improve from 25.25066
+606/606 [==============================] - 0s 265us/sample - loss: 26.6272 - val_loss: 25.3130
+Epoch 37/50
+ 50/606 [=>............................] - ETA: 0s - loss: 27.3768300/606 [=============>................] - ETA: 0s - loss: 26.7452550/606 [==========================>...] - ETA: 0s - loss: 26.4728
+Epoch 00037: val_loss improved from 25.25066 to 25.16120, saving model to /glade/scratch/wchapman/Reforecast/models/NN_CRPS/F048/StartingYear2013/CNN_2016/cpf_CRPS_val_2018_test_2016.ckpt
+606/606 [==============================] - 0s 311us/sample - loss: 26.5385 - val_loss: 25.1612
+Epoch 38/50
+ 50/606 [=>............................] - ETA: 0s - loss: 26.5675300/606 [=============>................] - ETA: 0s - loss: 26.2668550/606 [==========================>...] - ETA: 0s - loss: 26.5237
+Epoch 00038: val_loss improved from 25.16120 to 25.09731, saving model to /glade/scratch/wchapman/Reforecast/models/NN_CRPS/F048/StartingYear2013/CNN_2016/cpf_CRPS_val_2018_test_2016.ckpt
+606/606 [==============================] - 0s 309us/sample - loss: 26.4895 - val_loss: 25.0973
+Epoch 39/50
+ 50/606 [=>............................] - ETA: 0s - loss: 27.2845300/606 [=============>................] - ETA: 0s - loss: 26.6306550/606 [==========================>...] - ETA: 0s - loss: 26.5190
+Epoch 00039: val_loss did not improve from 25.09731
+606/606 [==============================] - 0s 264us/sample - loss: 26.4446 - val_loss: 25.1185
+Epoch 40/50
+ 50/606 [=>............................] - ETA: 0s - loss: 27.6542300/606 [=============>................] - ETA: 0s - loss: 27.1154550/606 [==========================>...] - ETA: 0s - loss: 26.6670
+Epoch 00040: val_loss did not improve from 25.09731
+
+Epoch 00040: ReduceLROnPlateau reducing learning rate to 2.560000284574926e-05.
+606/606 [==============================] - 0s 264us/sample - loss: 26.5779 - val_loss: 25.0995
+Epoch 41/50
+ 50/606 [=>............................] - ETA: 0s - loss: 25.2909300/606 [=============>................] - ETA: 0s - loss: 25.9970550/606 [==========================>...] - ETA: 0s - loss: 26.3529
+Epoch 00041: val_loss improved from 25.09731 to 24.95423, saving model to /glade/scratch/wchapman/Reforecast/models/NN_CRPS/F048/StartingYear2013/CNN_2016/cpf_CRPS_val_2018_test_2016.ckpt
+606/606 [==============================] - 0s 307us/sample - loss: 26.3464 - val_loss: 24.9542
+Epoch 42/50
+ 50/606 [=>............................] - ETA: 0s - loss: 27.6584300/606 [=============>................] - ETA: 0s - loss: 26.5836550/606 [==========================>...] - ETA: 0s - loss: 26.2883
+Epoch 00042: val_loss improved from 24.95423 to 24.92666, saving model to /glade/scratch/wchapman/Reforecast/models/NN_CRPS/F048/StartingYear2013/CNN_2016/cpf_CRPS_val_2018_test_2016.ckpt
+606/606 [==============================] - 0s 430us/sample - loss: 26.5419 - val_loss: 24.9267
+Epoch 43/50
+ 50/606 [=>............................] - ETA: 0s - loss: 25.8752300/606 [=============>................] - ETA: 0s - loss: 26.7921550/606 [==========================>...] - ETA: 0s - loss: 26.4996
+Epoch 00043: val_loss improved from 24.92666 to 24.84105, saving model to /glade/scratch/wchapman/Reforecast/models/NN_CRPS/F048/StartingYear2013/CNN_2016/cpf_CRPS_val_2018_test_2016.ckpt
+606/606 [==============================] - 0s 314us/sample - loss: 26.4006 - val_loss: 24.8411
+Epoch 44/50
+ 50/606 [=>............................] - ETA: 0s - loss: 26.1688300/606 [=============>................] - ETA: 0s - loss: 26.4776550/606 [==========================>...] - ETA: 0s - loss: 26.3825
+Epoch 00044: val_loss did not improve from 24.84105
+606/606 [==============================] - 0s 267us/sample - loss: 26.3921 - val_loss: 24.8627
+Epoch 45/50
+ 50/606 [=>............................] - ETA: 0s - loss: 26.5128300/606 [=============>................] - ETA: 0s - loss: 25.7053550/606 [==========================>...] - ETA: 0s - loss: 26.4205
+Epoch 00045: val_loss did not improve from 24.84105
+
+Epoch 00045: ReduceLROnPlateau reducing learning rate to 1.0240000847261399e-05.
+606/606 [==============================] - 0s 264us/sample - loss: 26.3531 - val_loss: 24.8745
+Epoch 46/50
+ 50/606 [=>............................] - ETA: 0s - loss: 25.4101300/606 [=============>................] - ETA: 0s - loss: 26.5181550/606 [==========================>...] - ETA: 0s - loss: 26.4787
+Epoch 00046: val_loss did not improve from 24.84105
+606/606 [==============================] - 0s 262us/sample - loss: 26.4402 - val_loss: 24.8585
+Epoch 47/50
+ 50/606 [=>............................] - ETA: 0s - loss: 27.5387300/606 [=============>................] - ETA: 0s - loss: 26.2394550/606 [==========================>...] - ETA: 0s - loss: 26.1810
+Epoch 00047: val_loss improved from 24.84105 to 24.82386, saving model to /glade/scratch/wchapman/Reforecast/models/NN_CRPS/F048/StartingYear2013/CNN_2016/cpf_CRPS_val_2018_test_2016.ckpt
+606/606 [==============================] - 0s 310us/sample - loss: 26.2258 - val_loss: 24.8239
+Epoch 48/50
+ 50/606 [=>............................] - ETA: 0s - loss: 26.9139300/606 [=============>................] - ETA: 0s - loss: 26.0164550/606 [==========================>...] - ETA: 0s - loss: 26.3359
+Epoch 00048: val_loss did not improve from 24.82386
+606/606 [==============================] - 0s 266us/sample - loss: 26.3732 - val_loss: 24.8281
+Epoch 49/50
+ 50/606 [=>............................] - ETA: 0s - loss: 25.6441300/606 [=============>................] - ETA: 0s - loss: 26.4707550/606 [==========================>...] - ETA: 0s - loss: 26.4486
+Epoch 00049: val_loss improved from 24.82386 to 24.77106, saving model to /glade/scratch/wchapman/Reforecast/models/NN_CRPS/F048/StartingYear2013/CNN_2016/cpf_CRPS_val_2018_test_2016.ckpt
+606/606 [==============================] - 0s 306us/sample - loss: 26.3810 - val_loss: 24.7711
+Epoch 50/50
+ 50/606 [=>............................] - ETA: 0s - loss: 27.1211300/606 [=============>................] - ETA: 0s - loss: 26.5138550/606 [==========================>...] - ETA: 0s - loss: 26.3486
+Epoch 00050: val_loss improved from 24.77106 to 24.76493, saving model to /glade/scratch/wchapman/Reforecast/models/NN_CRPS/F048/StartingYear2013/CNN_2016/cpf_CRPS_val_2018_test_2016.ckpt
+606/606 [==============================] - 0s 316us/sample - loss: 26.3686 - val_loss: 24.7649
+xnan: 0
+ynan: 0
+x_tstnan: 0
+y_tstnan: 0
+['/glade/scratch/wchapman/Reforecast/F048/train/F048_WY_2016_500mb_Clean.nc', '/glade/scratch/wchapman/Reforecast/F048/validate/F048_WY_2017_500mb_Clean.nc', '/glade/scratch/wchapman/Reforecast/F048/test/F048_WY_2018_500mb_Clean.nc']
+#################################################
+testing: ['/glade/scratch/wchapman/Reforecast/F048/validate/F048_WY_2017_500mb_Clean.nc']
+validatiing: ['/glade/scratch/wchapman/Reforecast/F048/train/F048_WY_2016_500mb_Clean.nc']
+#################################################
+Reading data from: "/glade/scratch/wchapman/Reforecast/F048/test/F048_WY_2018_500mb_Clean.nc"...
+Reading data from: "/glade/scratch/wchapman/Reforecast/F048/train/F048_WY_2016_500mb_Clean.nc"...
+...gathering data...
+Reading data from: "/glade/scratch/wchapman/Reforecast/F048/test/F048_WY_2018_500mb_Clean.nc"...
+Reading data from: "/glade/scratch/wchapman/Reforecast/F048/train/F048_WY_2016_500mb_Clean.nc"...
+Model: "model_3"
+__________________________________________________________________________________________________
+Layer (type)                    Output Shape         Param #     Connected to                     
+==================================================================================================
+input_4 (InputLayer)            [(None, 71, 57, 6)]  0                                            
+__________________________________________________________________________________________________
+zero_padding2d_3 (ZeroPadding2D (None, 72, 60, 6)    0           input_4[0][0]                    
+__________________________________________________________________________________________________
+downsampling_0_conv_0 (Conv2D)  (None, 72, 60, 16)   880         zero_padding2d_3[0][0]           
+__________________________________________________________________________________________________
+downsampling_0_batchnorm_0 (Bat (None, 72, 60, 16)   64          downsampling_0_conv_0[0][0]      
+__________________________________________________________________________________________________
+downsampling_0_activation_0 (Ac (None, 72, 60, 16)   0           downsampling_0_batchnorm_0[0][0] 
+__________________________________________________________________________________________________
+downsampling_0_conv_1 (Conv2D)  (None, 72, 60, 16)   2320        downsampling_0_activation_0[0][0]
+__________________________________________________________________________________________________
+downsampling_0_batchnorm_1 (Bat (None, 72, 60, 16)   64          downsampling_0_conv_1[0][0]      
+__________________________________________________________________________________________________
+downsampling_0_activation_1 (Ac (None, 72, 60, 16)   0           downsampling_0_batchnorm_1[0][0] 
+__________________________________________________________________________________________________
+max_pooling2d_3 (MaxPooling2D)  (None, 36, 30, 16)   0           downsampling_0_activation_1[0][0]
+__________________________________________________________________________________________________
+bottleneck_skip_0 (Conv2D)      (None, 36, 30, 32)   4640        max_pooling2d_3[0][0]            
+__________________________________________________________________________________________________
+bottleneck_skip_1 (Conv2D)      (None, 36, 30, 32)   9248        bottleneck_skip_0[0][0]          
+__________________________________________________________________________________________________
+bottleneck_skip_2 (Conv2D)      (None, 36, 30, 32)   9248        bottleneck_skip_1[0][0]          
+__________________________________________________________________________________________________
+add_3 (Add)                     (None, 36, 30, 32)   0           bottleneck_skip_0[0][0]          
+                                                                 bottleneck_skip_1[0][0]          
+                                                                 bottleneck_skip_2[0][0]          
+__________________________________________________________________________________________________
+upsampling_0_conv_trans_0 (Conv (None, 72, 60, 16)   2064        add_3[0][0]                      
+__________________________________________________________________________________________________
+concatenate_3 (Concatenate)     (None, 72, 60, 32)   0           upsampling_0_conv_trans_0[0][0]  
+                                                                 downsampling_0_activation_1[0][0]
+__________________________________________________________________________________________________
+upsampling_0_conv_0 (Conv2D)    (None, 72, 60, 16)   4624        concatenate_3[0][0]              
+__________________________________________________________________________________________________
+upsampling_0_activation_0 (Acti (None, 72, 60, 16)   0           upsampling_0_conv_0[0][0]        
+__________________________________________________________________________________________________
+upsampling_0_conv_1 (Conv2D)    (None, 72, 60, 16)   2320        upsampling_0_activation_0[0][0]  
+__________________________________________________________________________________________________
+upsampling_0_activation_1 (Acti (None, 72, 60, 16)   0           upsampling_0_conv_1[0][0]        
+__________________________________________________________________________________________________
+linear (Conv2D)                 (None, 72, 60, 2)    34          upsampling_0_activation_1[0][0]  
+__________________________________________________________________________________________________
+cropping2d_3 (Cropping2D)       (None, 71, 57, 2)    0           linear[0][0]                     
+==================================================================================================
+Total params: 35,506
+Trainable params: 35,442
+Non-trainable params: 64
+__________________________________________________________________________________________________
+/glade/scratch/wchapman/Reforecast/models/NN_CRPS/F048/StartingYear2013/CNN_2017
+/glade/scratch/wchapman/Reforecast/models/NN_CRPS/F048/StartingYear2013/CNN_2017
+/glade/scratch/wchapman/Reforecast/models/NN_CRPS/F048/StartingYear2013/CNN_2017
+/glade/scratch/wchapman/Reforecast/models/NN_CRPS/F048/StartingYear2013/CNN_2017
+/glade/scratch/wchapman/Reforecast/models/NN_CRPS/F048/StartingYear2013/CNN_2017
+/glade/scratch/wchapman/Reforecast/models/NN_CRPS/F048/StartingYear2013/CNN_2017
+/glade/scratch/wchapman/Reforecast/models/NN_CRPS/F048/StartingYear2013/CNN_2017
+/glade/scratch/wchapman/Reforecast/models/NN_CRPS/F048/StartingYear2013/CNN_2017
+/glade/scratch/wchapman/Reforecast/models/NN_CRPS/F048/StartingYear2013/CNN_2017
+########### Loading old model weights name: /glade/scratch/wchapman/Reforecast/models/NN_CRPS/F048/StartingYear2013/CNN_2017/cpf_CRPS_val_2016_test_2017.ckpt
+########### Loading old model weights name: /glade/scratch/wchapman/Reforecast/models/NN_CRPS/F048/StartingYear2013/CNN_2017/cpf_CRPS_val_2016_test_2017.ckpt
+########### Loading old model weights name: /glade/scratch/wchapman/Reforecast/models/NN_CRPS/F048/StartingYear2013/CNN_2017/cpf_CRPS_val_2016_test_2017.ckpt
+########### Loading old model weights name: /glade/scratch/wchapman/Reforecast/models/NN_CRPS/F048/StartingYear2013/CNN_2017/cpf_CRPS_val_2016_test_2017.ckpt
+########### Loading old model weights name: /glade/scratch/wchapman/Reforecast/models/NN_CRPS/F048/StartingYear2013/CNN_2017/cpf_CRPS_val_2016_test_2017.ckpt
+########### layers frozen ###########
+<tensorflow.python.keras.engine.input_layer.InputLayer object at 0x2b971b73cf28> False
+<tensorflow.python.keras.layers.convolutional.ZeroPadding2D object at 0x2b971b71f6a0> False
+<tensorflow.python.keras.layers.convolutional.Conv2D object at 0x2b971b71fd68> False
+<tensorflow.python.keras.layers.normalization_v2.BatchNormalization object at 0x2b971b71feb8> False
+<tensorflow.python.keras.layers.core.Activation object at 0x2b971b7484a8> False
+<tensorflow.python.keras.layers.convolutional.Conv2D object at 0x2b971b7489e8> False
+<tensorflow.python.keras.layers.normalization_v2.BatchNormalization object at 0x2b971b76aa20> False
+<tensorflow.python.keras.layers.core.Activation object at 0x2b971b76a978> False
+<tensorflow.python.keras.layers.pooling.MaxPooling2D object at 0x2b971b76ae48> False
+<tensorflow.python.keras.layers.convolutional.Conv2D object at 0x2b971b797be0> False
+<tensorflow.python.keras.layers.convolutional.Conv2D object at 0x2b971b7a0710> False
+<tensorflow.python.keras.layers.convolutional.Conv2D object at 0x2b971b7a9470> False
+<tensorflow.python.keras.layers.merge.Add object at 0x2b971b7b2cf8> False
+<tensorflow.python.keras.layers.convolutional.Conv2DTranspose object at 0x2b971b7b2f98> False
+<tensorflow.python.keras.layers.merge.Concatenate object at 0x2b971b7c5dd8> False
+<tensorflow.python.keras.layers.convolutional.Conv2D object at 0x2b971b7c5908> False
+<tensorflow.python.keras.layers.core.Activation object at 0x2b971b7d87f0> False
+<tensorflow.python.keras.layers.convolutional.Conv2D object at 0x2b971b7e27b8> False
+<tensorflow.python.keras.layers.core.Activation object at 0x2b971b7e2940> False
+<tensorflow.python.keras.layers.convolutional.Conv2D object at 0x2b971b7eb710> False
+<tensorflow.python.keras.layers.convolutional.Cropping2D object at 0x2b971b7eb898> False
+Model: "model_4"
+__________________________________________________________________________________________________
+Layer (type)                    Output Shape         Param #     Connected to                     
+==================================================================================================
+input_4 (InputLayer)            [(None, 71, 57, 6)]  0                                            
+__________________________________________________________________________________________________
+zero_padding2d_3 (ZeroPadding2D (None, 72, 60, 6)    0           input_4[0][0]                    
+__________________________________________________________________________________________________
+downsampling_0_conv_0 (Conv2D)  (None, 72, 60, 16)   880         zero_padding2d_3[0][0]           
+__________________________________________________________________________________________________
+downsampling_0_batchnorm_0 (Bat (None, 72, 60, 16)   64          downsampling_0_conv_0[0][0]      
+__________________________________________________________________________________________________
+downsampling_0_activation_0 (Ac (None, 72, 60, 16)   0           downsampling_0_batchnorm_0[0][0] 
+__________________________________________________________________________________________________
+downsampling_0_conv_1 (Conv2D)  (None, 72, 60, 16)   2320        downsampling_0_activation_0[0][0]
+__________________________________________________________________________________________________
+downsampling_0_batchnorm_1 (Bat (None, 72, 60, 16)   64          downsampling_0_conv_1[0][0]      
+__________________________________________________________________________________________________
+downsampling_0_activation_1 (Ac (None, 72, 60, 16)   0           downsampling_0_batchnorm_1[0][0] 
+__________________________________________________________________________________________________
+max_pooling2d_3 (MaxPooling2D)  (None, 36, 30, 16)   0           downsampling_0_activation_1[0][0]
+__________________________________________________________________________________________________
+bottleneck_skip_0 (Conv2D)      (None, 36, 30, 32)   4640        max_pooling2d_3[0][0]            
+__________________________________________________________________________________________________
+bottleneck_skip_1 (Conv2D)      (None, 36, 30, 32)   9248        bottleneck_skip_0[0][0]          
+__________________________________________________________________________________________________
+bottleneck_skip_2 (Conv2D)      (None, 36, 30, 32)   9248        bottleneck_skip_1[0][0]          
+__________________________________________________________________________________________________
+add_3 (Add)                     (None, 36, 30, 32)   0           bottleneck_skip_0[0][0]          
+                                                                 bottleneck_skip_1[0][0]          
+                                                                 bottleneck_skip_2[0][0]          
+__________________________________________________________________________________________________
+upsampling_0_conv_trans_0 (Conv (None, 72, 60, 16)   2064        add_3[0][0]                      
+__________________________________________________________________________________________________
+concatenate_3 (Concatenate)     (None, 72, 60, 32)   0           upsampling_0_conv_trans_0[0][0]  
+                                                                 downsampling_0_activation_1[0][0]
+__________________________________________________________________________________________________
+upsampling_0_conv_0 (Conv2D)    (None, 72, 60, 16)   4624        concatenate_3[0][0]              
+__________________________________________________________________________________________________
+upsampling_0_activation_0 (Acti (None, 72, 60, 16)   0           upsampling_0_conv_0[0][0]        
+__________________________________________________________________________________________________
+upsampling_0_conv_1 (Conv2D)    (None, 72, 60, 16)   2320        upsampling_0_activation_0[0][0]  
+__________________________________________________________________________________________________
+upsampling_0_activation_1 (Acti (None, 72, 60, 16)   0           upsampling_0_conv_1[0][0]        
+__________________________________________________________________________________________________
+linear (Conv2D)                 (None, 72, 60, 2)    34          upsampling_0_activation_1[0][0]  
+__________________________________________________________________________________________________
+cropping2d_3 (Cropping2D)       (None, 71, 57, 2)    0           linear[0][0]                     
+__________________________________________________________________________________________________
+conv2d (Conv2D)                 (None, 71, 57, 32)   608         cropping2d_3[0][0]               
+__________________________________________________________________________________________________
+conv2d_1 (Conv2D)               (None, 71, 57, 2)    578         conv2d[0][0]                     
+==================================================================================================
+Total params: 36,692
+Trainable params: 1,186
+Non-trainable params: 35,506
+__________________________________________________________________________________________________
+<tensorflow.python.keras.engine.input_layer.InputLayer object at 0x2b971b73cf28> False
+<tensorflow.python.keras.layers.convolutional.ZeroPadding2D object at 0x2b971b71f6a0> False
+<tensorflow.python.keras.layers.convolutional.Conv2D object at 0x2b971b71fd68> False
+<tensorflow.python.keras.layers.normalization_v2.BatchNormalization object at 0x2b971b71feb8> False
+<tensorflow.python.keras.layers.core.Activation object at 0x2b971b7484a8> False
+<tensorflow.python.keras.layers.convolutional.Conv2D object at 0x2b971b7489e8> False
+<tensorflow.python.keras.layers.normalization_v2.BatchNormalization object at 0x2b971b76aa20> False
+<tensorflow.python.keras.layers.core.Activation object at 0x2b971b76a978> False
+<tensorflow.python.keras.layers.pooling.MaxPooling2D object at 0x2b971b76ae48> False
+<tensorflow.python.keras.layers.convolutional.Conv2D object at 0x2b971b797be0> False
+<tensorflow.python.keras.layers.convolutional.Conv2D object at 0x2b971b7a0710> False
+<tensorflow.python.keras.layers.convolutional.Conv2D object at 0x2b971b7a9470> False
+<tensorflow.python.keras.layers.merge.Add object at 0x2b971b7b2cf8> False
+<tensorflow.python.keras.layers.convolutional.Conv2DTranspose object at 0x2b971b7b2f98> False
+<tensorflow.python.keras.layers.merge.Concatenate object at 0x2b971b7c5dd8> False
+<tensorflow.python.keras.layers.convolutional.Conv2D object at 0x2b971b7c5908> False
+<tensorflow.python.keras.layers.core.Activation object at 0x2b971b7d87f0> False
+<tensorflow.python.keras.layers.convolutional.Conv2D object at 0x2b971b7e27b8> False
+<tensorflow.python.keras.layers.core.Activation object at 0x2b971b7e2940> False
+<tensorflow.python.keras.layers.convolutional.Conv2D object at 0x2b971b7eb710> False
+<tensorflow.python.keras.layers.convolutional.Cropping2D object at 0x2b971b7eb898> False
+<tensorflow.python.keras.layers.convolutional.Conv2D object at 0x2b96cff81550> True
+<tensorflow.python.keras.layers.convolutional.Conv2D object at 0x2b971b7fca20> True
+########### Saving new model name: /glade/scratch/wchapman/Reforecast/models/NN_CRPS/F048/StartingYear2013/CNN_2017/cpf_CRPS_FINETUNE_val_2016_test_2017.ckpt
+Train on 121 samples, validate on 121 samples
+Epoch 1/200
+ 20/121 [===>..........................] - ETA: 3s - loss: 174.9533
+Epoch 00001: val_loss improved from inf to 109.57984, saving model to /glade/scratch/wchapman/Reforecast/models/NN_CRPS/F048/StartingYear2013/CNN_2017/cpf_CRPS_FINETUNE_val_2016_test_2017.ckpt
+121/121 [==============================] - 1s 8ms/sample - loss: 151.5186 - val_loss: 109.5798
+Epoch 2/200
+ 20/121 [===>..........................] - ETA: 0s - loss: 116.3468
+Epoch 00002: val_loss improved from 109.57984 to 66.18653, saving model to /glade/scratch/wchapman/Reforecast/models/NN_CRPS/F048/StartingYear2013/CNN_2017/cpf_CRPS_FINETUNE_val_2016_test_2017.ckpt
+121/121 [==============================] - 0s 578us/sample - loss: 89.6714 - val_loss: 66.1865
+Epoch 3/200
+ 20/121 [===>..........................] - ETA: 0s - loss: 67.3409
+Epoch 00003: val_loss improved from 66.18653 to 53.58054, saving model to /glade/scratch/wchapman/Reforecast/models/NN_CRPS/F048/StartingYear2013/CNN_2017/cpf_CRPS_FINETUNE_val_2016_test_2017.ckpt
+121/121 [==============================] - 0s 566us/sample - loss: 60.3380 - val_loss: 53.5805
+Epoch 4/200
+ 20/121 [===>..........................] - ETA: 0s - loss: 48.0122
+Epoch 00004: val_loss did not improve from 53.58054
+121/121 [==============================] - 0s 428us/sample - loss: 52.0764 - val_loss: 54.2182
+Epoch 5/200
+ 20/121 [===>..........................] - ETA: 0s - loss: 56.5040
+Epoch 00005: val_loss did not improve from 53.58054
+
+Epoch 00005: ReduceLROnPlateau reducing learning rate to 0.0004000000189989805.
+121/121 [==============================] - 0s 427us/sample - loss: 51.7054 - val_loss: 55.0163
+Epoch 6/200
+ 20/121 [===>..........................] - ETA: 0s - loss: 51.6401
+Epoch 00006: val_loss improved from 53.58054 to 53.41224, saving model to /glade/scratch/wchapman/Reforecast/models/NN_CRPS/F048/StartingYear2013/CNN_2017/cpf_CRPS_FINETUNE_val_2016_test_2017.ckpt
+121/121 [==============================] - 0s 574us/sample - loss: 51.2389 - val_loss: 53.4122
+Epoch 7/200
+ 20/121 [===>..........................] - ETA: 0s - loss: 49.9986
+Epoch 00007: val_loss improved from 53.41224 to 51.10601, saving model to /glade/scratch/wchapman/Reforecast/models/NN_CRPS/F048/StartingYear2013/CNN_2017/cpf_CRPS_FINETUNE_val_2016_test_2017.ckpt
+121/121 [==============================] - 0s 575us/sample - loss: 50.0042 - val_loss: 51.1060
+Epoch 8/200
+ 20/121 [===>..........................] - ETA: 0s - loss: 48.1670
+Epoch 00008: val_loss improved from 51.10601 to 49.57080, saving model to /glade/scratch/wchapman/Reforecast/models/NN_CRPS/F048/StartingYear2013/CNN_2017/cpf_CRPS_FINETUNE_val_2016_test_2017.ckpt
+121/121 [==============================] - 0s 569us/sample - loss: 48.9826 - val_loss: 49.5708
+Epoch 9/200
+ 20/121 [===>..........................] - ETA: 0s - loss: 45.9562
+Epoch 00009: val_loss improved from 49.57080 to 48.48315, saving model to /glade/scratch/wchapman/Reforecast/models/NN_CRPS/F048/StartingYear2013/CNN_2017/cpf_CRPS_FINETUNE_val_2016_test_2017.ckpt
+121/121 [==============================] - 0s 570us/sample - loss: 48.3486 - val_loss: 48.4832
+Epoch 10/200
+ 20/121 [===>..........................] - ETA: 0s - loss: 47.8819
+Epoch 00010: val_loss improved from 48.48315 to 48.30560, saving model to /glade/scratch/wchapman/Reforecast/models/NN_CRPS/F048/StartingYear2013/CNN_2017/cpf_CRPS_FINETUNE_val_2016_test_2017.ckpt
+121/121 [==============================] - 0s 576us/sample - loss: 48.0846 - val_loss: 48.3056
+Epoch 11/200
+ 20/121 [===>..........................] - ETA: 0s - loss: 47.9692
+Epoch 00011: val_loss did not improve from 48.30560
+121/121 [==============================] - 0s 428us/sample - loss: 47.8972 - val_loss: 48.4539
+Epoch 12/200
+ 20/121 [===>..........................] - ETA: 0s - loss: 46.7838
+Epoch 00012: val_loss improved from 48.30560 to 47.85492, saving model to /glade/scratch/wchapman/Reforecast/models/NN_CRPS/F048/StartingYear2013/CNN_2017/cpf_CRPS_FINETUNE_val_2016_test_2017.ckpt
+121/121 [==============================] - 0s 582us/sample - loss: 47.7610 - val_loss: 47.8549
+Epoch 13/200
+ 20/121 [===>..........................] - ETA: 0s - loss: 46.4163
+Epoch 00013: val_loss did not improve from 47.85492
+121/121 [==============================] - 0s 424us/sample - loss: 47.6895 - val_loss: 47.8854
+Epoch 14/200
+ 20/121 [===>..........................] - ETA: 0s - loss: 46.6574
+Epoch 00014: val_loss improved from 47.85492 to 47.66874, saving model to /glade/scratch/wchapman/Reforecast/models/NN_CRPS/F048/StartingYear2013/CNN_2017/cpf_CRPS_FINETUNE_val_2016_test_2017.ckpt
+121/121 [==============================] - 0s 562us/sample - loss: 47.5863 - val_loss: 47.6687
+Epoch 15/200
+ 20/121 [===>..........................] - ETA: 0s - loss: 46.4664
+Epoch 00015: val_loss did not improve from 47.66874
+121/121 [==============================] - 0s 424us/sample - loss: 47.4707 - val_loss: 48.0171
+Epoch 16/200
+ 20/121 [===>..........................] - ETA: 0s - loss: 47.6010
+Epoch 00016: val_loss did not improve from 47.66874
+
+Epoch 00016: ReduceLROnPlateau reducing learning rate to 0.00016000000759959222.
+121/121 [==============================] - 0s 429us/sample - loss: 47.3988 - val_loss: 47.9688
+Epoch 17/200
+ 20/121 [===>..........................] - ETA: 0s - loss: 45.3141
+Epoch 00017: val_loss did not improve from 47.66874
+121/121 [==============================] - 0s 422us/sample - loss: 47.3242 - val_loss: 47.8404
+Epoch 18/200
+ 20/121 [===>..........................] - ETA: 0s - loss: 45.7456
+Epoch 00018: val_loss improved from 47.66874 to 47.63280, saving model to /glade/scratch/wchapman/Reforecast/models/NN_CRPS/F048/StartingYear2013/CNN_2017/cpf_CRPS_FINETUNE_val_2016_test_2017.ckpt
+121/121 [==============================] - 0s 570us/sample - loss: 47.2826 - val_loss: 47.6328
+Epoch 19/200
+ 20/121 [===>..........................] - ETA: 0s - loss: 47.0848
+Epoch 00019: val_loss improved from 47.63280 to 47.61028, saving model to /glade/scratch/wchapman/Reforecast/models/NN_CRPS/F048/StartingYear2013/CNN_2017/cpf_CRPS_FINETUNE_val_2016_test_2017.ckpt
+121/121 [==============================] - 0s 578us/sample - loss: 47.2314 - val_loss: 47.6103
+Epoch 20/200
+ 20/121 [===>..........................] - ETA: 0s - loss: 48.8941
+Epoch 00020: val_loss improved from 47.61028 to 47.55030, saving model to /glade/scratch/wchapman/Reforecast/models/NN_CRPS/F048/StartingYear2013/CNN_2017/cpf_CRPS_FINETUNE_val_2016_test_2017.ckpt
+121/121 [==============================] - 0s 568us/sample - loss: 47.1976 - val_loss: 47.5503
+Epoch 21/200
+ 20/121 [===>..........................] - ETA: 0s - loss: 44.9234
+Epoch 00021: val_loss improved from 47.55030 to 47.28997, saving model to /glade/scratch/wchapman/Reforecast/models/NN_CRPS/F048/StartingYear2013/CNN_2017/cpf_CRPS_FINETUNE_val_2016_test_2017.ckpt
+121/121 [==============================] - 0s 569us/sample - loss: 47.1687 - val_loss: 47.2900
+Epoch 22/200
+ 20/121 [===>..........................] - ETA: 0s - loss: 43.8323
+Epoch 00022: val_loss improved from 47.28997 to 47.21360, saving model to /glade/scratch/wchapman/Reforecast/models/NN_CRPS/F048/StartingYear2013/CNN_2017/cpf_CRPS_FINETUNE_val_2016_test_2017.ckpt
+121/121 [==============================] - 0s 571us/sample - loss: 47.1906 - val_loss: 47.2136
+Epoch 23/200
+ 20/121 [===>..........................] - ETA: 0s - loss: 48.0414
+Epoch 00023: val_loss did not improve from 47.21360
+121/121 [==============================] - 0s 425us/sample - loss: 47.1290 - val_loss: 47.5127
+Epoch 24/200
+ 20/121 [===>..........................] - ETA: 0s - loss: 41.4514
+Epoch 00024: val_loss did not improve from 47.21360
+
+Epoch 00024: ReduceLROnPlateau reducing learning rate to 6.40000042039901e-05.
+121/121 [==============================] - 0s 426us/sample - loss: 47.0593 - val_loss: 47.7740
+Epoch 25/200
+ 20/121 [===>..........................] - ETA: 0s - loss: 47.9734
+Epoch 00025: val_loss did not improve from 47.21360
+121/121 [==============================] - 0s 419us/sample - loss: 47.0705 - val_loss: 47.8260
+Epoch 26/200
+ 20/121 [===>..........................] - ETA: 0s - loss: 47.9871
+Epoch 00026: val_loss did not improve from 47.21360
+
+Epoch 00026: ReduceLROnPlateau reducing learning rate to 2.560000284574926e-05.
+121/121 [==============================] - 0s 422us/sample - loss: 47.0823 - val_loss: 47.9267
+Epoch 27/200
+ 20/121 [===>..........................] - ETA: 0s - loss: 47.9391
+Epoch 00027: val_loss did not improve from 47.21360
+121/121 [==============================] - 0s 419us/sample - loss: 47.0791 - val_loss: 47.9239
+Epoch 28/200
+ 20/121 [===>..........................] - ETA: 0s - loss: 47.9531
+Epoch 00028: val_loss did not improve from 47.21360
+
+Epoch 00028: ReduceLROnPlateau reducing learning rate to 1.0240000847261399e-05.
+121/121 [==============================] - 0s 421us/sample - loss: 47.0692 - val_loss: 47.8392
+Epoch 29/200
+ 20/121 [===>..........................] - ETA: 0s - loss: 49.3240
+Epoch 00029: val_loss did not improve from 47.21360
+121/121 [==============================] - 0s 418us/sample - loss: 47.0519 - val_loss: 47.8146
+Epoch 30/200
+ 20/121 [===>..........................] - ETA: 0s - loss: 48.9100
+Epoch 00030: val_loss did not improve from 47.21360
+
+Epoch 00030: ReduceLROnPlateau reducing learning rate to 1e-05.
+121/121 [==============================] - 0s 429us/sample - loss: 47.0454 - val_loss: 47.7670
+Epoch 31/200
+ 20/121 [===>..........................] - ETA: 0s - loss: 46.9724
+Epoch 00031: val_loss did not improve from 47.21360
+121/121 [==============================] - 0s 419us/sample - loss: 47.0355 - val_loss: 47.7341
+Epoch 32/200
+ 20/121 [===>..........................] - ETA: 0s - loss: 47.1249
+Epoch 00032: val_loss did not improve from 47.21360
+121/121 [==============================] - 0s 422us/sample - loss: 47.0273 - val_loss: 47.6888
+/glade/work/wchapman/miniconda3/envs/tfp/lib/python3.6/site-packages/dask/config.py:168: YAMLLoadWarning: calling yaml.load() without Loader=... is deprecated, as the default Loader is unsafe. Please read https://msg.pyyaml.org/load for full details.
+  data = yaml.load(f.read()) or {}
+/glade/work/wchapman/AnEn/CNN/Coastal_Points_LogNormal/utilsProb.py:216: RuntimeWarning: invalid value encountered in log
+  post_matrix = numpy.log(post_matrix)
+WARNING:tensorflow:Unresolved object in checkpoint: (root).optimizer.iter
+WARNING:tensorflow:Unresolved object in checkpoint: (root).optimizer.beta_1
+WARNING:tensorflow:Unresolved object in checkpoint: (root).optimizer.beta_2
+WARNING:tensorflow:Unresolved object in checkpoint: (root).optimizer.decay
+WARNING:tensorflow:Unresolved object in checkpoint: (root).optimizer.learning_rate
+WARNING:tensorflow:A checkpoint was restored (e.g. tf.train.Checkpoint.restore or tf.keras.Model.load_weights) but not all checkpointed values were used. See above for specific issues. Use expect_partial() on the load status object, e.g. tf.train.Checkpoint.restore(...).expect_partial(), to silence these warnings, or use assert_consumed() to make the check explicit. See https://www.tensorflow.org/guide/checkpoint#loading_mechanics for details.
+Epoch 00032: early stopping
+#################################################
+testing: ['/glade/scratch/wchapman/Reforecast/F048/test/F048_WY_2018_500mb_Clean.nc']
+validatiing: ['/glade/scratch/wchapman/Reforecast/F048/validate/F048_WY_2017_500mb_Clean.nc']
+#################################################
+Reading data from: "/glade/scratch/wchapman/Reforecast/F048/train/F048_WY_2016_500mb_Clean.nc"...
+Reading data from: "/glade/scratch/wchapman/Reforecast/F048/validate/F048_WY_2017_500mb_Clean.nc"...
+...gathering data...
+Reading data from: "/glade/scratch/wchapman/Reforecast/F048/train/F048_WY_2016_500mb_Clean.nc"...
+Reading data from: "/glade/scratch/wchapman/Reforecast/F048/validate/F048_WY_2017_500mb_Clean.nc"...
+Model: "model_5"
+__________________________________________________________________________________________________
+Layer (type)                    Output Shape         Param #     Connected to                     
+==================================================================================================
+input_5 (InputLayer)            [(None, 71, 57, 6)]  0                                            
+__________________________________________________________________________________________________
+zero_padding2d_4 (ZeroPadding2D (None, 72, 60, 6)    0           input_5[0][0]                    
+__________________________________________________________________________________________________
+downsampling_0_conv_0 (Conv2D)  (None, 72, 60, 16)   880         zero_padding2d_4[0][0]           
+__________________________________________________________________________________________________
+downsampling_0_batchnorm_0 (Bat (None, 72, 60, 16)   64          downsampling_0_conv_0[0][0]      
+__________________________________________________________________________________________________
+downsampling_0_activation_0 (Ac (None, 72, 60, 16)   0           downsampling_0_batchnorm_0[0][0] 
+__________________________________________________________________________________________________
+downsampling_0_conv_1 (Conv2D)  (None, 72, 60, 16)   2320        downsampling_0_activation_0[0][0]
+__________________________________________________________________________________________________
+downsampling_0_batchnorm_1 (Bat (None, 72, 60, 16)   64          downsampling_0_conv_1[0][0]      
+__________________________________________________________________________________________________
+downsampling_0_activation_1 (Ac (None, 72, 60, 16)   0           downsampling_0_batchnorm_1[0][0] 
+__________________________________________________________________________________________________
+max_pooling2d_4 (MaxPooling2D)  (None, 36, 30, 16)   0           downsampling_0_activation_1[0][0]
+__________________________________________________________________________________________________
+bottleneck_skip_0 (Conv2D)      (None, 36, 30, 32)   4640        max_pooling2d_4[0][0]            
+__________________________________________________________________________________________________
+bottleneck_skip_1 (Conv2D)      (None, 36, 30, 32)   9248        bottleneck_skip_0[0][0]          
+__________________________________________________________________________________________________
+bottleneck_skip_2 (Conv2D)      (None, 36, 30, 32)   9248        bottleneck_skip_1[0][0]          
+__________________________________________________________________________________________________
+add_4 (Add)                     (None, 36, 30, 32)   0           bottleneck_skip_0[0][0]          
+                                                                 bottleneck_skip_1[0][0]          
+                                                                 bottleneck_skip_2[0][0]          
+__________________________________________________________________________________________________
+upsampling_0_conv_trans_0 (Conv (None, 72, 60, 16)   2064        add_4[0][0]                      
+__________________________________________________________________________________________________
+concatenate_4 (Concatenate)     (None, 72, 60, 32)   0           upsampling_0_conv_trans_0[0][0]  
+                                                                 downsampling_0_activation_1[0][0]
+__________________________________________________________________________________________________
+upsampling_0_conv_0 (Conv2D)    (None, 72, 60, 16)   4624        concatenate_4[0][0]              
+__________________________________________________________________________________________________
+upsampling_0_activation_0 (Acti (None, 72, 60, 16)   0           upsampling_0_conv_0[0][0]        
+__________________________________________________________________________________________________
+upsampling_0_conv_1 (Conv2D)    (None, 72, 60, 16)   2320        upsampling_0_activation_0[0][0]  
+__________________________________________________________________________________________________
+upsampling_0_activation_1 (Acti (None, 72, 60, 16)   0           upsampling_0_conv_1[0][0]        
+__________________________________________________________________________________________________
+linear (Conv2D)                 (None, 72, 60, 2)    34          upsampling_0_activation_1[0][0]  
+__________________________________________________________________________________________________
+cropping2d_4 (Cropping2D)       (None, 71, 57, 2)    0           linear[0][0]                     
+==================================================================================================
+Total params: 35,506
+Trainable params: 35,442
+Non-trainable params: 64
+__________________________________________________________________________________________________
+/glade/scratch/wchapman/Reforecast/models/NN_CRPS/F048/StartingYear2013/CNN_2018
+/glade/scratch/wchapman/Reforecast/models/NN_CRPS/F048/StartingYear2013/CNN_2018
+/glade/scratch/wchapman/Reforecast/models/NN_CRPS/F048/StartingYear2013/CNN_2018
+/glade/scratch/wchapman/Reforecast/models/NN_CRPS/F048/StartingYear2013/CNN_2018
+/glade/scratch/wchapman/Reforecast/models/NN_CRPS/F048/StartingYear2013/CNN_2018
+/glade/scratch/wchapman/Reforecast/models/NN_CRPS/F048/StartingYear2013/CNN_2018
+/glade/scratch/wchapman/Reforecast/models/NN_CRPS/F048/StartingYear2013/CNN_2018
+/glade/scratch/wchapman/Reforecast/models/NN_CRPS/F048/StartingYear2013/CNN_2018
+/glade/scratch/wchapman/Reforecast/models/NN_CRPS/F048/StartingYear2013/CNN_2018
+########### Loading old model weights name: /glade/scratch/wchapman/Reforecast/models/NN_CRPS/F048/StartingYear2013/CNN_2018/cpf_CRPS_val_2017_test_2018.ckpt
+########### Loading old model weights name: /glade/scratch/wchapman/Reforecast/models/NN_CRPS/F048/StartingYear2013/CNN_2018/cpf_CRPS_val_2017_test_2018.ckpt
+########### Loading old model weights name: /glade/scratch/wchapman/Reforecast/models/NN_CRPS/F048/StartingYear2013/CNN_2018/cpf_CRPS_val_2017_test_2018.ckpt
+########### Loading old model weights name: /glade/scratch/wchapman/Reforecast/models/NN_CRPS/F048/StartingYear2013/CNN_2018/cpf_CRPS_val_2017_test_2018.ckpt
+########### Loading old model weights name: /glade/scratch/wchapman/Reforecast/models/NN_CRPS/F048/StartingYear2013/CNN_2018/cpf_CRPS_val_2017_test_2018.ckpt
+########### layers frozen ###########
+<tensorflow.python.keras.engine.input_layer.InputLayer object at 0x2b971bb516d8> False
+<tensorflow.python.keras.layers.convolutional.ZeroPadding2D object at 0x2b971bf5e4a8> False
+<tensorflow.python.keras.layers.convolutional.Conv2D object at 0x2b971bf5e588> False
+<tensorflow.python.keras.layers.normalization_v2.BatchNormalization object at 0x2b971bf5eba8> False
+<tensorflow.python.keras.layers.core.Activation object at 0x2b971bf68b38> False
+<tensorflow.python.keras.layers.convolutional.Conv2D object at 0x2b971bf68400> False
+<tensorflow.python.keras.layers.normalization_v2.BatchNormalization object at 0x2b971bf86828> False
+<tensorflow.python.keras.layers.core.Activation object at 0x2b971bf8e4a8> False
+<tensorflow.python.keras.layers.pooling.MaxPooling2D object at 0x2b971bf86e10> False
+<tensorflow.python.keras.layers.convolutional.Conv2D object at 0x2b971bfb39e8> False
+<tensorflow.python.keras.layers.convolutional.Conv2D object at 0x2b971bfbb518> False
+<tensorflow.python.keras.layers.convolutional.Conv2D object at 0x2b971bfc5278> False
+<tensorflow.python.keras.layers.merge.Add object at 0x2b971bfd0eb8> False
+<tensorflow.python.keras.layers.convolutional.Conv2DTranspose object at 0x2b971bfd0e10> False
+<tensorflow.python.keras.layers.merge.Concatenate object at 0x2b975c008be0> False
+<tensorflow.python.keras.layers.convolutional.Conv2D object at 0x2b975c008710> False
+<tensorflow.python.keras.layers.core.Activation object at 0x2b975c019e48> False
+<tensorflow.python.keras.layers.convolutional.Conv2D object at 0x2b975c019f98> False
+<tensorflow.python.keras.layers.core.Activation object at 0x2b975c023dd8> False
+<tensorflow.python.keras.layers.convolutional.Conv2D object at 0x2b975c023f60> False
+<tensorflow.python.keras.layers.convolutional.Cropping2D object at 0x2b975c02cdd8> False
+Model: "model_6"
+__________________________________________________________________________________________________
+Layer (type)                    Output Shape         Param #     Connected to                     
+==================================================================================================
+input_5 (InputLayer)            [(None, 71, 57, 6)]  0                                            
+__________________________________________________________________________________________________
+zero_padding2d_4 (ZeroPadding2D (None, 72, 60, 6)    0           input_5[0][0]                    
+__________________________________________________________________________________________________
+downsampling_0_conv_0 (Conv2D)  (None, 72, 60, 16)   880         zero_padding2d_4[0][0]           
+__________________________________________________________________________________________________
+downsampling_0_batchnorm_0 (Bat (None, 72, 60, 16)   64          downsampling_0_conv_0[0][0]      
+__________________________________________________________________________________________________
+downsampling_0_activation_0 (Ac (None, 72, 60, 16)   0           downsampling_0_batchnorm_0[0][0] 
+__________________________________________________________________________________________________
+downsampling_0_conv_1 (Conv2D)  (None, 72, 60, 16)   2320        downsampling_0_activation_0[0][0]
+__________________________________________________________________________________________________
+downsampling_0_batchnorm_1 (Bat (None, 72, 60, 16)   64          downsampling_0_conv_1[0][0]      
+__________________________________________________________________________________________________
+downsampling_0_activation_1 (Ac (None, 72, 60, 16)   0           downsampling_0_batchnorm_1[0][0] 
+__________________________________________________________________________________________________
+max_pooling2d_4 (MaxPooling2D)  (None, 36, 30, 16)   0           downsampling_0_activation_1[0][0]
+__________________________________________________________________________________________________
+bottleneck_skip_0 (Conv2D)      (None, 36, 30, 32)   4640        max_pooling2d_4[0][0]            
+__________________________________________________________________________________________________
+bottleneck_skip_1 (Conv2D)      (None, 36, 30, 32)   9248        bottleneck_skip_0[0][0]          
+__________________________________________________________________________________________________
+bottleneck_skip_2 (Conv2D)      (None, 36, 30, 32)   9248        bottleneck_skip_1[0][0]          
+__________________________________________________________________________________________________
+add_4 (Add)                     (None, 36, 30, 32)   0           bottleneck_skip_0[0][0]          
+                                                                 bottleneck_skip_1[0][0]          
+                                                                 bottleneck_skip_2[0][0]          
+__________________________________________________________________________________________________
+upsampling_0_conv_trans_0 (Conv (None, 72, 60, 16)   2064        add_4[0][0]                      
+__________________________________________________________________________________________________
+concatenate_4 (Concatenate)     (None, 72, 60, 32)   0           upsampling_0_conv_trans_0[0][0]  
+                                                                 downsampling_0_activation_1[0][0]
+__________________________________________________________________________________________________
+upsampling_0_conv_0 (Conv2D)    (None, 72, 60, 16)   4624        concatenate_4[0][0]              
+__________________________________________________________________________________________________
+upsampling_0_activation_0 (Acti (None, 72, 60, 16)   0           upsampling_0_conv_0[0][0]        
+__________________________________________________________________________________________________
+upsampling_0_conv_1 (Conv2D)    (None, 72, 60, 16)   2320        upsampling_0_activation_0[0][0]  
+__________________________________________________________________________________________________
+upsampling_0_activation_1 (Acti (None, 72, 60, 16)   0           upsampling_0_conv_1[0][0]        
+__________________________________________________________________________________________________
+linear (Conv2D)                 (None, 72, 60, 2)    34          upsampling_0_activation_1[0][0]  
+__________________________________________________________________________________________________
+cropping2d_4 (Cropping2D)       (None, 71, 57, 2)    0           linear[0][0]                     
+__________________________________________________________________________________________________
+conv2d_2 (Conv2D)               (None, 71, 57, 32)   608         cropping2d_4[0][0]               
+__________________________________________________________________________________________________
+conv2d_3 (Conv2D)               (None, 71, 57, 2)    578         conv2d_2[0][0]                   
+==================================================================================================
+Total params: 36,692
+Trainable params: 1,186
+Non-trainable params: 35,506
+__________________________________________________________________________________________________
+<tensorflow.python.keras.engine.input_layer.InputLayer object at 0x2b971bb516d8> False
+<tensorflow.python.keras.layers.convolutional.ZeroPadding2D object at 0x2b971bf5e4a8> False
+<tensorflow.python.keras.layers.convolutional.Conv2D object at 0x2b971bf5e588> False
+<tensorflow.python.keras.layers.normalization_v2.BatchNormalization object at 0x2b971bf5eba8> False
+<tensorflow.python.keras.layers.core.Activation object at 0x2b971bf68b38> False
+<tensorflow.python.keras.layers.convolutional.Conv2D object at 0x2b971bf68400> False
+<tensorflow.python.keras.layers.normalization_v2.BatchNormalization object at 0x2b971bf86828> False
+<tensorflow.python.keras.layers.core.Activation object at 0x2b971bf8e4a8> False
+<tensorflow.python.keras.layers.pooling.MaxPooling2D object at 0x2b971bf86e10> False
+<tensorflow.python.keras.layers.convolutional.Conv2D object at 0x2b971bfb39e8> False
+<tensorflow.python.keras.layers.convolutional.Conv2D object at 0x2b971bfbb518> False
+<tensorflow.python.keras.layers.convolutional.Conv2D object at 0x2b971bfc5278> False
+<tensorflow.python.keras.layers.merge.Add object at 0x2b971bfd0eb8> False
+<tensorflow.python.keras.layers.convolutional.Conv2DTranspose object at 0x2b971bfd0e10> False
+<tensorflow.python.keras.layers.merge.Concatenate object at 0x2b975c008be0> False
+<tensorflow.python.keras.layers.convolutional.Conv2D object at 0x2b975c008710> False
+<tensorflow.python.keras.layers.core.Activation object at 0x2b975c019e48> False
+<tensorflow.python.keras.layers.convolutional.Conv2D object at 0x2b975c019f98> False
+<tensorflow.python.keras.layers.core.Activation object at 0x2b975c023dd8> False
+<tensorflow.python.keras.layers.convolutional.Conv2D object at 0x2b975c023f60> False
+<tensorflow.python.keras.layers.convolutional.Cropping2D object at 0x2b975c02cdd8> False
+<tensorflow.python.keras.layers.convolutional.Conv2D object at 0x2b975c057eb8> True
+<tensorflow.python.keras.layers.convolutional.Conv2D object at 0x2b975c03e748> True
+########### Saving new model name: /glade/scratch/wchapman/Reforecast/models/NN_CRPS/F048/StartingYear2013/CNN_2018/cpf_CRPS_FINETUNE_val_2017_test_2018.ckpt
+Train on 121 samples, validate on 121 samples
+Epoch 1/200
+ 20/121 [===>..........................] - ETA: 2s - loss: 168.9009
+Epoch 00001: val_loss improved from inf to 61.30364, saving model to /glade/scratch/wchapman/Reforecast/models/NN_CRPS/F048/StartingYear2013/CNN_2018/cpf_CRPS_FINETUNE_val_2017_test_2018.ckpt
+121/121 [==============================] - 1s 6ms/sample - loss: 118.5534 - val_loss: 61.3036
+Epoch 2/200
+ 20/121 [===>..........................] - ETA: 0s - loss: 66.5198
+Epoch 00002: val_loss improved from 61.30364 to 42.82240, saving model to /glade/scratch/wchapman/Reforecast/models/NN_CRPS/F048/StartingYear2013/CNN_2018/cpf_CRPS_FINETUNE_val_2017_test_2018.ckpt
+121/121 [==============================] - 0s 598us/sample - loss: 49.2008 - val_loss: 42.8224
+Epoch 3/200
+ 20/121 [===>..........................] - ETA: 0s - loss: 45.8937
+Epoch 00003: val_loss did not improve from 42.82240
+121/121 [==============================] - 0s 435us/sample - loss: 46.6384 - val_loss: 45.4688
+Epoch 4/200
+ 20/121 [===>..........................] - ETA: 0s - loss: 51.6733
+Epoch 00004: val_loss improved from 42.82240 to 42.36086, saving model to /glade/scratch/wchapman/Reforecast/models/NN_CRPS/F048/StartingYear2013/CNN_2018/cpf_CRPS_FINETUNE_val_2017_test_2018.ckpt
+121/121 [==============================] - 0s 573us/sample - loss: 46.9111 - val_loss: 42.3609
+Epoch 5/200
+ 20/121 [===>..........................] - ETA: 0s - loss: 45.1714
+Epoch 00005: val_loss did not improve from 42.36086
+121/121 [==============================] - 0s 430us/sample - loss: 42.7651 - val_loss: 42.3930
+Epoch 6/200
+ 20/121 [===>..........................] - ETA: 0s - loss: 44.4962
+Epoch 00006: val_loss did not improve from 42.36086
+
+Epoch 00006: ReduceLROnPlateau reducing learning rate to 0.0004000000189989805.
+121/121 [==============================] - 0s 426us/sample - loss: 42.4926 - val_loss: 43.1040
+Epoch 7/200
+ 20/121 [===>..........................] - ETA: 0s - loss: 44.7748
+Epoch 00007: val_loss did not improve from 42.36086
+121/121 [==============================] - 0s 423us/sample - loss: 42.5377 - val_loss: 42.7228
+Epoch 8/200
+ 20/121 [===>..........................] - ETA: 0s - loss: 44.3319
+Epoch 00008: val_loss improved from 42.36086 to 42.12909, saving model to /glade/scratch/wchapman/Reforecast/models/NN_CRPS/F048/StartingYear2013/CNN_2018/cpf_CRPS_FINETUNE_val_2017_test_2018.ckpt
+121/121 [==============================] - 0s 575us/sample - loss: 42.1716 - val_loss: 42.1291
+Epoch 9/200
+ 20/121 [===>..........................] - ETA: 0s - loss: 45.0247
+Epoch 00009: val_loss improved from 42.12909 to 41.82950, saving model to /glade/scratch/wchapman/Reforecast/models/NN_CRPS/F048/StartingYear2013/CNN_2018/cpf_CRPS_FINETUNE_val_2017_test_2018.ckpt
+121/121 [==============================] - 0s 569us/sample - loss: 42.0547 - val_loss: 41.8295
+Epoch 10/200
+ 20/121 [===>..........................] - ETA: 0s - loss: 39.8653
+Epoch 00010: val_loss improved from 41.82950 to 41.78173, saving model to /glade/scratch/wchapman/Reforecast/models/NN_CRPS/F048/StartingYear2013/CNN_2018/cpf_CRPS_FINETUNE_val_2017_test_2018.ckpt
+121/121 [==============================] - 0s 579us/sample - loss: 41.9627 - val_loss: 41.7817
+Epoch 11/200
+ 20/121 [===>..........................] - ETA: 0s - loss: 37.8211
+Epoch 00011: val_loss did not improve from 41.78173
+121/121 [==============================] - 0s 426us/sample - loss: 41.8785 - val_loss: 41.8144
+Epoch 12/200
+ 20/121 [===>..........................] - ETA: 0s - loss: 42.6332
+Epoch 00012: val_loss did not improve from 41.78173
+
+Epoch 00012: ReduceLROnPlateau reducing learning rate to 0.00016000000759959222.
+121/121 [==============================] - 0s 429us/sample - loss: 41.8302 - val_loss: 41.8155
+Epoch 13/200
+ 20/121 [===>..........................] - ETA: 0s - loss: 43.1393
+Epoch 00013: val_loss did not improve from 41.78173
+121/121 [==============================] - 0s 428us/sample - loss: 41.7971 - val_loss: 41.8095
+Epoch 14/200
+ 20/121 [===>..........................] - ETA: 0s - loss: 43.1477
+Epoch 00014: val_loss did not improve from 41.78173
+
+Epoch 00014: ReduceLROnPlateau reducing learning rate to 6.40000042039901e-05.
+121/121 [==============================] - 0s 427us/sample - loss: 41.7730 - val_loss: 41.7883
+Epoch 15/200
+ 20/121 [===>..........................] - ETA: 0s - loss: 39.7393
+Epoch 00015: val_loss improved from 41.78173 to 41.77721, saving model to /glade/scratch/wchapman/Reforecast/models/NN_CRPS/F048/StartingYear2013/CNN_2018/cpf_CRPS_FINETUNE_val_2017_test_2018.ckpt
+121/121 [==============================] - 0s 569us/sample - loss: 41.7536 - val_loss: 41.7772
+Epoch 16/200
+ 20/121 [===>..........................] - ETA: 0s - loss: 41.3868
+Epoch 00016: val_loss improved from 41.77721 to 41.74692, saving model to /glade/scratch/wchapman/Reforecast/models/NN_CRPS/F048/StartingYear2013/CNN_2018/cpf_CRPS_FINETUNE_val_2017_test_2018.ckpt
+121/121 [==============================] - 0s 561us/sample - loss: 41.7420 - val_loss: 41.7469
+Epoch 17/200
+ 20/121 [===>..........................] - ETA: 0s - loss: 42.9105
+Epoch 00017: val_loss improved from 41.74692 to 41.70843, saving model to /glade/scratch/wchapman/Reforecast/models/NN_CRPS/F048/StartingYear2013/CNN_2018/cpf_CRPS_FINETUNE_val_2017_test_2018.ckpt
+121/121 [==============================] - 0s 578us/sample - loss: 41.7256 - val_loss: 41.7084
+Epoch 18/200
+ 20/121 [===>..........................] - ETA: 0s - loss: 40.6732
+Epoch 00018: val_loss improved from 41.70843 to 41.69520, saving model to /glade/scratch/wchapman/Reforecast/models/NN_CRPS/F048/StartingYear2013/CNN_2018/cpf_CRPS_FINETUNE_val_2017_test_2018.ckpt
+121/121 [==============================] - 0s 579us/sample - loss: 41.7126 - val_loss: 41.6952
+Epoch 19/200
+ 20/121 [===>..........................] - ETA: 0s - loss: 42.4704
+Epoch 00019: val_loss improved from 41.69520 to 41.68303, saving model to /glade/scratch/wchapman/Reforecast/models/NN_CRPS/F048/StartingYear2013/CNN_2018/cpf_CRPS_FINETUNE_val_2017_test_2018.ckpt
+121/121 [==============================] - 0s 565us/sample - loss: 41.6998 - val_loss: 41.6830
+Epoch 20/200
+ 20/121 [===>..........................] - ETA: 0s - loss: 39.2248
+Epoch 00020: val_loss improved from 41.68303 to 41.66379, saving model to /glade/scratch/wchapman/Reforecast/models/NN_CRPS/F048/StartingYear2013/CNN_2018/cpf_CRPS_FINETUNE_val_2017_test_2018.ckpt
+121/121 [==============================] - 0s 564us/sample - loss: 41.6868 - val_loss: 41.6638
+Epoch 21/200
+ 20/121 [===>..........................] - ETA: 0s - loss: 40.6528
+Epoch 00021: val_loss improved from 41.66379 to 41.64834, saving model to /glade/scratch/wchapman/Reforecast/models/NN_CRPS/F048/StartingYear2013/CNN_2018/cpf_CRPS_FINETUNE_val_2017_test_2018.ckpt
+121/121 [==============================] - 0s 571us/sample - loss: 41.6750 - val_loss: 41.6483
+Epoch 22/200
+ 20/121 [===>..........................] - ETA: 0s - loss: 38.2559
+Epoch 00022: val_loss improved from 41.64834 to 41.63608, saving model to /glade/scratch/wchapman/Reforecast/models/NN_CRPS/F048/StartingYear2013/CNN_2018/cpf_CRPS_FINETUNE_val_2017_test_2018.ckpt
+121/121 [==============================] - 0s 566us/sample - loss: 41.6615 - val_loss: 41.6361
+Epoch 23/200
+ 20/121 [===>..........................] - ETA: 0s - loss: 41.4525
+Epoch 00023: val_loss improved from 41.63608 to 41.63338, saving model to /glade/scratch/wchapman/Reforecast/models/NN_CRPS/F048/StartingYear2013/CNN_2018/cpf_CRPS_FINETUNE_val_2017_test_2018.ckpt
+121/121 [==============================] - 0s 564us/sample - loss: 41.6497 - val_loss: 41.6334
+Epoch 24/200
+ 20/121 [===>..........................] - ETA: 0s - loss: 39.1351
+Epoch 00024: val_loss improved from 41.63338 to 41.61344, saving model to /glade/scratch/wchapman/Reforecast/models/NN_CRPS/F048/StartingYear2013/CNN_2018/cpf_CRPS_FINETUNE_val_2017_test_2018.ckpt
+121/121 [==============================] - 0s 559us/sample - loss: 41.6369 - val_loss: 41.6134
+Epoch 25/200
+ 20/121 [===>..........................] - ETA: 0s - loss: 40.3807
+Epoch 00025: val_loss did not improve from 41.61344
+121/121 [==============================] - 0s 427us/sample - loss: 41.6239 - val_loss: 41.6147
+Epoch 26/200
+ 20/121 [===>..........................] - ETA: 0s - loss: 43.3170
+Epoch 00026: val_loss did not improve from 41.61344
+
+Epoch 00026: ReduceLROnPlateau reducing learning rate to 2.560000284574926e-05.
+121/121 [==============================] - 0s 423us/sample - loss: 41.6128 - val_loss: 41.6198
+Epoch 27/200
+ 20/121 [===>..........................] - ETA: 0s - loss: 40.7365
+Epoch 00027: val_loss did not improve from 41.61344
+121/121 [==============================] - 0s 420us/sample - loss: 41.6049 - val_loss: 41.6229
+Epoch 28/200
+ 20/121 [===>..........................] - ETA: 0s - loss: 44.3152
+Epoch 00028: val_loss did not improve from 41.61344
+
+Epoch 00028: ReduceLROnPlateau reducing learning rate to 1.0240000847261399e-05.
+121/121 [==============================] - 0s 422us/sample - loss: 41.5996 - val_loss: 41.6162
+Epoch 29/200
+ 20/121 [===>..........................] - ETA: 0s - loss: 41.9640
+Epoch 00029: val_loss did not improve from 41.61344
+121/121 [==============================] - 0s 422us/sample - loss: 41.5951 - val_loss: 41.6141
+Epoch 30/200
+ 20/121 [===>..........................] - ETA: 0s - loss: 43.7223
+Epoch 00030: val_loss improved from 41.61344 to 41.61286, saving model to /glade/scratch/wchapman/Reforecast/models/NN_CRPS/F048/StartingYear2013/CNN_2018/cpf_CRPS_FINETUNE_val_2017_test_2018.ckpt
+121/121 [==============================] - 0s 576us/sample - loss: 41.5932 - val_loss: 41.6129
+Epoch 31/200
+ 20/121 [===>..........................] - ETA: 0s - loss: 44.0393
+Epoch 00031: val_loss improved from 41.61286 to 41.61099, saving model to /glade/scratch/wchapman/Reforecast/models/NN_CRPS/F048/StartingYear2013/CNN_2018/cpf_CRPS_FINETUNE_val_2017_test_2018.ckpt
+121/121 [==============================] - 0s 572us/sample - loss: 41.5913 - val_loss: 41.6110
+Epoch 32/200
+ 20/121 [===>..........................] - ETA: 0s - loss: 40.5131
+Epoch 00032: val_loss did not improve from 41.61099
+121/121 [==============================] - 0s 426us/sample - loss: 41.5895 - val_loss: 41.6110
+Epoch 33/200
+ 20/121 [===>..........................] - ETA: 0s - loss: 41.3804
+Epoch 00033: val_loss improved from 41.61099 to 41.60701, saving model to /glade/scratch/wchapman/Reforecast/models/NN_CRPS/F048/StartingYear2013/CNN_2018/cpf_CRPS_FINETUNE_val_2017_test_2018.ckpt
+121/121 [==============================] - 0s 577us/sample - loss: 41.5877 - val_loss: 41.6070
+Epoch 34/200
+ 20/121 [===>..........................] - ETA: 0s - loss: 38.6317
+Epoch 00034: val_loss improved from 41.60701 to 41.60318, saving model to /glade/scratch/wchapman/Reforecast/models/NN_CRPS/F048/StartingYear2013/CNN_2018/cpf_CRPS_FINETUNE_val_2017_test_2018.ckpt
+121/121 [==============================] - 0s 556us/sample - loss: 41.5857 - val_loss: 41.6032
+Epoch 35/200
+ 20/121 [===>..........................] - ETA: 0s - loss: 40.7696
+Epoch 00035: val_loss improved from 41.60318 to 41.60268, saving model to /glade/scratch/wchapman/Reforecast/models/NN_CRPS/F048/StartingYear2013/CNN_2018/cpf_CRPS_FINETUNE_val_2017_test_2018.ckpt
+121/121 [==============================] - 0s 565us/sample - loss: 41.5836 - val_loss: 41.6027
+Epoch 36/200
+ 20/121 [===>..........................] - ETA: 0s - loss: 42.7414
+Epoch 00036: val_loss improved from 41.60268 to 41.59967, saving model to /glade/scratch/wchapman/Reforecast/models/NN_CRPS/F048/StartingYear2013/CNN_2018/cpf_CRPS_FINETUNE_val_2017_test_2018.ckpt
+121/121 [==============================] - 0s 565us/sample - loss: 41.5819 - val_loss: 41.5997
+Epoch 37/200
+ 20/121 [===>..........................] - ETA: 0s - loss: 39.1272
+Epoch 00037: val_loss improved from 41.59967 to 41.59790, saving model to /glade/scratch/wchapman/Reforecast/models/NN_CRPS/F048/StartingYear2013/CNN_2018/cpf_CRPS_FINETUNE_val_2017_test_2018.ckpt
+121/121 [==============================] - 0s 567us/sample - loss: 41.5803 - val_loss: 41.5979
+Epoch 38/200
+ 20/121 [===>..........................] - ETA: 0s - loss: 38.7870
+Epoch 00038: val_loss improved from 41.59790 to 41.59397, saving model to /glade/scratch/wchapman/Reforecast/models/NN_CRPS/F048/StartingYear2013/CNN_2018/cpf_CRPS_FINETUNE_val_2017_test_2018.ckpt
+121/121 [==============================] - 0s 564us/sample - loss: 41.5786 - val_loss: 41.5940
+Epoch 39/200
+ 20/121 [===>..........................] - ETA: 0s - loss: 43.2945
+Epoch 00039: val_loss did not improve from 41.59397
+121/121 [==============================] - 0s 425us/sample - loss: 41.5767 - val_loss: 41.5943
+Epoch 40/200
+ 20/121 [===>..........................] - ETA: 0s - loss: 41.8196
+Epoch 00040: val_loss did not improve from 41.59397
+
+Epoch 00040: ReduceLROnPlateau reducing learning rate to 1e-05.
+121/121 [==============================] - 0s 423us/sample - loss: 41.5753 - val_loss: 41.5963
+Epoch 41/200
+ 20/121 [===>..........................] - ETA: 0s - loss: 40.9763
+Epoch 00041: val_loss did not improve from 41.59397
+121/121 [==============================] - 0s 418us/sample - loss: 41.5732 - val_loss: 41.5952
+Epoch 42/200
+ 20/121 [===>..........................] - ETA: 0s - loss: 39.9399
+Epoch 00042: val_loss improved from 41.59397 to 41.59177, saving model to /glade/scratch/wchapman/Reforecast/models/NN_CRPS/F048/StartingYear2013/CNN_2018/cpf_CRPS_FINETUNE_val_2017_test_2018.ckpt
+121/121 [==============================] - 0s 576us/sample - loss: 41.5714 - val_loss: 41.5918
+Epoch 43/200
+ 20/121 [===>..........................] - ETA: 0s - loss: 43.6504
+Epoch 00043: val_loss improved from 41.59177 to 41.58630, saving model to /glade/scratch/wchapman/Reforecast/models/NN_CRPS/F048/StartingYear2013/CNN_2018/cpf_CRPS_FINETUNE_val_2017_test_2018.ckpt
+121/121 [==============================] - 0s 567us/sample - loss: 41.5690 - val_loss: 41.5863
+Epoch 44/200
+ 20/121 [===>..........................] - ETA: 0s - loss: 42.3911
+Epoch 00044: val_loss improved from 41.58630 to 41.58178, saving model to /glade/scratch/wchapman/Reforecast/models/NN_CRPS/F048/StartingYear2013/CNN_2018/cpf_CRPS_FINETUNE_val_2017_test_2018.ckpt
+121/121 [==============================] - 0s 568us/sample - loss: 41.5675 - val_loss: 41.5818
+Epoch 45/200
+ 20/121 [===>..........................] - ETA: 0s - loss: 40.7317
+Epoch 00045: val_loss improved from 41.58178 to 41.57621, saving model to /glade/scratch/wchapman/Reforecast/models/NN_CRPS/F048/StartingYear2013/CNN_2018/cpf_CRPS_FINETUNE_val_2017_test_2018.ckpt
+121/121 [==============================] - 0s 574us/sample - loss: 41.5659 - val_loss: 41.5762
+Epoch 46/200
+ 20/121 [===>..........................] - ETA: 0s - loss: 44.4109
+Epoch 00046: val_loss improved from 41.57621 to 41.56882, saving model to /glade/scratch/wchapman/Reforecast/models/NN_CRPS/F048/StartingYear2013/CNN_2018/cpf_CRPS_FINETUNE_val_2017_test_2018.ckpt
+121/121 [==============================] - 0s 569us/sample - loss: 41.5637 - val_loss: 41.5688
+Epoch 47/200
+ 20/121 [===>..........................] - ETA: 0s - loss: 38.5071
+Epoch 00047: val_loss improved from 41.56882 to 41.56089, saving model to /glade/scratch/wchapman/Reforecast/models/NN_CRPS/F048/StartingYear2013/CNN_2018/cpf_CRPS_FINETUNE_val_2017_test_2018.ckpt
+121/121 [==============================] - 0s 565us/sample - loss: 41.5623 - val_loss: 41.5609
+Epoch 48/200
+ 20/121 [===>..........................] - ETA: 0s - loss: 43.3742
+Epoch 00048: val_loss improved from 41.56089 to 41.55843, saving model to /glade/scratch/wchapman/Reforecast/models/NN_CRPS/F048/StartingYear2013/CNN_2018/cpf_CRPS_FINETUNE_val_2017_test_2018.ckpt
+121/121 [==============================] - 0s 570us/sample - loss: 41.5606 - val_loss: 41.5584
+Epoch 49/200
+ 20/121 [===>..........................] - ETA: 0s - loss: 40.7210
+Epoch 00049: val_loss did not improve from 41.55843
+121/121 [==============================] - 0s 426us/sample - loss: 41.5589 - val_loss: 41.5590
+Epoch 50/200
+ 20/121 [===>..........................] - ETA: 0s - loss: 37.5071
+Epoch 00050: val_loss did not improve from 41.55843
+121/121 [==============================] - 0s 427us/sample - loss: 41.5572 - val_loss: 41.5609
+Epoch 51/200
+ 20/121 [===>..........................] - ETA: 0s - loss: 39.9179
+Epoch 00051: val_loss did not improve from 41.55843
+121/121 [==============================] - 0s 422us/sample - loss: 41.5553 - val_loss: 41.5607
+Epoch 52/200
+ 20/121 [===>..........................] - ETA: 0s - loss: 40.1719
+Epoch 00052: val_loss did not improve from 41.55843
+121/121 [==============================] - 0s 420us/sample - loss: 41.5534 - val_loss: 41.5627
+Epoch 53/200
+ 20/121 [===>..........................] - ETA: 0s - loss: 40.6993
+Epoch 00053: val_loss did not improve from 41.55843
+121/121 [==============================] - 0s 420us/sample - loss: 41.5512 - val_loss: 41.5672
+Epoch 54/200
+ 20/121 [===>..........................] - ETA: 0s - loss: 40.0676
+Epoch 00054: val_loss did not improve from 41.55843
+121/121 [==============================] - 0s 422us/sample - loss: 41.5501 - val_loss: 41.5667
+Epoch 55/200
+ 20/121 [===>..........................] - ETA: 0s - loss: 41.8333
+Epoch 00055: val_loss did not improve from 41.55843
+121/121 [==============================] - 0s 444us/sample - loss: 41.5482 - val_loss: 41.5684
+Epoch 56/200
+ 20/121 [===>..........................] - ETA: 0s - loss: 42.4572
+Epoch 00056: val_loss did not improve from 41.55843
+121/121 [==============================] - 0s 420us/sample - loss: 41.5466 - val_loss: 41.5684
+Epoch 57/200
+ 20/121 [===>..........................] - ETA: 0s - loss: 42.5184
+Epoch 00057: val_loss did not improve from 41.55843
+121/121 [==============================] - 0s 421us/sample - loss: 41.5449 - val_loss: 41.5673
+Epoch 58/200
+ 20/121 [===>..........................] - ETA: 0s - loss: 42.8111
+Epoch 00058: val_loss did not improve from 41.55843
+121/121 [==============================] - 0s 421us/sample - loss: 41.5431 - val_loss: 41.5653
+WARNING:tensorflow:Unresolved object in checkpoint: (root).optimizer.iter
+WARNING:tensorflow:Unresolved object in checkpoint: (root).optimizer.beta_1
+WARNING:tensorflow:Unresolved object in checkpoint: (root).optimizer.beta_2
+WARNING:tensorflow:Unresolved object in checkpoint: (root).optimizer.decay
+WARNING:tensorflow:Unresolved object in checkpoint: (root).optimizer.learning_rate
+WARNING:tensorflow:A checkpoint was restored (e.g. tf.train.Checkpoint.restore or tf.keras.Model.load_weights) but not all checkpointed values were used. See above for specific issues. Use expect_partial() on the load status object, e.g. tf.train.Checkpoint.restore(...).expect_partial(), to silence these warnings, or use assert_consumed() to make the check explicit. See https://www.tensorflow.org/guide/checkpoint#loading_mechanics for details.
+WARNING:tensorflow:Unresolved object in checkpoint: (root).optimizer.iter
+WARNING:tensorflow:Unresolved object in checkpoint: (root).optimizer.beta_1
+WARNING:tensorflow:Unresolved object in checkpoint: (root).optimizer.beta_2
+WARNING:tensorflow:Unresolved object in checkpoint: (root).optimizer.decay
+WARNING:tensorflow:Unresolved object in checkpoint: (root).optimizer.learning_rate
+WARNING:tensorflow:A checkpoint was restored (e.g. tf.train.Checkpoint.restore or tf.keras.Model.load_weights) but not all checkpointed values were used. See above for specific issues. Use expect_partial() on the load status object, e.g. tf.train.Checkpoint.restore(...).expect_partial(), to silence these warnings, or use assert_consumed() to make the check explicit. See https://www.tensorflow.org/guide/checkpoint#loading_mechanics for details.
+Epoch 00058: early stopping
+#################################################
+testing: ['/glade/scratch/wchapman/Reforecast/F048/train/F048_WY_2016_500mb_Clean.nc']
+validatiing: ['/glade/scratch/wchapman/Reforecast/F048/test/F048_WY_2018_500mb_Clean.nc']
+#################################################
+Reading data from: "/glade/scratch/wchapman/Reforecast/F048/train/F048_WY_2016_500mb_Clean.nc"...
+Reading data from: "/glade/scratch/wchapman/Reforecast/F048/validate/F048_WY_2017_500mb_Clean.nc"...
+Reading data from: "/glade/scratch/wchapman/Reforecast/F048/test/F048_WY_2018_500mb_Clean.nc"...
+...gathering data...
+Reading data from: "/glade/scratch/wchapman/Reforecast/F048/train/F048_WY_2016_500mb_Clean.nc"...
+Reading data from: "/glade/scratch/wchapman/Reforecast/F048/validate/F048_WY_2017_500mb_Clean.nc"...
+Reading data from: "/glade/scratch/wchapman/Reforecast/F048/test/F048_WY_2018_500mb_Clean.nc"...
+Model: "model_7"
+__________________________________________________________________________________________________
+Layer (type)                    Output Shape         Param #     Connected to                     
+==================================================================================================
+input_6 (InputLayer)            [(None, 71, 57, 6)]  0                                            
+__________________________________________________________________________________________________
+zero_padding2d_5 (ZeroPadding2D (None, 72, 60, 6)    0           input_6[0][0]                    
+__________________________________________________________________________________________________
+downsampling_0_conv_0 (Conv2D)  (None, 72, 60, 16)   880         zero_padding2d_5[0][0]           
+__________________________________________________________________________________________________
+downsampling_0_batchnorm_0 (Bat (None, 72, 60, 16)   64          downsampling_0_conv_0[0][0]      
+__________________________________________________________________________________________________
+downsampling_0_activation_0 (Ac (None, 72, 60, 16)   0           downsampling_0_batchnorm_0[0][0] 
+__________________________________________________________________________________________________
+downsampling_0_conv_1 (Conv2D)  (None, 72, 60, 16)   2320        downsampling_0_activation_0[0][0]
+__________________________________________________________________________________________________
+downsampling_0_batchnorm_1 (Bat (None, 72, 60, 16)   64          downsampling_0_conv_1[0][0]      
+__________________________________________________________________________________________________
+downsampling_0_activation_1 (Ac (None, 72, 60, 16)   0           downsampling_0_batchnorm_1[0][0] 
+__________________________________________________________________________________________________
+max_pooling2d_5 (MaxPooling2D)  (None, 36, 30, 16)   0           downsampling_0_activation_1[0][0]
+__________________________________________________________________________________________________
+bottleneck_skip_0 (Conv2D)      (None, 36, 30, 32)   4640        max_pooling2d_5[0][0]            
+__________________________________________________________________________________________________
+bottleneck_skip_1 (Conv2D)      (None, 36, 30, 32)   9248        bottleneck_skip_0[0][0]          
+__________________________________________________________________________________________________
+bottleneck_skip_2 (Conv2D)      (None, 36, 30, 32)   9248        bottleneck_skip_1[0][0]          
+__________________________________________________________________________________________________
+add_5 (Add)                     (None, 36, 30, 32)   0           bottleneck_skip_0[0][0]          
+                                                                 bottleneck_skip_1[0][0]          
+                                                                 bottleneck_skip_2[0][0]          
+__________________________________________________________________________________________________
+upsampling_0_conv_trans_0 (Conv (None, 72, 60, 16)   2064        add_5[0][0]                      
+__________________________________________________________________________________________________
+concatenate_5 (Concatenate)     (None, 72, 60, 32)   0           upsampling_0_conv_trans_0[0][0]  
+                                                                 downsampling_0_activation_1[0][0]
+__________________________________________________________________________________________________
+upsampling_0_conv_0 (Conv2D)    (None, 72, 60, 16)   4624        concatenate_5[0][0]              
+__________________________________________________________________________________________________
+upsampling_0_activation_0 (Acti (None, 72, 60, 16)   0           upsampling_0_conv_0[0][0]        
+__________________________________________________________________________________________________
+upsampling_0_conv_1 (Conv2D)    (None, 72, 60, 16)   2320        upsampling_0_activation_0[0][0]  
+__________________________________________________________________________________________________
+upsampling_0_activation_1 (Acti (None, 72, 60, 16)   0           upsampling_0_conv_1[0][0]        
+__________________________________________________________________________________________________
+linear (Conv2D)                 (None, 72, 60, 2)    34          upsampling_0_activation_1[0][0]  
+__________________________________________________________________________________________________
+cropping2d_5 (Cropping2D)       (None, 71, 57, 2)    0           linear[0][0]                     
+==================================================================================================
+Total params: 35,506
+Trainable params: 35,442
+Non-trainable params: 64
+__________________________________________________________________________________________________
+/glade/scratch/wchapman/Reforecast/models/NN_CRPS/F048/StartingYear2013/CNN_2016
+/glade/scratch/wchapman/Reforecast/models/NN_CRPS/F048/StartingYear2013/CNN_2016
+/glade/scratch/wchapman/Reforecast/models/NN_CRPS/F048/StartingYear2013/CNN_2016
+/glade/scratch/wchapman/Reforecast/models/NN_CRPS/F048/StartingYear2013/CNN_2016
+/glade/scratch/wchapman/Reforecast/models/NN_CRPS/F048/StartingYear2013/CNN_2016
+/glade/scratch/wchapman/Reforecast/models/NN_CRPS/F048/StartingYear2013/CNN_2016
+/glade/scratch/wchapman/Reforecast/models/NN_CRPS/F048/StartingYear2013/CNN_2016
+/glade/scratch/wchapman/Reforecast/models/NN_CRPS/F048/StartingYear2013/CNN_2016
+/glade/scratch/wchapman/Reforecast/models/NN_CRPS/F048/StartingYear2013/CNN_2016
+########### Loading old model weights name: /glade/scratch/wchapman/Reforecast/models/NN_CRPS/F048/StartingYear2013/CNN_2016/cpf_CRPS_val_2018_test_2016.ckpt
+########### Loading old model weights name: /glade/scratch/wchapman/Reforecast/models/NN_CRPS/F048/StartingYear2013/CNN_2016/cpf_CRPS_val_2018_test_2016.ckpt
+########### Loading old model weights name: /glade/scratch/wchapman/Reforecast/models/NN_CRPS/F048/StartingYear2013/CNN_2016/cpf_CRPS_val_2018_test_2016.ckpt
+########### Loading old model weights name: /glade/scratch/wchapman/Reforecast/models/NN_CRPS/F048/StartingYear2013/CNN_2016/cpf_CRPS_val_2018_test_2016.ckpt
+########### Loading old model weights name: /glade/scratch/wchapman/Reforecast/models/NN_CRPS/F048/StartingYear2013/CNN_2016/cpf_CRPS_val_2018_test_2016.ckpt
+########### layers frozen ###########
+<tensorflow.python.keras.engine.input_layer.InputLayer object at 0x2b975c377dd8> False
+<tensorflow.python.keras.layers.convolutional.ZeroPadding2D object at 0x2b975c78e518> False
+<tensorflow.python.keras.layers.convolutional.Conv2D object at 0x2b975c78e908> False
+<tensorflow.python.keras.layers.normalization_v2.BatchNormalization object at 0x2b975c78ef98> False
+<tensorflow.python.keras.layers.core.Activation object at 0x2b975c377518> False
+<tensorflow.python.keras.layers.convolutional.Conv2D object at 0x2b975c78e0f0> False
+<tensorflow.python.keras.layers.normalization_v2.BatchNormalization object at 0x2b975c7a8898> False
+<tensorflow.python.keras.layers.core.Activation object at 0x2b975c7af518> False
+<tensorflow.python.keras.layers.pooling.MaxPooling2D object at 0x2b975c7a8e80> False
+<tensorflow.python.keras.layers.convolutional.Conv2D object at 0x2b975c7d4a58> False
+<tensorflow.python.keras.layers.convolutional.Conv2D object at 0x2b975c7dd588> False
+<tensorflow.python.keras.layers.convolutional.Conv2D object at 0x2b975c7e82e8> False
+<tensorflow.python.keras.layers.merge.Add object at 0x2b975c7f3f28> False
+<tensorflow.python.keras.layers.convolutional.Conv2DTranspose object at 0x2b975c7f3e80> False
+<tensorflow.python.keras.layers.merge.Concatenate object at 0x2b975c807c50> False
+<tensorflow.python.keras.layers.convolutional.Conv2D object at 0x2b975c807780> False
+<tensorflow.python.keras.layers.core.Activation object at 0x2b975c817f28> False
+<tensorflow.python.keras.layers.convolutional.Conv2D object at 0x2b975c817e48> False
+<tensorflow.python.keras.layers.core.Activation object at 0x2b975c821e48> False
+<tensorflow.python.keras.layers.convolutional.Conv2D object at 0x2b975c821fd0> False
+<tensorflow.python.keras.layers.convolutional.Cropping2D object at 0x2b975c82ada0> False
+Model: "model_8"
+__________________________________________________________________________________________________
+Layer (type)                    Output Shape         Param #     Connected to                     
+==================================================================================================
+input_6 (InputLayer)            [(None, 71, 57, 6)]  0                                            
+__________________________________________________________________________________________________
+zero_padding2d_5 (ZeroPadding2D (None, 72, 60, 6)    0           input_6[0][0]                    
+__________________________________________________________________________________________________
+downsampling_0_conv_0 (Conv2D)  (None, 72, 60, 16)   880         zero_padding2d_5[0][0]           
+__________________________________________________________________________________________________
+downsampling_0_batchnorm_0 (Bat (None, 72, 60, 16)   64          downsampling_0_conv_0[0][0]      
+__________________________________________________________________________________________________
+downsampling_0_activation_0 (Ac (None, 72, 60, 16)   0           downsampling_0_batchnorm_0[0][0] 
+__________________________________________________________________________________________________
+downsampling_0_conv_1 (Conv2D)  (None, 72, 60, 16)   2320        downsampling_0_activation_0[0][0]
+__________________________________________________________________________________________________
+downsampling_0_batchnorm_1 (Bat (None, 72, 60, 16)   64          downsampling_0_conv_1[0][0]      
+__________________________________________________________________________________________________
+downsampling_0_activation_1 (Ac (None, 72, 60, 16)   0           downsampling_0_batchnorm_1[0][0] 
+__________________________________________________________________________________________________
+max_pooling2d_5 (MaxPooling2D)  (None, 36, 30, 16)   0           downsampling_0_activation_1[0][0]
+__________________________________________________________________________________________________
+bottleneck_skip_0 (Conv2D)      (None, 36, 30, 32)   4640        max_pooling2d_5[0][0]            
+__________________________________________________________________________________________________
+bottleneck_skip_1 (Conv2D)      (None, 36, 30, 32)   9248        bottleneck_skip_0[0][0]          
+__________________________________________________________________________________________________
+bottleneck_skip_2 (Conv2D)      (None, 36, 30, 32)   9248        bottleneck_skip_1[0][0]          
+__________________________________________________________________________________________________
+add_5 (Add)                     (None, 36, 30, 32)   0           bottleneck_skip_0[0][0]          
+                                                                 bottleneck_skip_1[0][0]          
+                                                                 bottleneck_skip_2[0][0]          
+__________________________________________________________________________________________________
+upsampling_0_conv_trans_0 (Conv (None, 72, 60, 16)   2064        add_5[0][0]                      
+__________________________________________________________________________________________________
+concatenate_5 (Concatenate)     (None, 72, 60, 32)   0           upsampling_0_conv_trans_0[0][0]  
+                                                                 downsampling_0_activation_1[0][0]
+__________________________________________________________________________________________________
+upsampling_0_conv_0 (Conv2D)    (None, 72, 60, 16)   4624        concatenate_5[0][0]              
+__________________________________________________________________________________________________
+upsampling_0_activation_0 (Acti (None, 72, 60, 16)   0           upsampling_0_conv_0[0][0]        
+__________________________________________________________________________________________________
+upsampling_0_conv_1 (Conv2D)    (None, 72, 60, 16)   2320        upsampling_0_activation_0[0][0]  
+__________________________________________________________________________________________________
+upsampling_0_activation_1 (Acti (None, 72, 60, 16)   0           upsampling_0_conv_1[0][0]        
+__________________________________________________________________________________________________
+linear (Conv2D)                 (None, 72, 60, 2)    34          upsampling_0_activation_1[0][0]  
+__________________________________________________________________________________________________
+cropping2d_5 (Cropping2D)       (None, 71, 57, 2)    0           linear[0][0]                     
+__________________________________________________________________________________________________
+conv2d_4 (Conv2D)               (None, 71, 57, 32)   608         cropping2d_5[0][0]               
+__________________________________________________________________________________________________
+conv2d_5 (Conv2D)               (None, 71, 57, 2)    578         conv2d_4[0][0]                   
+==================================================================================================
+Total params: 36,692
+Trainable params: 1,186
+Non-trainable params: 35,506
+__________________________________________________________________________________________________
+<tensorflow.python.keras.engine.input_layer.InputLayer object at 0x2b975c377dd8> False
+<tensorflow.python.keras.layers.convolutional.ZeroPadding2D object at 0x2b975c78e518> False
+<tensorflow.python.keras.layers.convolutional.Conv2D object at 0x2b975c78e908> False
+<tensorflow.python.keras.layers.normalization_v2.BatchNormalization object at 0x2b975c78ef98> False
+<tensorflow.python.keras.layers.core.Activation object at 0x2b975c377518> False
+<tensorflow.python.keras.layers.convolutional.Conv2D object at 0x2b975c78e0f0> False
+<tensorflow.python.keras.layers.normalization_v2.BatchNormalization object at 0x2b975c7a8898> False
+<tensorflow.python.keras.layers.core.Activation object at 0x2b975c7af518> False
+<tensorflow.python.keras.layers.pooling.MaxPooling2D object at 0x2b975c7a8e80> False
+<tensorflow.python.keras.layers.convolutional.Conv2D object at 0x2b975c7d4a58> False
+<tensorflow.python.keras.layers.convolutional.Conv2D object at 0x2b975c7dd588> False
+<tensorflow.python.keras.layers.convolutional.Conv2D object at 0x2b975c7e82e8> False
+<tensorflow.python.keras.layers.merge.Add object at 0x2b975c7f3f28> False
+<tensorflow.python.keras.layers.convolutional.Conv2DTranspose object at 0x2b975c7f3e80> False
+<tensorflow.python.keras.layers.merge.Concatenate object at 0x2b975c807c50> False
+<tensorflow.python.keras.layers.convolutional.Conv2D object at 0x2b975c807780> False
+<tensorflow.python.keras.layers.core.Activation object at 0x2b975c817f28> False
+<tensorflow.python.keras.layers.convolutional.Conv2D object at 0x2b975c817e48> False
+<tensorflow.python.keras.layers.core.Activation object at 0x2b975c821e48> False
+<tensorflow.python.keras.layers.convolutional.Conv2D object at 0x2b975c821fd0> False
+<tensorflow.python.keras.layers.convolutional.Cropping2D object at 0x2b975c82ada0> False
+<tensorflow.python.keras.layers.convolutional.Conv2D object at 0x2b975c855f28> True
+<tensorflow.python.keras.layers.convolutional.Conv2D object at 0x2b975c83d7b8> True
+########### Saving new model name: /glade/scratch/wchapman/Reforecast/models/NN_CRPS/F048/StartingYear2013/CNN_2016/cpf_CRPS_FINETUNE_val_2018_test_2016.ckpt
+Train on 242 samples, validate on 121 samples
+Epoch 1/200
+ 20/242 [=>............................] - ETA: 8s - loss: 106.5039
+Epoch 00001: val_loss improved from inf to 36.91518, saving model to /glade/scratch/wchapman/Reforecast/models/NN_CRPS/F048/StartingYear2013/CNN_2016/cpf_CRPS_FINETUNE_val_2018_test_2016.ckpt
+242/242 [==============================] - 1s 5ms/sample - loss: 74.8203 - val_loss: 36.9152
+Epoch 2/200
+ 20/242 [=>............................] - ETA: 0s - loss: 38.6732
+Epoch 00002: val_loss improved from 36.91518 to 31.20979, saving model to /glade/scratch/wchapman/Reforecast/models/NN_CRPS/F048/StartingYear2013/CNN_2016/cpf_CRPS_FINETUNE_val_2018_test_2016.ckpt
+242/242 [==============================] - 0s 395us/sample - loss: 32.3687 - val_loss: 31.2098
+Epoch 3/200
+ 20/242 [=>............................] - ETA: 0s - loss: 27.4832
+Epoch 00003: val_loss improved from 31.20979 to 26.27162, saving model to /glade/scratch/wchapman/Reforecast/models/NN_CRPS/F048/StartingYear2013/CNN_2016/cpf_CRPS_FINETUNE_val_2018_test_2016.ckpt
+242/242 [==============================] - 0s 386us/sample - loss: 29.8767 - val_loss: 26.2716
+Epoch 4/200
+ 20/242 [=>............................] - ETA: 0s - loss: 25.1066
+Epoch 00004: val_loss improved from 26.27162 to 25.58723, saving model to /glade/scratch/wchapman/Reforecast/models/NN_CRPS/F048/StartingYear2013/CNN_2016/cpf_CRPS_FINETUNE_val_2018_test_2016.ckpt
+242/242 [==============================] - 0s 390us/sample - loss: 25.9323 - val_loss: 25.5872
+Epoch 5/200
+ 20/242 [=>............................] - ETA: 0s - loss: 23.7680
+Epoch 00005: val_loss improved from 25.58723 to 25.38349, saving model to /glade/scratch/wchapman/Reforecast/models/NN_CRPS/F048/StartingYear2013/CNN_2016/cpf_CRPS_FINETUNE_val_2018_test_2016.ckpt
+242/242 [==============================] - 0s 390us/sample - loss: 25.3542 - val_loss: 25.3835
+Epoch 6/200
+ 20/242 [=>............................] - ETA: 0s - loss: 27.0783
+Epoch 00006: val_loss improved from 25.38349 to 24.97707, saving model to /glade/scratch/wchapman/Reforecast/models/NN_CRPS/F048/StartingYear2013/CNN_2016/cpf_CRPS_FINETUNE_val_2018_test_2016.ckpt
+242/242 [==============================] - 0s 387us/sample - loss: 25.0786 - val_loss: 24.9771
+Epoch 7/200
+ 20/242 [=>............................] - ETA: 0s - loss: 26.4205
+Epoch 00007: val_loss improved from 24.97707 to 24.83666, saving model to /glade/scratch/wchapman/Reforecast/models/NN_CRPS/F048/StartingYear2013/CNN_2016/cpf_CRPS_FINETUNE_val_2018_test_2016.ckpt
+242/242 [==============================] - 0s 383us/sample - loss: 24.7912 - val_loss: 24.8367
+Epoch 8/200
+ 20/242 [=>............................] - ETA: 0s - loss: 25.2236
+Epoch 00008: val_loss improved from 24.83666 to 24.60563, saving model to /glade/scratch/wchapman/Reforecast/models/NN_CRPS/F048/StartingYear2013/CNN_2016/cpf_CRPS_FINETUNE_val_2018_test_2016.ckpt
+242/242 [==============================] - 0s 384us/sample - loss: 24.6163 - val_loss: 24.6056
+Epoch 9/200
+ 20/242 [=>............................] - ETA: 0s - loss: 25.3333
+Epoch 00009: val_loss improved from 24.60563 to 24.53320, saving model to /glade/scratch/wchapman/Reforecast/models/NN_CRPS/F048/StartingYear2013/CNN_2016/cpf_CRPS_FINETUNE_val_2018_test_2016.ckpt
+242/242 [==============================] - 0s 383us/sample - loss: 24.4916 - val_loss: 24.5332
+Epoch 10/200
+ 20/242 [=>............................] - ETA: 0s - loss: 25.2519
+Epoch 00010: val_loss improved from 24.53320 to 24.47241, saving model to /glade/scratch/wchapman/Reforecast/models/NN_CRPS/F048/StartingYear2013/CNN_2016/cpf_CRPS_FINETUNE_val_2018_test_2016.ckpt
+242/242 [==============================] - 0s 388us/sample - loss: 24.4041 - val_loss: 24.4724
+Epoch 11/200
+ 20/242 [=>............................] - ETA: 0s - loss: 25.7507
+Epoch 00011: val_loss improved from 24.47241 to 24.42632, saving model to /glade/scratch/wchapman/Reforecast/models/NN_CRPS/F048/StartingYear2013/CNN_2016/cpf_CRPS_FINETUNE_val_2018_test_2016.ckpt
+242/242 [==============================] - 0s 386us/sample - loss: 24.3568 - val_loss: 24.4263
+Epoch 12/200
+ 20/242 [=>............................] - ETA: 0s - loss: 24.2282
+Epoch 00012: val_loss improved from 24.42632 to 24.41522, saving model to /glade/scratch/wchapman/Reforecast/models/NN_CRPS/F048/StartingYear2013/CNN_2016/cpf_CRPS_FINETUNE_val_2018_test_2016.ckpt
+242/242 [==============================] - 0s 386us/sample - loss: 24.3066 - val_loss: 24.4152
+Epoch 13/200
+ 20/242 [=>............................] - ETA: 0s - loss: 23.3314
+Epoch 00013: val_loss improved from 24.41522 to 24.34504, saving model to /glade/scratch/wchapman/Reforecast/models/NN_CRPS/F048/StartingYear2013/CNN_2016/cpf_CRPS_FINETUNE_val_2018_test_2016.ckpt
+242/242 [==============================] - 0s 386us/sample - loss: 24.2540 - val_loss: 24.3450
+Epoch 14/200
+ 20/242 [=>............................] - ETA: 0s - loss: 25.0618
+Epoch 00014: val_loss improved from 24.34504 to 24.32889, saving model to /glade/scratch/wchapman/Reforecast/models/NN_CRPS/F048/StartingYear2013/CNN_2016/cpf_CRPS_FINETUNE_val_2018_test_2016.ckpt
+242/242 [==============================] - 0s 384us/sample - loss: 24.2026 - val_loss: 24.3289
+Epoch 15/200
+ 20/242 [=>............................] - ETA: 0s - loss: 20.5721
+Epoch 00015: val_loss did not improve from 24.32889
+242/242 [==============================] - 0s 315us/sample - loss: 24.1656 - val_loss: 24.3652
+Epoch 16/200
+ 20/242 [=>............................] - ETA: 0s - loss: 23.0315
+Epoch 00016: val_loss improved from 24.32889 to 24.21366, saving model to /glade/scratch/wchapman/Reforecast/models/NN_CRPS/F048/StartingYear2013/CNN_2016/cpf_CRPS_FINETUNE_val_2018_test_2016.ckpt
+242/242 [==============================] - 0s 386us/sample - loss: 24.1401 - val_loss: 24.2137
+Epoch 17/200
+ 20/242 [=>............................] - ETA: 0s - loss: 23.9924
+Epoch 00017: val_loss did not improve from 24.21366
+242/242 [==============================] - 0s 314us/sample - loss: 24.0968 - val_loss: 24.2595
+Epoch 18/200
+ 20/242 [=>............................] - ETA: 0s - loss: 21.9437
+Epoch 00018: val_loss did not improve from 24.21366
+
+Epoch 00018: ReduceLROnPlateau reducing learning rate to 0.0004000000189989805.
+242/242 [==============================] - 0s 313us/sample - loss: 24.0603 - val_loss: 24.2672
+Epoch 19/200
+ 20/242 [=>............................] - ETA: 0s - loss: 23.9228
+Epoch 00019: val_loss improved from 24.21366 to 24.18381, saving model to /glade/scratch/wchapman/Reforecast/models/NN_CRPS/F048/StartingYear2013/CNN_2016/cpf_CRPS_FINETUNE_val_2018_test_2016.ckpt
+242/242 [==============================] - 0s 396us/sample - loss: 24.0289 - val_loss: 24.1838
+Epoch 20/200
+ 20/242 [=>............................] - ETA: 0s - loss: 25.2271
+Epoch 00020: val_loss did not improve from 24.18381
+242/242 [==============================] - 0s 315us/sample - loss: 24.0327 - val_loss: 24.2120
+Epoch 21/200
+ 20/242 [=>............................] - ETA: 0s - loss: 24.1106
+Epoch 00021: val_loss did not improve from 24.18381
+
+Epoch 00021: ReduceLROnPlateau reducing learning rate to 0.00016000000759959222.
+242/242 [==============================] - 0s 313us/sample - loss: 24.0151 - val_loss: 24.1839
+Epoch 22/200
+ 20/242 [=>............................] - ETA: 0s - loss: 23.1043
+Epoch 00022: val_loss improved from 24.18381 to 24.17268, saving model to /glade/scratch/wchapman/Reforecast/models/NN_CRPS/F048/StartingYear2013/CNN_2016/cpf_CRPS_FINETUNE_val_2018_test_2016.ckpt
+242/242 [==============================] - 0s 389us/sample - loss: 23.9941 - val_loss: 24.1727
+Epoch 23/200
+ 20/242 [=>............................] - ETA: 0s - loss: 22.6022
+Epoch 00023: val_loss improved from 24.17268 to 24.16126, saving model to /glade/scratch/wchapman/Reforecast/models/NN_CRPS/F048/StartingYear2013/CNN_2016/cpf_CRPS_FINETUNE_val_2018_test_2016.ckpt
+242/242 [==============================] - 0s 389us/sample - loss: 23.9960 - val_loss: 24.1613
+Epoch 24/200
+ 20/242 [=>............................] - ETA: 0s - loss: 24.1499
+Epoch 00024: val_loss did not improve from 24.16126
+242/242 [==============================] - 0s 315us/sample - loss: 23.9896 - val_loss: 24.1881
+Epoch 25/200
+ 20/242 [=>............................] - ETA: 0s - loss: 23.7352
+Epoch 00025: val_loss did not improve from 24.16126
+
+Epoch 00025: ReduceLROnPlateau reducing learning rate to 6.40000042039901e-05.
+242/242 [==============================] - 0s 312us/sample - loss: 23.9860 - val_loss: 24.1844
+Epoch 26/200
+ 20/242 [=>............................] - ETA: 0s - loss: 23.2360
+Epoch 00026: val_loss did not improve from 24.16126
+242/242 [==============================] - 0s 312us/sample - loss: 23.9823 - val_loss: 24.1674
+Epoch 27/200
+ 20/242 [=>............................] - ETA: 0s - loss: 26.7717
+Epoch 00027: val_loss did not improve from 24.16126
+
+Epoch 00027: ReduceLROnPlateau reducing learning rate to 2.560000284574926e-05.
+242/242 [==============================] - 0s 316us/sample - loss: 23.9791 - val_loss: 24.1640
+Epoch 28/200
+ 20/242 [=>............................] - ETA: 0s - loss: 21.3446
+Epoch 00028: val_loss did not improve from 24.16126
+242/242 [==============================] - 0s 317us/sample - loss: 23.9784 - val_loss: 24.1643
+Epoch 29/200
+ 20/242 [=>............................] - ETA: 0s - loss: 23.3103
+Epoch 00029: val_loss did not improve from 24.16126
+
+Epoch 00029: ReduceLROnPlateau reducing learning rate to 1.0240000847261399e-05.
+242/242 [==============================] - 0s 314us/sample - loss: 23.9777 - val_loss: 24.1648
+Epoch 30/200
+ 20/242 [=>............................] - ETA: 0s - loss: 26.4936
+Epoch 00030: val_loss did not improve from 24.16126
+242/242 [==============================] - 0s 311us/sample - loss: 23.9763 - val_loss: 24.1661
+Epoch 31/200
+ 20/242 [=>............................] - ETA: 0s - loss: 24.5277
+Epoch 00031: val_loss did not improve from 24.16126
+
+Epoch 00031: ReduceLROnPlateau reducing learning rate to 1e-05.
+242/242 [==============================] - 0s 313us/sample - loss: 23.9761 - val_loss: 24.1696
+Epoch 32/200
+ 20/242 [=>............................] - ETA: 0s - loss: 20.9896
+Epoch 00032: val_loss did not improve from 24.16126
+242/242 [==============================] - 0s 309us/sample - loss: 23.9755 - val_loss: 24.1673
+Epoch 33/200
+ 20/242 [=>............................] - ETA: 0s - loss: 23.3221
+Epoch 00033: val_loss did not improve from 24.16126
+242/242 [==============================] - 0s 312us/sample - loss: 23.9753 - val_loss: 24.1670
+Epoch 00033: early stopping
+done
