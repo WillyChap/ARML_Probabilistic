@@ -13,7 +13,8 @@ This repository provides Python code to accompany the paper:
 
 ***Post arxiv link here (when available).*** 
 
-Code use and file structure: 
+Code use and file structure:
+
 Code for processing and implementation all neural betwork models is available in /Coastal_Points/python_scripts and accompanying jupyter notebooks for verification are contained in /Coastal_Points/Generate_Figures. All utility files, which contain python functionality are in /Coastal_Points/python_scripts/utils*.py. The U-NET build file is /Coastal_Points/python_scripts/UNET_b.py.
 
 This study demonstrates how neural networks can be used for post-processing of deterministic weather forecasts to create a distributional (i.e. probabilistic) regressional framework using a CRPS loss function. 
