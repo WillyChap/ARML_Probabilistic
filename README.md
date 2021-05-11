@@ -13,7 +13,7 @@ This repository provides Python code to accompany the paper:
 
 ***Post arxiv link here (when available).*** 
 
-Code for processing and implementation all neural betwork models is available in /Coastal_Points/python_scripts
+Code for processing and implementation all neural betwork models is available in /Coastal_Points/python_scripts and accompanying jupyter notebooks for verification are contained in /Coastal_Points/Figures
 
 This study demonstrates how neural networks can be used for post-processing of deterministic weather forecasts to create a distributional (i.e. probabilistic) regressional framework using a CRPS loss function. 
 
