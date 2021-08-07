@@ -44,7 +44,12 @@ import utils_CNN
 import coms
 from tensorflow.python.client import device_lib
 ####################################################################################
+#set seeds
 tf.random.set_seed(33) #patrick roy's number.
+np.random.seed(33) #set numpy seed 
+#epocs for taining and fine tuning
+epos_ = 50
+epos_2 = 200
 ####################################################################################
 
 stepnum=int(sys.argv[1])
@@ -78,6 +83,7 @@ else:
 ####################################################################################
 print('We are here:',os.getcwd())
 os.chdir('/glade/work/wchapman/AnEn/CNN/Coastal_Points_LogNormal/')
+
 
 ####################################################################################
 # check region of interest folder
@@ -159,11 +165,13 @@ norm_dict_targ['IVTm'][1]=1
 All_file_names
 allinds = np.arange(len(res))
 
-for bb in range(len(res)-3,len(res)):
+yearsgoback = 3 #three years in the testing data. 
+
+for bb in range(len(res)-yearsgoback,len(res)):
     
     if bb == (len(res)-1):
         allinds = np.arange(len(res))
-        test_fil_name = [res[allinds[-3]]]
+        test_fil_name = [res[allinds[-yearsgoback]]]
         val_fil_name = [res[allinds[-1]]]
         rest = np.delete(allinds,[bb,bb+1])
         train_fil_name = np.array(res)[rest].tolist()
@@ -223,7 +231,7 @@ for bb in range(len(res)-3,len(res)):
     er_stop = tf.keras.callbacks.EarlyStopping(monitor='val_loss', min_delta=0, patience=10, verbose=1, mode='auto',baseline=None, restore_best_weights=False)
     
     #train model
-    histss = model.fit(x, y,validation_data=(x_tst,y_tst), epochs=50,batch_size=50 ,verbose=True,callbacks=[modsave,reduce_lr,er_stop]);
+    histss = model.fit(x, y,validation_data=(x_tst,y_tst), epochs=epos_,batch_size=50 ,verbose=2,callbacks=[modsave,reduce_lr,er_stop]);
     hist_df = pd.DataFrame(histss.history) 
    
     # or save to csv: 
@@ -244,6 +252,11 @@ print('y_tstnan:',np.sum(np.isnan(y_tst)))
 
         
 yearstoinclude = ['2016','2017','2018']
+
+# yearstoinclude = ['1985','1986','1987','1988','1989','1990','1991','1992','1993','1994','1995','1996','1997','1998','1999','2000','2001','2002','2003','2004','2005',
+#                   '2006','2007','2008','2009','2010','2011','2012','2013','2014','2015','2016','2017','2018']
+
+
 res=[]
 for jj in yearstoinclude:
     res.append([i for i in All_file_names if jj in i][0])
@@ -258,7 +271,7 @@ All_file_names
 
 allinds = np.arange(len(res))
 
-for bb in range(len(res)-3,len(res)):
+for bb in range(len(res)-yearsgoback,len(res)):
     
     if bb == (len(res)-1):
         allinds = np.arange(len(res))
@@ -323,7 +336,7 @@ for bb in range(len(res)-3,len(res)):
 
     print('########### layers frozen ###########')
     ### CHANGE THIS FOR PRODUCTION RUNS ###########
-    model.load_weights(Wsave_name)
+    model.load_weights(Wsave_name).expect_partial()
     ### CHANGE THIS FOR PRODUCTION RUNS ###########
     for layer in model.layers[:]:
         layer.trainable = False
@@ -351,10 +364,10 @@ for bb in range(len(res)-3,len(res)):
 
     modsave = tf.keras.callbacks.ModelCheckpoint(Wsave_name, monitor='val_loss', verbose=1, save_best_only=True,save_weights_only=True, mode='min',include_optimizer=False)
     reduce_lr = tf.keras.callbacks.ReduceLROnPlateau(monitor='val_loss', factor=0.4,patience=2, min_lr=0.00001,verbose=1)
-    er_stop = tf.keras.callbacks.EarlyStopping(monitor='val_loss', min_delta=0, patience=10, verbose=1, mode='auto',baseline=None, restore_best_weights=False)
+    er_stop = tf.keras.callbacks.EarlyStopping(monitor='val_loss', min_delta=0, patience=10, verbose=2, mode='auto',baseline=None, restore_best_weights=False)
     
     #train model
-    histss = model.fit(x, y,validation_data=(x_tst,y_tst), epochs=200,batch_size=20 ,verbose=True,callbacks=[modsave,reduce_lr,er_stop]);
+    histss = model.fit(x, y,validation_data=(x_tst,y_tst), epochs=epos_2,batch_size=20 ,verbose=2,callbacks=[modsave,reduce_lr,er_stop]);
     hist_df = pd.DataFrame(histss.history) 
    
     # or save to csv: 

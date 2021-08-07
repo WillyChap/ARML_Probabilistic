@@ -52,6 +52,7 @@ from cartopy.mpl.gridliner import LONGITUDE_FORMATTER, LATITUDE_FORMATTER
 import xarray as xr
 ####################################################################################
 tf.random.set_seed(33) #patrick roy's number.
+np.random.seed(33) #set numpy seed 
 ####################################################################################
 
 stepnum=int(sys.argv[1])
@@ -287,7 +288,7 @@ for bb in range(len(res)-3,len(res)):
     net_in = tf.keras.layers.Input(shape=(in_shape))
     
     #train model
-    histss = model.fit([x,stID], y,validation_data=([x_tst,stID_tst],y_tst), epochs=200,batch_size=100 ,verbose=True,callbacks=[modsave,reduce_lr,er_stop]);
+    histss = model.fit([x,stID], y,validation_data=([x_tst,stID_tst],y_tst), epochs=200,batch_size=100 ,verbose=2,callbacks=[modsave,reduce_lr,er_stop]);
     hist_df = pd.DataFrame(histss.history) 
    
     # or save to csv: 
@@ -417,7 +418,7 @@ for bb in range(len(res)-3,len(res)):
 
     print('########### layers frozen ###########')
     ### CHANGE THIS FOR PRODUCTION RUNS ###########
-    model.load_weights(Wsave_name)
+    model.load_weights(Wsave_name).expect_partial()
     ### CHANGE THIS FOR PRODUCTION RUNS ###########
     for layer in model.layers[:]:
         layer.trainable = False
@@ -454,7 +455,7 @@ for bb in range(len(res)-3,len(res)):
     net_in = tf.keras.layers.Input(shape=(in_shape))
     
     #train model
-    histss = model.fit([x,stID], y,validation_data=([x_tst,stID_tst],y_tst), epochs=200,batch_size=100 ,verbose=True,callbacks=[modsave,reduce_lr,er_stop]);
+    histss = model.fit([x,stID], y,validation_data=([x_tst,stID_tst],y_tst), epochs=200,batch_size=100 ,verbose=2,callbacks=[modsave,reduce_lr,er_stop]);
     hist_df = pd.DataFrame(histss.history) 
    
     # or save to csv: 

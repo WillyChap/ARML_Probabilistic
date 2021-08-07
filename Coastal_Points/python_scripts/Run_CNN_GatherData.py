@@ -347,6 +347,12 @@ print('IVT mean shape:', mAl.shape)
 print('IVT std shape:', sAl.shape)
 
 df_out = pd.DataFrame({'time':tout,'OBS':yAl,'Model':wwrfAl,'IVTmean':mAl,'IVTstd':sAl,'lat':latoutAl,'lon':lonoutAl})
+
+
+
+
+
+
 df_out.to_pickle(newdir+'NN_CRPS_CNNPP_ref2.pkl')
 np.savez(newdir+'NN_CRPS_CNNPP_ref2.npz',lat=lat,lon=lon,IVTgefsm=mAl,IVTgefss=sAl,IVTm_gefs=yAl)
 

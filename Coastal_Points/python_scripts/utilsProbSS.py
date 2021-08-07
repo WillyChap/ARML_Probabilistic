@@ -23,7 +23,7 @@ import matplotlib.colors
 import matplotlib.pyplot as pyplot
 
 # need a single file to set variables
-exampfil = "/glade/scratch/wchapman/Reforecast/F036/train/F036_WY_1985_500mb.nc"
+exampfil = "/glade/scratch/wchapman/Reforecast/F036/train/F036_WY_1985_500mb_Clean.nc"
 exampfilgefs = "/glade/scratch/wchapman/GEFS/F048/WY_2016_GEFS_F048.nc"
 
 trainst = '11/30/1985'

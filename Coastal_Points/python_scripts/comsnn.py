@@ -478,6 +478,50 @@ def build_emb_model(n_features, n_outputs, hidden_nodes, emb_size, max_id,
         model.compile(optimizer=opt, loss=loss)
     return model
 
+
+
+
+def build_model(n_features, n_outputs, hidden_nodes,
+                    compile=False, optimizer='adam', lr=0.0001,
+                    loss=crps_cost_function,
+                    activation='relu', reg=None):
+    """
+    Args:
+        n_features: Number of features
+        n_outputs: Number of outputs
+        hidden_nodes: int or list of hidden nodes
+        emb_size: Embedding size
+        max_id: Max embedding ID
+        compile: If true, compile model
+        optimizer: Name of optimizer
+        lr: learning rate
+        loss: loss function
+        activation: Activation function for hidden layer
+    Returns:
+        model: Keras model
+    """
+    if type(hidden_nodes) is not list:
+        hidden_nodes = [hidden_nodes]
+
+    features_in = tf.keras.layers.Input(shape=(n_features,))
+    id_in = tf.keras.layers.Input(shape=(1,))
+
+    x = features_in
+    for h in hidden_nodes:
+        x = tf.keras.layers.Dense(h, activation=activation, kernel_regularizer=reg)(x)
+    x = tf.keras.layers.Dense(n_outputs, activation='linear', kernel_regularizer=reg)(x)
+    model = tf.keras.models.Model(inputs=features_in, outputs=x)
+
+    if compile:
+        opt = tf.optimizers.Adam(learning_rate=lr)
+        model.compile(optimizer=opt, loss=loss)
+    return model
+
+
+
+
+
+
 def lognstat(mu, sigma):
     """Calculate the mean of and variance of the lognormal distribution given
     the mean (`mu`) and standard deviation (`sigma`), of the associated normal 

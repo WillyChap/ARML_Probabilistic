@@ -62,8 +62,8 @@ from tqdm import tqdm
 # file switch: 
 def load_forecast(fcast,whichone):
     
-    if whichone not in ['Raw_gefs','MV_gefs','NN_gefs','NN_ref','CNN_ref','CNNft_ref','AnEn','Reforecast','NNft_ref']:
-        raise NameError('forecast must be one of : Raw_gefs, MV_gefs , NN_ref , CNN_ref , CNNft_ref , AnEn, NNft_ref, or Reforecast ')
+    if whichone not in ['Raw_gefs','MV_gefs','NN_gefs','NN_ref','CNN_ref','CNNft_ref','AnEn','Reforecast','NNft_ref','EMOS']:
+        raise NameError('forecast must be one of : Raw_gefs, MV_gefs , NN_ref , CNN_ref , CNNft_ref , AnEn, NNft_ref, EMOS, or Reforecast ')
     
     
     if whichone == 'Raw_gefs':
@@ -140,6 +140,14 @@ def load_forecast(fcast,whichone):
         Post_s = np.zeros(len(Pre_m))
         Obs = np.array(df['OBS'])
         
+    if whichone == 'EMOS':
+        df = pd.read_pickle('/glade/scratch/wchapman/Reforecast/models/NN_CRPS/'+fcast+'/Reforecast_out/FCN_FINETUNE_CRPS_PP_ref2.pkl')
+        Pre_m = np.array(df['Model'])
+        Pre_s = np.zeros(len(Pre_m))
+        Post_m = np.array(df['Model'])
+        Post_s = np.array(df['IVTstd'])
+        Obs = np.array(df['OBS'])
+        
 
     return df, Pre_m, Pre_s, Post_m, Post_s, Obs
 
@@ -150,8 +158,8 @@ def load_forecast(fcast,whichone):
 
 def load_forecast_concat(fcasts,whichone): 
     
-    if whichone not in ['Raw_gefs','MV_gefs','NN_gefs','NN_ref','CNN_ref','CNNft_ref','AnEn','Reforecast','NNft_ref']:
-        raise NameError('forecast must be one of : Raw_gefs, MV_gefs , NN_ref , CNN_ref , CNNft_ref , AnEn, NNft_ref, or Reforecast ')
+    if whichone not in ['Raw_gefs','MV_gefs','NN_gefs','NN_ref','CNN_ref','CNNft_ref','AnEn','Reforecast','NNft_ref','EMOS']:
+        raise NameError('forecast must be one of : Raw_gefs, MV_gefs , NN_ref , CNN_ref , CNNft_ref , AnEn, NNft_ref, EMOS, or Reforecast ')
         
     for ind,fcast in enumerate(fcasts):
         dft, Pre_mt, Pre_st, Post_mt, Post_st, Obst = load_forecast(fcast,whichone)
